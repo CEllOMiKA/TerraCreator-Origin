@@ -11,9 +11,6 @@
 
 且电脑版本在Windows7及以上
 
-点击ClickMeToStart
-
-
 注意:
 
 TerraCreator处于开发阶段
