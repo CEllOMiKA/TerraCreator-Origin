@@ -45,8 +45,13 @@
             additem = new ToolStripButton();
             codes = new RichTextBox();
             fileview = new TreeView();
+            split = new SplitContainer();
             menuStrip1.SuspendLayout();
             toolStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)split).BeginInit();
+            split.Panel1.SuspendLayout();
+            split.Panel2.SuspendLayout();
+            split.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -55,7 +60,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, 关于ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1332, 32);
+            menuStrip1.Size = new Size(1355, 32);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -116,7 +121,7 @@
             // toolst_about
             // 
             toolst_about.Name = "toolst_about";
-            toolst_about.Size = new Size(270, 34);
+            toolst_about.Size = new Size(146, 34);
             toolst_about.Text = "关于";
             toolst_about.Click += toolst_about_Click;
             // 
@@ -126,7 +131,7 @@
             toolStrip1.Items.AddRange(new ToolStripItem[] { fresh, save, additem });
             toolStrip1.Location = new Point(0, 32);
             toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1332, 33);
+            toolStrip1.Size = new Size(1355, 33);
             toolStrip1.TabIndex = 1;
             toolStrip1.Text = "toolStrip1";
             // 
@@ -162,12 +167,12 @@
             // 
             // codes
             // 
-            codes.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             codes.BackColor = Color.FromArgb(192, 255, 255);
+            codes.Dock = DockStyle.Fill;
             codes.Font = new Font("微软雅黑", 11F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            codes.Location = new Point(295, 65);
+            codes.Location = new Point(0, 0);
             codes.Name = "codes";
-            codes.Size = new Size(1037, 757);
+            codes.Size = new Size(1031, 849);
             codes.TabIndex = 2;
             codes.Text = "欢迎使用TerraCreator\n点击上方按钮开始吧\n右侧是文件夹文件\n这个是代码编辑器\n\n\n\nBUG反馈:cmcello@outlook.com";
             codes.TextChanged += codes_TextChanged;
@@ -175,21 +180,39 @@
             // fileview
             // 
             fileview.BackColor = Color.FromArgb(192, 255, 255);
-            fileview.Dock = DockStyle.Left;
-            fileview.Location = new Point(0, 65);
+            fileview.Dock = DockStyle.Fill;
+            fileview.Location = new Point(0, 0);
             fileview.Name = "fileview";
-            fileview.Size = new Size(289, 757);
+            fileview.Size = new Size(320, 849);
             fileview.TabIndex = 3;
             fileview.AfterSelect += fileview_AfterSelect;
+            // 
+            // split
+            // 
+            split.Dock = DockStyle.Fill;
+            split.FixedPanel = FixedPanel.Panel1;
+            split.IsSplitterFixed = true;
+            split.Location = new Point(0, 65);
+            split.Name = "split";
+            // 
+            // split.Panel1
+            // 
+            split.Panel1.Controls.Add(fileview);
+            // 
+            // split.Panel2
+            // 
+            split.Panel2.Controls.Add(codes);
+            split.Size = new Size(1355, 849);
+            split.SplitterDistance = 320;
+            split.TabIndex = 4;
             // 
             // Main
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(1332, 822);
-            Controls.Add(fileview);
-            Controls.Add(codes);
+            ClientSize = new Size(1355, 914);
+            Controls.Add(split);
             Controls.Add(toolStrip1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -199,6 +222,10 @@
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
+            split.Panel1.ResumeLayout(false);
+            split.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)split).EndInit();
+            split.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -219,6 +246,7 @@
         private ToolStripMenuItem toolst_exitprog;
         private ToolStripButton save;
         private ToolStripButton additem;
+        private SplitContainer split;
         public static TreeView fileview;
         public static RichTextBox codes;
     }

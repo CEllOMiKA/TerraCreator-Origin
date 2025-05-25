@@ -190,9 +190,76 @@ namespace TerraCreator
             }
         }
 
+
         private void toolst_additemintoproj_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("我们还没做好这一块内容");
+
+            bool CopyChecked = false;
+            string ChooseFilePath = "";
+            string ChooseFolderPath = "";
+            string ChooseFileName = "";
+
+            if (ProjectData.ProjectChecked)
+            {
+
+                OpenFileDialog ChooseAddFile = new OpenFileDialog();
+                ChooseAddFile.Filter = "所有文件(*.*)|*.*";
+                ChooseAddFile.Title = "选择要导入的文件";
+                ChooseAddFile.FilterIndex = 0;
+                DialogResult result = ChooseAddFile.ShowDialog();
+
+                if (result == DialogResult.OK)
+                {
+                    ChooseFilePath = ChooseAddFile.FileName;
+                    ChooseFileName = ChooseAddFile.SafeFileName;
+
+                    FolderBrowserDialog ChooseWhichFolder = new FolderBrowserDialog();
+                    ChooseWhichFolder.SelectedPath = ProjectData.ProjectPath;
+                    ChooseWhichFolder.Description = "选择要导入的文件夹";
+                    DialogResult FolderChoosen = ChooseWhichFolder.ShowDialog();
+                    if (FolderChoosen == DialogResult.OK)
+                    {
+                        DialogResult ConfirmCopy = MessageBox.Show(
+                            $"导入文件到项目文件夹会覆盖文件" +
+                            $"\n源文件地址:{ChooseAddFile.FileName}" +
+                            $"\n导入文件夹地址:{ChooseWhichFolder.SelectedPath}",
+                            "提示",
+                            MessageBoxButtons.YesNo,
+                            MessageBoxIcon.Question
+                        );
+
+                        if (ConfirmCopy == DialogResult.Yes)
+                        {
+                            ChooseFolderPath = ChooseWhichFolder.SelectedPath;
+                            CopyChecked = true;
+                        }
+
+                    }
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            //copy
+            if (CopyChecked)
+            {
+                try
+                {
+                    System.IO.File.Copy(ChooseFilePath, ChooseFolderPath + "\\" + ChooseFileName, true);
+                    MessageBox.Show($"导入成功\n文件地址:{ChooseFilePath}", "导入成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"复制失败: {ex.Message}\n请手动导入", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+
         }
+
+        
     }
 }

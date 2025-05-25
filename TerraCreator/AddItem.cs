@@ -253,7 +253,7 @@ namespace TerraCreator
                     "using Terraria;" + Environment.NewLine +
                     "using Terraria.ID;" + Environment.NewLine +
                     "using Terraria.ModLoader;" + Environment.NewLine +
-                  $"namespace {ProjectData.ProjectNamespace}" + Environment.NewLine +
+                  $"namespace {ProjectData.ProjectNamespace}.Items" + Environment.NewLine +
                     "{" + Environment.NewLine +
                   $"    public class {namespacetextbox.Text} : ModItem" + Environment.NewLine +
                     "    {" + Environment.NewLine +
