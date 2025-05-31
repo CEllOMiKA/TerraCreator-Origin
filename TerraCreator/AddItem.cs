@@ -208,8 +208,8 @@ namespace TerraCreator
 
             void itemcodespreviewlabel_click(object sender, EventArgs e)
             {
-                WriteCodes();
-                MessageBox.Show(codes, "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                if(WriteCodes()) MessageBox.Show(codes, "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
 
@@ -231,7 +231,7 @@ namespace TerraCreator
                     return;
                 }
 
-                WriteCodes();
+                if (!WriteCodes()) return;
 
                 //CheckIfWantToWrite
                 DialogResult ConfirmCopy = MessageBox.Show($"图片复制到项目文件夹会覆盖文件" +
@@ -272,13 +272,13 @@ namespace TerraCreator
 
 
             //WriteCodes
-            void WriteCodes()
+            bool WriteCodes()
             {
 
                 if (string.IsNullOrEmpty(namespacetextbox.Text))
                 {
                     MessageBox.Show("请先输入物品定义名", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    return false;
                 }
 
                 codes = "";
@@ -300,6 +300,8 @@ namespace TerraCreator
                     "          }" + Environment.NewLine +
                     "    }" + Environment.NewLine +
                     "}";
+
+                return true;
             }
 
 

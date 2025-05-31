@@ -37,6 +37,7 @@
             list = new ListView();
             itempanel = new Panel();
             newitemlabel = new Label();
+            tips = new Label();
             SuspendLayout();
             // 
             // list
@@ -58,7 +59,7 @@
             list.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3 });
             list.Location = new Point(12, 43);
             list.Name = "list";
-            list.Size = new Size(253, 559);
+            list.Size = new Size(253, 612);
             list.TabIndex = 0;
             list.UseCompatibleStateImageBehavior = false;
             list.View = View.SmallIcon;
@@ -70,7 +71,7 @@
             itempanel.BackColor = Color.FromArgb(192, 255, 255);
             itempanel.Location = new Point(271, 43);
             itempanel.Name = "itempanel";
-            itempanel.Size = new Size(749, 557);
+            itempanel.Size = new Size(1125, 612);
             itempanel.TabIndex = 3;
             // 
             // newitemlabel
@@ -83,12 +84,22 @@
             newitemlabel.TabIndex = 4;
             newitemlabel.Text = "新建项";
             // 
+            // tips
+            // 
+            tips.AutoSize = true;
+            tips.Location = new Point(49, 681);
+            tips.Name = "tips";
+            tips.Size = new Size(163, 72);
+            tips.TabIndex = 5;
+            tips.Text = "提示:\r\n你觉得功能太少了?\r\n那就快去催更作者!";
+            // 
             // AddItem
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(1032, 612);
+            ClientSize = new Size(1408, 667);
+            Controls.Add(tips);
             Controls.Add(newitemlabel);
             Controls.Add(itempanel);
             Controls.Add(list);
@@ -105,5 +116,6 @@
         private ListView list;
         private Panel itempanel;
         private Label newitemlabel;
+        private Label tips;
     }
 }

@@ -31,7 +31,12 @@ namespace TerraCreator
 
         private void toolst_exitprog_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult ConfirmExit = MessageBox.Show("是否退出TerraCreator","退出",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            if (ConfirmExit == DialogResult.OK)
+            {
+                this.Close();
+            }
+            
         }
 
         private void toolst_newitem_Click(object sender, EventArgs e)
@@ -47,6 +52,7 @@ namespace TerraCreator
                 MessageBox.Show("重导入需重新启动程序\n是否关闭程序", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (IfWantToRestartApp == DialogResult.Yes)
                 {
+                    System.Diagnostics.Process.Start("TerraCreator.exe");
                     this.Close();
                 }
             }
