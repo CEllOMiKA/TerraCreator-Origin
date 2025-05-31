@@ -39,6 +39,7 @@
             toolst_exitprog = new ToolStripMenuItem();
             关于ToolStripMenuItem = new ToolStripMenuItem();
             toolst_about = new ToolStripMenuItem();
+            settings = new ToolStripMenuItem();
             toolStrip1 = new ToolStrip();
             fresh = new ToolStripButton();
             save = new ToolStripButton();
@@ -113,7 +114,7 @@
             // 
             // 关于ToolStripMenuItem
             // 
-            关于ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolst_about });
+            关于ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolst_about, settings });
             关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             关于ToolStripMenuItem.Size = new Size(62, 28);
             关于ToolStripMenuItem.Text = "关于";
@@ -121,9 +122,16 @@
             // toolst_about
             // 
             toolst_about.Name = "toolst_about";
-            toolst_about.Size = new Size(146, 34);
+            toolst_about.Size = new Size(270, 34);
             toolst_about.Text = "关于";
             toolst_about.Click += toolst_about_Click;
+            // 
+            // settings
+            // 
+            settings.Name = "settings";
+            settings.Size = new Size(270, 34);
+            settings.Text = "设置";
+            settings.Click += settings_Click;
             // 
             // toolStrip1
             // 
@@ -218,6 +226,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Main";
             Text = "TerraCreator";
+            Load += Main_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             toolStrip1.ResumeLayout(false);
@@ -247,6 +256,7 @@
         private ToolStripButton save;
         private ToolStripButton additem;
         private SplitContainer split;
+        private ToolStripMenuItem settings;
         public static TreeView fileview;
         public static RichTextBox codes;
     }

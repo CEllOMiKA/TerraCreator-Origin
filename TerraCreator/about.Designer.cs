@@ -56,7 +56,7 @@
             label2.Name = "label2";
             label2.Size = new Size(242, 72);
             label2.TabIndex = 1;
-            label2.Text = "v2025.5.2 build 28\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
+            label2.Text = "v2025.5.4\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
             // 
             // label3
             // 
@@ -113,6 +113,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "about";
             Text = "关于";
+            Load += about_Load;
             ((System.ComponentModel.ISupportInitialize)icon).EndInit();
             ResumeLayout(false);
             PerformLayout();

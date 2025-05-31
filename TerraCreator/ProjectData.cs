@@ -8,6 +8,7 @@ namespace TerraCreator
 {
     public class ProjectData
     {
+        
         public static bool ProjectChecked=false;
 
         public static string ProjectPath="";
@@ -19,5 +20,9 @@ namespace TerraCreator
         public static string ProjectBuild = "";
         public static string ProjectLaunchSettings = "";
         public static string ProjectMain = "";
+
+
+
+
     }
 }

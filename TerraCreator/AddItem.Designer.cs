@@ -95,6 +95,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "AddItem";
             Text = "新建项";
+            Load += AddItem_Load;
             ResumeLayout(false);
             PerformLayout();
         }

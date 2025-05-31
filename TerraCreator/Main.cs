@@ -12,6 +12,17 @@ namespace TerraCreator
             InitializeComponent();
         }
 
+        //Main
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+            fileview.BackColor = TerraCreatorData.FormToolColour;
+            codes.BackColor = TerraCreatorData.FormToolColour;
+            this.BackColor = TerraCreatorData.FormBackColour;
+        }
+
+
+
         private void toolst_about_Click(object sender, EventArgs e)
         {
             Form about = new about();
@@ -80,7 +91,10 @@ namespace TerraCreator
             NewItem();
         }
 
-
+        private void settings_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("正在开发...你可以试试打开文件夹下的TerraCreatorData.tcdata文件");
+        }
 
 
 

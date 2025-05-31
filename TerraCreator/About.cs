@@ -31,10 +31,15 @@ namespace TerraCreator
         {
             int r, g, b;
             Random random = new Random();
-            r= random.Next(0, 255);
+            r = random.Next(0, 255);
             g = random.Next(0, 255);
             b = random.Next(0, 255);
             name.ForeColor = Color.FromArgb(r, g, b);
+        }
+
+        private void about_Load(object sender, EventArgs e)
+        {
+            this.BackColor = TerraCreatorData.FormBackColour;
         }
     }
 }

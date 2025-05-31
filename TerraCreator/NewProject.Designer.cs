@@ -142,6 +142,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NewProject";
             Text = "导入项目";
+            Load += NewProject_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -22,7 +22,12 @@ namespace TerraCreator
             InitializeComponent();
         }
 
-
+        private void AddItem_Load(object sender, EventArgs e)
+        {
+            this.BackColor = TerraCreatorData.FormBackColour;
+            itempanel.BackColor = TerraCreatorData.FormToolColour;
+            list.BackColor = TerraCreatorData.FormToolColour;
+        }
 
 
         private void AddItemtoPanel_NewTMLItem()
@@ -61,32 +66,44 @@ namespace TerraCreator
             //namespace
             Label namespacelabel = new Label();
             namespacelabel.Text = "物品定义名";
-            namespacelabel.Location = new Point(r1, y * 2 + d*2);
+            namespacelabel.Location = new Point(r1, y * 2 + d * 2);
             TextBox namespacetextbox = new TextBox();
             namespacetextbox.Width = w1;
             namespacetextbox.Font = new Font("Microsoft YaHei UI", 11);
-            namespacetextbox.Location = new Point(r2, y * 2 + d*2);
+            namespacetextbox.Location = new Point(r2, y * 2 + d * 2);
+
+
+            //ImageShow
+            PictureBox ImageChooseBox = new PictureBox();
+            ImageChooseBox.SizeMode = PictureBoxSizeMode.Zoom;
+            ImageChooseBox.Width = 100;
+            ImageChooseBox.Height = 100;
+            ImageChooseBox.Location = new Point(r2 + 650, y * 1 + d * 1 - 10);
+            ImageChooseBox.Image = null; //默认无图片
+
+
 
             //image
             Label imagelabel = new Label();
             imagelabel.Text = "物品图片";
-            imagelabel.Location = new Point(r1, y * 3 + d*3);
+            imagelabel.Location = new Point(r1, y * 3 + d * 3);
             Button imagechoosebutton = new Button();
             imagechoosebutton.Text = "选择图片";
             imagechoosebutton.Height = h3;
             imagechoosebutton.Width = w3;
-            imagechoosebutton.Location = new Point(r2, y * 3 + d*3);
+            imagechoosebutton.Location = new Point(r2, y * 3 + d * 3);
             OpenFileDialog imagechoosefile = new OpenFileDialog();
 
             Label ImagePath = new Label();
             ImagePath.Text = "";
             ImagePath.Width = 900;
-            ImagePath.Location = new Point(r2+140, y * 3 + d * 3 + 5);
+            ImagePath.Location = new Point(r2 + 140, y * 3 + d * 3 + 5);
 
             string imagePath = "";
 
             imagechoosebutton.Click += new EventHandler(itemimagechoosebutton_click);
-            void itemimagechoosebutton_click(object sender, EventArgs e)
+
+            void itemimagechoosebutton_click(object sender, EventArgs e)  //ClickTheButtonToChooseImage
             {
                 if (string.IsNullOrEmpty(namespacetextbox.Text))
                 {
@@ -98,11 +115,23 @@ namespace TerraCreator
                 DialogResult imagechoosefile_result = imagechoosefile.ShowDialog();
                 if (imagechoosefile_result == DialogResult.OK)
                 {
-                     imagePath = imagechoosefile.FileName;
+                    imagePath = imagechoosefile.FileName;
                     ImagePath.Text = imagePath;
+
+                    //Let ImageChooseBox Show Image
+                    try
+                    {
+                        ImageChooseBox.Image = Image.FromFile(imagePath);
+                    }
+                    catch (Exception ex)
+                    {
+                        //MessageBox.Show($"图片加载失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        ImageChooseBox.Image = null;
+                    }
+
                 }
 
-               
+
             }
 
             //damagetype
@@ -194,7 +223,7 @@ namespace TerraCreator
             saveButton.Click += new EventHandler(saveButton_Click);
             void saveButton_Click(object sender, EventArgs e)
             {
-                WriteCodes();
+
 
                 if (string.IsNullOrEmpty(imagePath))
                 {
@@ -202,14 +231,17 @@ namespace TerraCreator
                     return;
                 }
 
-                //CopyImage
+                WriteCodes();
+
+                //CheckIfWantToWrite
                 DialogResult ConfirmCopy = MessageBox.Show($"图片复制到项目文件夹会覆盖文件" +
                     $"\n文件代码生成也会覆盖文件" +
-                    $"\n文件夹地址:{ProjectData.ProjectPath + "\\Items\\"}", 
-                    "提示", 
-                    MessageBoxButtons.YesNo, 
+                    $"\n文件夹地址:{ProjectData.ProjectPath + "\\Items\\"}",
+                    "提示",
+                    MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question
                     );
+
                 if (ConfirmCopy == DialogResult.Yes)
                 {
 
@@ -221,20 +253,21 @@ namespace TerraCreator
                     {
                         MessageBox.Show($"复制失败: {ex.Message}\n请手动复制图片至文件夹", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    //CopyCodes
+                    string filePath = ProjectData.ProjectPath + "\\Items\\" + namespacetextbox.Text + ".cs";
+                    try
+                    {
+                        System.IO.File.WriteAllText(filePath, codes, Encoding.UTF8);
+                        MessageBox.Show($"代码保存成功\n文件地址:{filePath}", "保存成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"保存失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
 
-                //CopyCodes
-                string filePath = ProjectData.ProjectPath+"\\Items\\"+ namespacetextbox.Text + ".cs";
-                try
-                {
-                    System.IO.File.WriteAllText(filePath, codes, Encoding.UTF8);
-                    MessageBox.Show($"代码保存成功\n文件地址:{filePath}", "保存成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"保存失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
             }
 
 
@@ -292,6 +325,7 @@ namespace TerraCreator
             itempanel.Controls.Add(maxStackNumeric);
             itempanel.Controls.Add(codespreviewlabel);
             itempanel.Controls.Add(saveButton);
+            itempanel.Controls.Add(ImageChooseBox);
         }
 
 
@@ -314,7 +348,7 @@ namespace TerraCreator
             int r1 = 16;//right
             int r2 = 132;//mid
 
-           
+
 
             //title
             Label title = new Label();
@@ -342,22 +376,22 @@ namespace TerraCreator
             SavePathChooseButton.Height = h3;
             SavePathChooseButton.Width = w3;
             SavePathChooseButton.Location = new Point(r2, y * 2 + d * 2);
-            FolderBrowserDialog SavePathChooseDialog= new FolderBrowserDialog();
+            FolderBrowserDialog SavePathChooseDialog = new FolderBrowserDialog();
             Label SavePath = new Label();
             SavePath.Text = "";
             SavePath.Width = 900;
             SavePath.Location = new Point(r2 + 140, y * 2 + d * 2 + 5);
             string SelectPath = "";
             SavePathChooseButton.Click += new EventHandler(SavePathChooseDialog_click);
-            
+
             void SavePathChooseDialog_click(object sender, EventArgs e)
             {
-                
+
                 DialogResult SavePathChooseDialog_result = SavePathChooseDialog.ShowDialog();
 
                 if (SavePathChooseDialog_result == DialogResult.OK)
                 {
-                    
+
                     SelectPath = SavePathChooseDialog.SelectedPath;
                     SavePath.Text = SelectPath;
                 }
@@ -380,7 +414,7 @@ namespace TerraCreator
                 //CopyCodes
                 try
                 {
-                    System.IO.File.WriteAllText(SelectPath+"\\"+nametextbox.Text, "", Encoding.UTF8);
+                    System.IO.File.WriteAllText(SelectPath + "\\" + nametextbox.Text, "", Encoding.UTF8);
                     MessageBox.Show($"文件创建成功\n文件地址:{SelectPath + "\\" + nametextbox.Text}", "创建成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)

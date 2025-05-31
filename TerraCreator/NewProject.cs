@@ -16,7 +16,7 @@ namespace TerraCreator
 {
     public partial class NewProject : Form
     {
-        string ProjectFolderPath="";
+        string ProjectFolderPath = "";
         public NewProject()
         {
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace TerraCreator
         {
             if (ProjectData.ProjectChecked)
             {
-                MessageBox.Show("重导入需重新启动程序\n还有你是怎么做到打开了项目还能打开这个的","提示",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                MessageBox.Show("重导入需重新启动程序\n还有你是怎么做到打开了项目还能打开这个的", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             }
             else
             {
@@ -113,6 +113,11 @@ namespace TerraCreator
                 }
             }
 
+        }
+
+        private void NewProject_Load(object sender, EventArgs e)
+        {
+            this.BackColor = TerraCreatorData.FormBackColour;
         }
     }
 }
