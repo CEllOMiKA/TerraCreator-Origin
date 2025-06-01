@@ -35,7 +35,7 @@ namespace TerraCreator
             int y = 40; //distance
             int d = 2; //distance down
 
-            int w1 = 600; //main
+            int w1 = 800; //main
             int w2 = 500; //other
             int w3 = 120; //button
 
@@ -78,7 +78,7 @@ namespace TerraCreator
             ImageChooseBox.SizeMode = PictureBoxSizeMode.Zoom;
             ImageChooseBox.Width = 100;
             ImageChooseBox.Height = 100;
-            ImageChooseBox.Location = new Point(r2 + 650, y * 1 + d * 1 - 10);
+            ImageChooseBox.Location = new Point(r2 + 850, y * 1 + d * 1 - 10);
             ImageChooseBox.Image = null; //默认无图片
 
 
@@ -151,51 +151,85 @@ namespace TerraCreator
             damagetypecombobox.Font = new Font("Microsoft YaHei UI", 11);
             damagetypecombobox.Location = new Point(r2, y * 4 + d * 4);
 
+            //UseStyle
+            Label UseStyleLabel = new Label();
+            UseStyleLabel.Text = "使用方式";
+            UseStyleLabel.Location = new Point(r1, y * 5 + d * 5);
+            ComboBox UseStyleComboBox = new ComboBox();
+            UseStyleComboBox.Font = new Font("Microsoft YaHei UI", 11);
+            UseStyleComboBox.Items.Add("/*剑类挥舞*/ItemUseStyleID.Swing");
+            UseStyleComboBox.Items.Add("/*短剑刺击(无动画)*/ItemUseStyleID.Thrust");
+            UseStyleComboBox.Items.Add("/*举起(类似生命水晶)*/ItemUseStyleID.HoldUp");
+            UseStyleComboBox.Items.Add("/*射击(枪,法杖,弓)*/ItemUseStyleID.Shoot");
+            UseStyleComboBox.Items.Add("/*猛喝(!?)*/ItemUseStyleID.DrinkLong");
+            UseStyleComboBox.Items.Add("/*食物服用*/ItemUseStyleID.EatFood");
+            UseStyleComboBox.Items.Add("/*喝药水(旧版)*/ItemUseStyleID.DrinkOld");
+            UseStyleComboBox.Items.Add("/*喝药水(新版)*/ItemUseStyleID.DrinkLiquid");
+            UseStyleComboBox.Items.Add("/*高尔夫杆动作*/ItemUseStyleID.GolfPlay");
+            UseStyleComboBox.Items.Add("/*割草机动作*/ItemUseStyleID.MowTheLawn");
+            UseStyleComboBox.Items.Add("/*弹吉他*/ItemUseStyleID.Guitar");
+            UseStyleComboBox.Items.Add("/*类似标尺,星光等动作*/ItemUseStyleID.Rapier");
+            UseStyleComboBox.Items.Add("/*类似夜光等动作*/ItemUseStyleID.RaiseLamp");
+            UseStyleComboBox.Items.Add("/*隐藏动作*/ItemUseStyleID.HiddenAnimation");
+            UseStyleComboBox.Items.Add("/*无挥动效果*/ItemUseStyleID.None");
+            UseStyleComboBox.Width = 500;
+            UseStyleComboBox.Font = new Font("Microsoft YaHei UI", 11);
+            UseStyleComboBox.Location = new Point(r2, y * 5 + d * 5);
+
             //damage
             Label damagelabel = new Label();
             damagelabel.Text = "物品伤害";
-            damagelabel.Location = new Point(r1, y * 5 + d * 5);
+            damagelabel.Location = new Point(r1, y * 6 + d * 6);
             NumericUpDown damagetextbox = new NumericUpDown();
             damagetextbox.Maximum = 10000000;
             damagetextbox.Minimum = 0;
             damagetextbox.Width = w2;
             damagetextbox.Font = new Font("Microsoft YaHei UI", 11);
-            damagetextbox.Location = new Point(r2, y * 5 + d * 5);
+            damagetextbox.Location = new Point(r2, y * 6 + d * 6);
 
             //knockback
             Label knockbacklabel = new Label();
             knockbacklabel.Text = "物品击退";
-            knockbacklabel.Location = new Point(r1, y * 6 + d * 6);
+            knockbacklabel.Location = new Point(r1, y * 7 + d * 7);
             NumericUpDown knockbacktextbox = new NumericUpDown();
             knockbacktextbox.Maximum = 1000;
             knockbacktextbox.Minimum = 0;
             knockbacktextbox.Width = w2;
             knockbacktextbox.Font = new Font("Microsoft YaHei UI", 11);
-            knockbacktextbox.Location = new Point(r2, y * 6 + d * 6);
+            knockbacktextbox.Location = new Point(r2, y * 7 + d * 7);
 
             // usetime
             Label useTimeLabel = new Label();
             useTimeLabel.Text = "使用时间";
-            useTimeLabel.Location = new Point(r1, y * 7 + d * 7);
+            useTimeLabel.Location = new Point(r1, y * 8 + d * 8);
             NumericUpDown useTimeNumeric = new NumericUpDown();
             useTimeNumeric.Maximum = 1000;
             useTimeNumeric.Minimum = 1;
             useTimeNumeric.Width = w2;
             useTimeNumeric.Font = new Font("Microsoft YaHei UI", 11);
-            useTimeNumeric.Location = new Point(r2, y * 7 + d * 7);
+            useTimeNumeric.Location = new Point(r2, y * 8 + d * 8);
 
             // max stack
             Label maxStackLabel = new Label();
             maxStackLabel.Text = "最大堆叠";
-            maxStackLabel.Location = new Point(r1, y * 8 + d * 8);
+            maxStackLabel.Location = new Point(r1, y * 9 + d * 9);
             NumericUpDown maxStackNumeric = new NumericUpDown();
             maxStackNumeric.Maximum = 9999;
             maxStackNumeric.Minimum = 1;
             maxStackNumeric.Width = w2;
             maxStackNumeric.Font = new Font("Microsoft YaHei UI", 11);
-            maxStackNumeric.Location = new Point(r2, y * 8 + d * 8);
+            maxStackNumeric.Location = new Point(r2, y * 9 + d * 9);
 
-
+            //Item Value
+            Label ItemValueLabel = new Label();
+            ItemValueLabel.Text = "物品价值";
+            ItemValueLabel.Location = new Point(r1, y * 10 + d * 10);
+            NumericUpDown ItemValueNumeric = new NumericUpDown();//not support buyprice() sellprice() now,maybe later
+            ItemValueNumeric.Maximum = 1000000;
+            ItemValueNumeric.Minimum = 0;
+            ItemValueNumeric.Width = w2;
+            ItemValueNumeric.Font = new Font("Microsoft YaHei UI", 11);
+            ItemValueNumeric.Location = new Point(r2, y * 10 + d * 10);
 
 
             //codespreview
@@ -203,7 +237,7 @@ namespace TerraCreator
             codespreviewlabel.Text = "代码预览";
             codespreviewlabel.Height = h3;
             codespreviewlabel.Width = w3;
-            codespreviewlabel.Location = new Point(r1, y * 10 + d * 10);
+            codespreviewlabel.Location = new Point(r1, y * 12 + d * 12);
             codespreviewlabel.Click += new EventHandler(itemcodespreviewlabel_click);
 
             void itemcodespreviewlabel_click(object sender, EventArgs e)
@@ -219,7 +253,7 @@ namespace TerraCreator
             saveButton.Text = "保存代码";
             saveButton.Height = h3;
             saveButton.Width = w3;
-            saveButton.Location = new Point(r1, y * 11 + d * 11);
+            saveButton.Location = new Point(r1, y * 13 + d * 13);
             saveButton.Click += new EventHandler(saveButton_Click);
             void saveButton_Click(object sender, EventArgs e)
             {
@@ -293,10 +327,12 @@ namespace TerraCreator
                     "          public override void SetDefaults()" + Environment.NewLine +
                     "          {" + Environment.NewLine +
                   $"               Item.DamageType = {damagetypecombobox.Text};" + Environment.NewLine +
-                  $"               Item.damage = {damagetextbox.Value};" + Environment.NewLine +
+                  $"               Item.Damage = {damagetextbox.Value};" + Environment.NewLine +
+                  $"               Item.useStyle = {UseStyleComboBox.Text};" + Environment.NewLine +
                   $"               Item.knockBack = {knockbacktextbox.Value};" + Environment.NewLine +
                   $"               Item.useTime = {useTimeNumeric.Value};" + Environment.NewLine +
                   $"               Item.maxStack = {maxStackNumeric.Value};" + Environment.NewLine +
+                  $"               Item.value = Item.buyPrice(gold: {ItemValueNumeric.Value / 10000});" + Environment.NewLine +
                     "          }" + Environment.NewLine +
                     "    }" + Environment.NewLine +
                     "}";
@@ -328,6 +364,11 @@ namespace TerraCreator
             itempanel.Controls.Add(codespreviewlabel);
             itempanel.Controls.Add(saveButton);
             itempanel.Controls.Add(ImageChooseBox);
+            itempanel.Controls.Add(UseStyleLabel);
+            itempanel.Controls.Add(UseStyleComboBox);
+            itempanel.Controls.Add(ItemValueLabel);
+            itempanel.Controls.Add(ItemValueNumeric);
+
         }
 
 

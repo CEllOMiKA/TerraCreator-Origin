@@ -9,7 +9,18 @@ namespace TerraCreator
         static void Main()
         {
 
-            //ReadDataFile
+            //Set Application
+
+
+
+            Console.WriteLine("Loading TerraCreator...");
+            Console.WriteLine("Loading TerraCreator Data...");
+
+
+
+
+
+            //CreateDataFile
             string DataFilePath = "TerraCreatorData.tcdata";
             
             if (!File.Exists(DataFilePath))
@@ -29,6 +40,11 @@ namespace TerraCreator
             }
 
 
+
+
+
+
+            //ReadDataFile
             int DataLineCount = File.ReadLines(DataFilePath).Count();
             String[] Data = new string[DataLineCount];
             for (int i = 0; i <= DataLineCount-1; i++)
@@ -51,6 +67,8 @@ namespace TerraCreator
 
 
 
+            Console.WriteLine("Starting TerraCreator...");
+
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
@@ -58,7 +76,7 @@ namespace TerraCreator
 
             //Read Data File
 
-
+            
 
         }
     }
