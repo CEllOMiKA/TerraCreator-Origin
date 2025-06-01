@@ -1,17 +1,25 @@
-# TerraCreatorGitHub
+# TerraCreator-Public
+#### Alpha Edition
 
 一个泰拉瑞亚tModLoader模组制作器
 
-致力于用简单的图形化界面简化代码编程
+不同于Darthsae和FunCrafter1234的tCreator
 
+TerraCreator使用Windows Form老牌框架(old但稳定)
 
-使用说明:
+基于.NET8.0(与tModLoader一致)
 
-保证你电脑安装了.NET 8.0
+### 系统要求:
 
-且电脑版本在Windows7及以上
+Windows7 SP1及以上
 
-注意:
+.NET 8.0  (下载地址:https://dotnet.microsoft.com/)
+
+### 贡献者:
+
+CEllOMiKA (cmcello@outlook.com)
+
+### 注意:
 
 TerraCreator处于开发阶段
 
