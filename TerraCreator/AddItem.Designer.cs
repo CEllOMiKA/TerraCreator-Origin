@@ -32,7 +32,9 @@
             ListViewGroup listViewGroup2 = new ListViewGroup("其他", HorizontalAlignment.Left);
             ListViewItem listViewItem1 = new ListViewItem("物品");
             ListViewItem listViewItem2 = new ListViewItem("射弹");
-            ListViewItem listViewItem3 = new ListViewItem("文本代码文件");
+            ListViewItem listViewItem3 = new ListViewItem("物块");
+            ListViewItem listViewItem4 = new ListViewItem("文本文件");
+            ListViewItem listViewItem5 = new ListViewItem("PNG图片");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddItem));
             list = new ListView();
             itempanel = new Panel();
@@ -54,9 +56,13 @@
             listViewItem2.Group = listViewGroup1;
             listViewItem2.Tag = "projectile";
             listViewItem2.ToolTipText = "添加射弹(Projectile)";
-            listViewItem3.Group = listViewGroup2;
-            listViewItem3.ToolTipText = "新建文件";
-            list.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3 });
+            listViewItem3.Group = listViewGroup1;
+            listViewItem3.ToolTipText = "添加物块(Tile)";
+            listViewItem4.Group = listViewGroup2;
+            listViewItem4.ToolTipText = "新建文件";
+            listViewItem5.Group = listViewGroup2;
+            listViewItem5.ToolTipText = "新建PNG材质";
+            list.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5 });
             list.Location = new Point(12, 43);
             list.Name = "list";
             list.Size = new Size(253, 612);
@@ -71,7 +77,7 @@
             itempanel.BackColor = Color.FromArgb(192, 255, 255);
             itempanel.Location = new Point(271, 43);
             itempanel.Name = "itempanel";
-            itempanel.Size = new Size(1125, 612);
+            itempanel.Size = new Size(1196, 786);
             itempanel.TabIndex = 3;
             // 
             // newitemlabel
@@ -98,7 +104,7 @@
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(1408, 667);
+            ClientSize = new Size(1479, 841);
             Controls.Add(tips);
             Controls.Add(newitemlabel);
             Controls.Add(itempanel);

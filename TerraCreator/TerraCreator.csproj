@@ -7,6 +7,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Version>2025.6.1.0</Version>
+    <Authors>CEllOMiKA</Authors>
+    <Copyright>GPL v3</Copyright>
   </PropertyGroup>
 
   <ItemGroup>

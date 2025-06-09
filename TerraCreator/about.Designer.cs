@@ -31,23 +31,24 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(about));
             name = new Label();
             label2 = new Label();
-            label3 = new Label();
             notice = new Label();
             ok = new Button();
             icon = new PictureBox();
+            milestone = new Label();
             ((System.ComponentModel.ISupportInitialize)icon).BeginInit();
             SuspendLayout();
             // 
             // name
             // 
+            name.Anchor = AnchorStyles.Top;
             name.AutoSize = true;
-            name.Font = new Font("Microsoft YaHei UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            name.Location = new Point(12, 9);
+            name.Font = new Font("Yu Gothic UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            name.Location = new Point(41, 9);
             name.Name = "name";
-            name.Size = new Size(502, 96);
+            name.Size = new Size(446, 96);
             name.TabIndex = 0;
             name.Text = "TerraCreator";
-            name.Click += name_Click;
+            name.MouseEnter += name_MouseEnter;
             // 
             // label2
             // 
@@ -56,22 +57,12 @@
             label2.Name = "label2";
             label2.Size = new Size(242, 72);
             label2.TabIndex = 1;
-            label2.Text = "v2025.6\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            label3.Location = new Point(413, 86);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 31);
-            label3.TabIndex = 2;
-            label3.Text = "Alpha";
+            label2.Text = "v2025.6.1\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
             // 
             // notice
             // 
             notice.AutoSize = true;
-            notice.Location = new Point(35, 212);
+            notice.Location = new Point(35, 210);
             notice.Name = "notice";
             notice.Size = new Size(410, 168);
             notice.TabIndex = 8;
@@ -79,6 +70,7 @@
             // 
             // ok
             // 
+            ok.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             ok.Location = new Point(402, 344);
             ok.Name = "ok";
             ok.Size = new Size(112, 34);
@@ -89,6 +81,7 @@
             // 
             // icon
             // 
+            icon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             icon.Image = Properties.Resources.icon;
             icon.Location = new Point(423, 133);
             icon.Name = "icon";
@@ -98,16 +91,28 @@
             icon.TabStop = false;
             icon.Click += icon_Click;
             // 
+            // milestone
+            // 
+            milestone.Anchor = AnchorStyles.Top;
+            milestone.AutoSize = true;
+            milestone.BackColor = Color.Transparent;
+            milestone.Font = new Font("Letter Gothic Std", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            milestone.Location = new Point(172, 95);
+            milestone.Name = "milestone";
+            milestone.Size = new Size(181, 30);
+            milestone.TabIndex = 11;
+            milestone.Text = "Milestone #1\r\n";
+            // 
             // about
             // 
             AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
             ClientSize = new Size(525, 390);
+            Controls.Add(milestone);
             Controls.Add(icon);
             Controls.Add(ok);
             Controls.Add(notice);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(name);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -123,9 +128,9 @@
 
         private Label name;
         private Label label2;
-        private Label label3;
         private Label notice;
         private Button ok;
         private PictureBox icon;
+        private Label milestone;
     }
 }

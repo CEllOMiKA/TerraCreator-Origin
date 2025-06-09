@@ -231,6 +231,23 @@ namespace TerraCreator
             ItemValueNumeric.Font = new Font("Microsoft YaHei UI", 11);
             ItemValueNumeric.Location = new Point(r2, y * 10 + d * 10);
 
+            //Shoot
+
+            //Label ItemShootLabel = new Label();
+            //ItemShootLabel.Text = "发射射弹";
+            //ItemShootLabel.Location = new Point(r1, y * 11 + d * 11);
+            //ComboBox ItemShootComboBox = new ComboBox();
+            //ItemShootComboBox.Font = new Font("Microsoft YaHei UI", 11);
+            //ItemShootComboBox.Items.Add("/*泰拉光束*/ItemShoot.TerraBeam");
+            
+            //wip
+
+            //ShootSpeed
+            //Axe
+            //Pick
+            //Hammer
+            //...
+
 
             //codespreview
             Button codespreviewlabel = new Button();
@@ -479,6 +496,64 @@ namespace TerraCreator
 
 
 
+
+        void AddItemtoPanel_NewTMLProjectile()
+        {
+            int y = 40; //distance
+            int d = 2; //distance down
+
+            int w1 = 800; //main
+            int w2 = 500; //other
+            int w3 = 120; //button
+
+            int h3 = y - 5; //button
+            int h4 = 145; //richbox
+
+            int r1 = 16;//right
+            int r2 = 132;//mid
+
+            string codes = "";
+
+            //title
+            Label title = new Label();
+            title.Text = "射弹";
+            title.Height = 35;
+            title.Location = new Point(2, y * 0);
+            title.Font = new Font("Microsoft YaHei UI", 12);
+
+            //name
+            Label namelabel = new Label();
+            namelabel.Text = "射弹名称";
+            namelabel.Location = new Point(r1, y + 2);
+            TextBox nametextbox = new TextBox();
+            nametextbox.Width = w1;
+            nametextbox.Font = new Font("Microsoft YaHei UI", 11);
+            nametextbox.Location = new Point(r2, y + 2);
+
+            //namespace
+            Label namespacelabel = new Label();
+            namespacelabel.Text = "射弹定义名";
+            namespacelabel.Location = new Point(r1, y * 2 + d * 2);
+            TextBox namespacetextbox = new TextBox();
+            namespacetextbox.Width = w1;
+            namespacetextbox.Font = new Font("Microsoft YaHei UI", 11);
+            namespacetextbox.Location = new Point(r2, y * 2 + d * 2);
+
+
+            itempanel.Controls.Add(title);
+            itempanel.Controls.Add(namespacelabel);
+            itempanel.Controls.Add(namespacetextbox);
+            itempanel.Controls.Add(namelabel);
+            itempanel.Controls.Add(nametextbox);
+            
+
+        }
+
+
+
+
+
+
         private void list_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -490,6 +565,7 @@ namespace TerraCreator
             if (this.list.Groups[0].Items[1].Selected)
             {
                 itempanel.Controls.Clear();
+                AddItemtoPanel_NewTMLProjectile();
             }
             if (this.list.Groups[1].Items[0].Selected)
             {

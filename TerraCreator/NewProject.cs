@@ -101,7 +101,7 @@ namespace TerraCreator
                         Main.fileview.ExpandAll();
                         Main.codes.Text = "";
 
-                        MessageBox.Show("已完成导入");
+                        MessageBox.Show("已完成导入","完成",MessageBoxButtons.OK,MessageBoxIcon.Information);
                         this.Close();
                     }
 

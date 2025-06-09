@@ -39,8 +39,12 @@ namespace TerraCreator
                 File.WriteAllText(DataFilePath, DataSimpletext);
             }
 
-
-
+            //CreateAddonFolder
+            string FolderPath = "Addons";
+            if (!Directory.Exists(FolderPath))
+            {
+                Directory.CreateDirectory(FolderPath);
+            }
 
 
 

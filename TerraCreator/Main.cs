@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TerraCreator;
 
@@ -15,8 +16,6 @@ namespace TerraCreator
         //Main
         private void Main_Load(object sender, EventArgs e)
         {
-
-
             fileview.BackColor = TerraCreatorData.FormToolColour;
             codes.BackColor = TerraCreatorData.FormToolColour;
             this.BackColor = TerraCreatorData.FormBackColour;
@@ -32,12 +31,12 @@ namespace TerraCreator
 
         private void toolst_exitprog_Click(object sender, EventArgs e)
         {
-            DialogResult ConfirmExit = MessageBox.Show("是否退出TerraCreator","退出",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
+            DialogResult ConfirmExit = MessageBox.Show("是否退出TerraCreator", "退出", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (ConfirmExit == DialogResult.OK)
             {
                 this.Close();
             }
-            
+
         }
 
         private void toolst_newitem_Click(object sender, EventArgs e)
@@ -152,66 +151,30 @@ namespace TerraCreator
             {
                 try
                 {
-                    codes.Text = File.ReadAllText(fileInfo.FullName);
+                    Regex checkPNG = new Regex("^.*\\.(jpg|jpeg|png|gif|bmp|tiff)$");
+                    Match matchPNG = checkPNG.Match(fileInfo.FullName);
+                    if (matchPNG.Success)
+                    {
+                        codes.Visible = false;
+                        ImageBox.Visible = true;
+                        codes.Text = "";
+                        ImageBox.Image = Image.FromFile(fileInfo.FullName);
+                    }
+                    else
+                    {
+                        codes.Visible = true;
+                        ImageBox.Visible = false;
+                        ImageBox.Image = null;
+                        codes.Text = File.ReadAllText(fileInfo.FullName);
+                    }
+
                 }
                 catch (Exception ex)
                 {
-                    codes.Text = $"无法读取文件: {ex.Message}";
+                    MessageBox.Show($"无法读取文件: \n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
-
-
-
-
-
-        void SaveFile()
-        {
-            if (ProjectData.ProjectChecked)
-            {
-                if (codes.Text == "")
-                {
-                    MessageBox.Show("你还没有打开文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                if (fileview.SelectedNode != null && fileview.SelectedNode.Tag is FileInfo fileInfo)
-                {
-                    try
-                    {
-                        File.WriteAllText(fileInfo.FullName, codes.Text);
-                        MessageBox.Show("文件已保存", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show($"保存文件失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("请选择要保存的文件", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-
-            else
-            {
-                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        void NewItem()
-        {
-            if (ProjectData.ProjectChecked)
-            {
-                Form additem = new AddItem();
-                additem.Show();
-            }
-            else
-            {
-                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
 
         private void toolst_additemintoproj_Click(object sender, EventArgs e)
         {
@@ -275,13 +238,250 @@ namespace TerraCreator
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"复制失败: {ex.Message}\n请手动导入", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"复制失败:\n {ex.Message}\n请手动导入", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
 
         }
 
-        
+        private void addon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("制作中...", "提示");
+        }
+
+
+        private void toolst_SaveAs_Click(object sender, EventArgs e)
+        {
+            SaveAsFile();
+
+        }
+
+
+        private void RuntML_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                System.Diagnostics.Process.Start("explorer","steam://rungameid/1281930");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"无法打开\n请确保你安装了Steam和tModLoader\n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        void SaveFile()
+        {
+            if (ProjectData.ProjectChecked)
+            {
+                if (codes.Text == "")
+                {
+                    MessageBox.Show("你还没有打开文本文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (fileview.SelectedNode != null && fileview.SelectedNode.Tag is FileInfo fileInfo)
+                {
+
+                    if (!File.Exists(fileInfo.FullName))
+                    {
+                        //MessageBox.Show("没有这个文件\n请点击另存为", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        // Save As
+                        SaveAsFile();
+                        return;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            File.WriteAllText(fileInfo.FullName, codes.Text);
+                            MessageBox.Show("文件已保存", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"保存文件失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("请选择要保存的文件", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+
+            else
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+        void NewItem()
+        {
+            if (ProjectData.ProjectChecked)
+            {
+                Form additem = new AddItem();
+                additem.Show();
+            }
+            else
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+
+
+        void SaveAsFile()
+        {
+            if (ProjectData.ProjectChecked)
+            {
+
+                if (codes.Text == "")
+                {
+                    MessageBox.Show("你还没有打开文本文件", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (fileview.SelectedNode != null && fileview.SelectedNode.Tag is FileInfo fileInfo)
+                {
+
+                    //SaveAs
+                    SaveFileDialog ChooseSaveAsPath = new SaveFileDialog();
+                    ChooseSaveAsPath.Filter = ChooseSaveAsPath.Filter = "文本文件|*.txt|C#代码文件|*.cs|所有文件|*.*";
+                    ChooseSaveAsPath.RestoreDirectory = true;
+                    ChooseSaveAsPath.FilterIndex = 2;
+                    ChooseSaveAsPath.Title = "另存为文件";
+
+                    //ifPressOK
+                    if (ChooseSaveAsPath.ShowDialog() == DialogResult.OK)
+                    {
+                        try
+                        {
+                            string filePath = ChooseSaveAsPath.FileName;
+                            File.WriteAllText(filePath, codes.Text);
+                            MessageBox.Show("文件另存为成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // reflash fileview
+                            fileview.Nodes.Clear();
+                            LoadFileTreeView(ProjectData.ProjectPath);
+                            fileview.ExpandAll();
+
+                            // 选中新保存的文件
+                            SelectFileNode(fileview, filePath);
+
+                            // 递归查找并选中指定文件路径的节点
+                            void SelectFileNode(TreeView treeView, string filePath)
+                            {
+                                foreach (TreeNode node in treeView.Nodes)
+                                {
+                                    if (SelectFileNodeRecursive(node, filePath))
+                                        break;
+                                }
+                            }
+
+                            bool SelectFileNodeRecursive(TreeNode node, string filePath)
+                            {
+                                if (node.Tag is FileInfo fileInfo &&
+                                    string.Equals(fileInfo.FullName, filePath, StringComparison.OrdinalIgnoreCase))
+                                {
+                                    node.TreeView.SelectedNode = node;
+                                    node.TreeView.Focus();
+                                    return true;
+                                }
+                                foreach (TreeNode child in node.Nodes)
+                                {
+                                    if (SelectFileNodeRecursive(child, filePath))
+                                        return true;
+                                }
+                                return false;
+                            }
+
+
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"无法另存为:\n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("请选择要另存为的文件", "提示", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+
+
+
     }
+
+
+
 }
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

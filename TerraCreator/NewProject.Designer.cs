@@ -32,7 +32,6 @@
             newprojlabel = new Label();
             tmlyouneed = new Label();
             clickto = new LinkLabel();
-            openfoldertext = new Label();
             choosefolder = new Button();
             folderpositiontext = new Label();
             create = new Button();
@@ -42,106 +41,64 @@
             // 
             // newprojlabel
             // 
-            newprojlabel.AutoSize = true;
-            newprojlabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            newprojlabel.Location = new Point(12, 9);
+            resources.ApplyResources(newprojlabel, "newprojlabel");
             newprojlabel.Name = "newprojlabel";
-            newprojlabel.Size = new Size(110, 31);
-            newprojlabel.TabIndex = 0;
-            newprojlabel.Text = "导入项目";
             // 
             // tmlyouneed
             // 
-            tmlyouneed.AutoSize = true;
-            tmlyouneed.Location = new Point(12, 54);
+            resources.ApplyResources(tmlyouneed, "tmlyouneed");
             tmlyouneed.Name = "tmlyouneed";
-            tmlyouneed.Size = new Size(279, 48);
-            tmlyouneed.TabIndex = 1;
-            tmlyouneed.Text = "你需要在tModLoader中创建项目\r\n什么?你不会?\r\n";
             // 
             // clickto
             // 
-            clickto.AutoSize = true;
-            clickto.Location = new Point(12, 102);
+            resources.ApplyResources(clickto, "clickto");
             clickto.Name = "clickto";
-            clickto.Size = new Size(118, 24);
-            clickto.TabIndex = 2;
             clickto.TabStop = true;
-            clickto.Text = "点我查看教程";
             clickto.LinkClicked += clickto_LinkClicked;
-            // 
-            // openfoldertext
-            // 
-            openfoldertext.AutoSize = true;
-            openfoldertext.Location = new Point(12, 126);
-            openfoldertext.Name = "openfoldertext";
-            openfoldertext.Size = new Size(172, 48);
-            openfoldertext.TabIndex = 3;
-            openfoldertext.Text = "你已经创建好了?\r\n选择代码所在文件夹";
             // 
             // choosefolder
             // 
-            choosefolder.Location = new Point(12, 177);
+            resources.ApplyResources(choosefolder, "choosefolder");
             choosefolder.Name = "choosefolder";
-            choosefolder.Size = new Size(110, 32);
-            choosefolder.TabIndex = 4;
-            choosefolder.Text = "选择";
             choosefolder.UseVisualStyleBackColor = true;
             choosefolder.Click += choosefolder_Click;
             // 
             // folderpositiontext
             // 
-            folderpositiontext.AutoSize = true;
-            folderpositiontext.Location = new Point(12, 212);
+            resources.ApplyResources(folderpositiontext, "folderpositiontext");
             folderpositiontext.Name = "folderpositiontext";
-            folderpositiontext.Size = new Size(176, 24);
-            folderpositiontext.TabIndex = 5;
-            folderpositiontext.Text = "你选择的文件夹地址:";
             // 
             // create
             // 
-            create.Location = new Point(12, 266);
+            resources.ApplyResources(create, "create");
             create.Name = "create";
-            create.Size = new Size(110, 34);
-            create.TabIndex = 8;
-            create.Text = "导入并开始";
             create.UseVisualStyleBackColor = true;
             create.Click += create_Click;
             // 
             // typenamespace
             // 
-            typenamespace.AutoSize = true;
-            typenamespace.Location = new Point(12, 239);
+            resources.ApplyResources(typenamespace, "typenamespace");
             typenamespace.Name = "typenamespace";
-            typenamespace.Size = new Size(158, 24);
-            typenamespace.TabIndex = 9;
-            typenamespace.Text = "输入模组内部名称:";
             // 
             // ProjectNameSpaceTextBox
             // 
-            ProjectNameSpaceTextBox.Location = new Point(176, 236);
+            resources.ApplyResources(ProjectNameSpaceTextBox, "ProjectNameSpaceTextBox");
             ProjectNameSpaceTextBox.Name = "ProjectNameSpaceTextBox";
-            ProjectNameSpaceTextBox.Size = new Size(346, 30);
-            ProjectNameSpaceTextBox.TabIndex = 10;
             // 
             // NewProject
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(553, 314);
             Controls.Add(ProjectNameSpaceTextBox);
             Controls.Add(typenamespace);
             Controls.Add(create);
             Controls.Add(folderpositiontext);
             Controls.Add(choosefolder);
-            Controls.Add(openfoldertext);
             Controls.Add(clickto);
             Controls.Add(tmlyouneed);
             Controls.Add(newprojlabel);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "NewProject";
-            Text = "导入项目";
             Load += NewProject_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -152,7 +109,6 @@
         private Label newprojlabel;
         private Label tmlyouneed;
         private LinkLabel clickto;
-        private Label openfoldertext;
         private Button choosefolder;
         private Label folderpositiontext;
         private Button create;
