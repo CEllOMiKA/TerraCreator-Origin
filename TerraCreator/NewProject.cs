@@ -100,8 +100,9 @@ namespace TerraCreator
                         Main.LoadFileTreeView(ProjectData.ProjectPath);
                         Main.fileview.ExpandAll();
                         Main.codes.Text = "";
+                        Main.ProjectName.Text = ProjectData.ProjectNamespace;
 
-                        MessageBox.Show("已完成导入","完成",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("已完成导入", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
                     }
 
@@ -109,7 +110,7 @@ namespace TerraCreator
                 }
                 else
                 {
-                    MessageBox.Show("你是来搞笑的", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("输入模组内部名称", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -119,5 +120,15 @@ namespace TerraCreator
         {
             this.BackColor = TerraCreatorData.FormBackColour;
         }
+
+        private void ProjectNameSpaceTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                create_Click(sender, e);
+            }
+
+        }
+
     }
 }

@@ -1,6 +1,7 @@
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TerraCreator;
+using System.IO;
 
 namespace TerraCreator
 {
@@ -19,6 +20,7 @@ namespace TerraCreator
             fileview.BackColor = TerraCreatorData.FormToolColour;
             codes.BackColor = TerraCreatorData.FormToolColour;
             this.BackColor = TerraCreatorData.FormBackColour;
+
         }
 
 
@@ -70,6 +72,8 @@ namespace TerraCreator
         {
 
             codes.LanguageOption = RichTextBoxLanguageOptions.UIFonts;
+
+            CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
 
         }
 
@@ -158,6 +162,8 @@ namespace TerraCreator
                         codes.Visible = false;
                         ImageBox.Visible = true;
                         codes.Text = "";
+                        FilePropt.Text = fileInfo.Name;
+                        CodeCount.Text = "字数:0";
                         ImageBox.Image = Image.FromFile(fileInfo.FullName);
                     }
                     else
@@ -165,8 +171,10 @@ namespace TerraCreator
                         codes.Visible = true;
                         ImageBox.Visible = false;
                         ImageBox.Image = null;
+                        FilePropt.Text = fileInfo.Name;
                         codes.Text = File.ReadAllText(fileInfo.FullName);
-                    }
+                        CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
+;                    }
 
                 }
                 catch (Exception ex)
@@ -262,7 +270,7 @@ namespace TerraCreator
         {
             try
             {
-                System.Diagnostics.Process.Start("explorer","steam://rungameid/1281930");
+                System.Diagnostics.Process.Start("explorer", "steam://rungameid/1281930");
             }
             catch (Exception ex)
             {
@@ -271,6 +279,18 @@ namespace TerraCreator
         }
 
 
+        private void OpenCsproj_Click(object sender, EventArgs e)
+        {
+            if (ProjectData.ProjectChecked)
+            {
+                MessageBox.Show(ProjectData.ProjectPath + "\\"+ProjectData.ProjectNamespace + ".csproj");
+                System.Diagnostics.Process.Start("explorer", ProjectData.ProjectPath + "\\"+ProjectData.ProjectNamespace + ".csproj");
+            }
+            else
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
 
 
 
@@ -457,8 +477,6 @@ namespace TerraCreator
             }
 
         }
-
-
 
 
     }

@@ -43,9 +43,10 @@
             name.Anchor = AnchorStyles.Top;
             name.AutoSize = true;
             name.Font = new Font("Yu Gothic UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            name.Location = new Point(41, 9);
+            name.Location = new Point(26, 6);
+            name.Margin = new Padding(2, 0, 2, 0);
             name.Name = "name";
-            name.Size = new Size(446, 96);
+            name.Size = new Size(299, 65);
             name.TabIndex = 0;
             name.Text = "TerraCreator";
             name.MouseEnter += name_MouseEnter;
@@ -53,27 +54,30 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(35, 125);
+            label2.Location = new Point(22, 89);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(242, 72);
+            label2.Size = new Size(164, 51);
             label2.TabIndex = 1;
-            label2.Text = "v2025.6.1\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
+            label2.Text = "v2025.6.3\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
             // 
             // notice
             // 
             notice.AutoSize = true;
-            notice.Location = new Point(35, 210);
+            notice.Location = new Point(22, 149);
+            notice.Margin = new Padding(2, 0, 2, 0);
             notice.Name = "notice";
-            notice.Size = new Size(410, 168);
+            notice.Size = new Size(278, 119);
             notice.TabIndex = 8;
             notice.Text = "注意:\r\nTerraCreator处于开发阶段\r\n不能保证完全没有BUG\r\n同时,TerraCreator可能无法满足你的所有代码要求\r\n只能起到辅助编程的作用 \r\n感谢理解\r\n\r\n";
             // 
             // ok
             // 
             ok.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ok.Location = new Point(402, 344);
+            ok.Location = new Point(256, 244);
+            ok.Margin = new Padding(2);
             ok.Name = "ok";
-            ok.Size = new Size(112, 34);
+            ok.Size = new Size(71, 24);
             ok.TabIndex = 9;
             ok.Text = "OK";
             ok.UseVisualStyleBackColor = true;
@@ -83,9 +87,10 @@
             // 
             icon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             icon.Image = Properties.Resources.icon;
-            icon.Location = new Point(423, 133);
+            icon.Location = new Point(269, 94);
+            icon.Margin = new Padding(2);
             icon.Name = "icon";
-            icon.Size = new Size(64, 64);
+            icon.Size = new Size(41, 45);
             icon.SizeMode = PictureBoxSizeMode.StretchImage;
             icon.TabIndex = 10;
             icon.TabStop = false;
@@ -96,19 +101,20 @@
             milestone.Anchor = AnchorStyles.Top;
             milestone.AutoSize = true;
             milestone.BackColor = Color.Transparent;
-            milestone.Font = new Font("Letter Gothic Std", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            milestone.Location = new Point(172, 95);
+            milestone.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            milestone.Location = new Point(111, 66);
+            milestone.Margin = new Padding(2, 0, 2, 0);
             milestone.Name = "milestone";
-            milestone.Size = new Size(181, 30);
+            milestone.Size = new Size(106, 23);
             milestone.TabIndex = 11;
             milestone.Text = "Milestone #1\r\n";
             // 
             // about
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(525, 390);
+            ClientSize = new Size(334, 276);
             Controls.Add(milestone);
             Controls.Add(icon);
             Controls.Add(ok);
@@ -116,6 +122,7 @@
             Controls.Add(label2);
             Controls.Add(name);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
             Name = "about";
             Text = "关于";
             Load += about_Load;

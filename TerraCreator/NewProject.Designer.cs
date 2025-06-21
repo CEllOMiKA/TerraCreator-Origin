@@ -84,6 +84,7 @@
             // 
             resources.ApplyResources(ProjectNameSpaceTextBox, "ProjectNameSpaceTextBox");
             ProjectNameSpaceTextBox.Name = "ProjectNameSpaceTextBox";
+            ProjectNameSpaceTextBox.KeyDown += ProjectNameSpaceTextBox_KeyUp;
             // 
             // NewProject
             // 

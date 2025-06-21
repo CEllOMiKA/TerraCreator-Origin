@@ -29,11 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            split = new SplitContainer();
             fileview = new TreeView();
-            codes = new RichTextBox();
-            ImageBox = new PictureBox();
-            menuStrip1 = new MenuStrip();
+            MenuList = new MenuStrip();
             文件ToolStripMenuItem = new ToolStripMenuItem();
             toolst_newproj = new ToolStripMenuItem();
             toolst_newitem = new ToolStripMenuItem();
@@ -45,38 +42,31 @@
             toolst_exitprog = new ToolStripMenuItem();
             Run = new ToolStripMenuItem();
             RuntML = new ToolStripMenuItem();
+            OpenCsproj = new ToolStripMenuItem();
             关于ToolStripMenuItem = new ToolStripMenuItem();
             toolst_about = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             addon = new ToolStripMenuItem();
             settings = new ToolStripMenuItem();
-            toolStrip1 = new ToolStrip();
+            ToolList = new ToolStrip();
             fresh = new ToolStripButton();
             save = new ToolStripButton();
             additem = new ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)split).BeginInit();
-            split.Panel1.SuspendLayout();
-            split.Panel2.SuspendLayout();
-            split.SuspendLayout();
+            toolStripSeparator4 = new ToolStripSeparator();
+            ProjectName = new ToolStripLabel();
+            status = new StatusStrip();
+            CodeCount = new ToolStripStatusLabel();
+            FilePropt = new ToolStripStatusLabel();
+            split = new Splitter();
+            ImageBox = new PictureBox();
+            codes = new RichTextBox();
+            panel1 = new Panel();
+            MenuList.SuspendLayout();
+            ToolList.SuspendLayout();
+            status.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ImageBox).BeginInit();
-            menuStrip1.SuspendLayout();
-            toolStrip1.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // split
-            // 
-            resources.ApplyResources(split, "split");
-            split.FixedPanel = FixedPanel.Panel1;
-            split.Name = "split";
-            // 
-            // split.Panel1
-            // 
-            split.Panel1.Controls.Add(fileview);
-            // 
-            // split.Panel2
-            // 
-            split.Panel2.Controls.Add(codes);
-            split.Panel2.Controls.Add(ImageBox);
             // 
             // fileview
             // 
@@ -85,25 +75,12 @@
             fileview.Name = "fileview";
             fileview.AfterSelect += fileview_AfterSelect;
             // 
-            // codes
+            // MenuList
             // 
-            codes.BackColor = Color.FromArgb(192, 255, 255);
-            resources.ApplyResources(codes, "codes");
-            codes.Name = "codes";
-            codes.TextChanged += codes_TextChanged;
-            // 
-            // ImageBox
-            // 
-            resources.ApplyResources(ImageBox, "ImageBox");
-            ImageBox.Name = "ImageBox";
-            ImageBox.TabStop = false;
-            // 
-            // menuStrip1
-            // 
-            menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, 关于ToolStripMenuItem });
-            resources.ApplyResources(menuStrip1, "menuStrip1");
-            menuStrip1.Name = "menuStrip1";
+            MenuList.ImageScalingSize = new Size(24, 24);
+            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, 关于ToolStripMenuItem });
+            resources.ApplyResources(MenuList, "MenuList");
+            MenuList.Name = "MenuList";
             // 
             // 文件ToolStripMenuItem
             // 
@@ -159,7 +136,7 @@
             // 
             // Run
             // 
-            Run.DropDownItems.AddRange(new ToolStripItem[] { RuntML });
+            Run.DropDownItems.AddRange(new ToolStripItem[] { RuntML, OpenCsproj });
             Run.Name = "Run";
             resources.ApplyResources(Run, "Run");
             // 
@@ -168,6 +145,12 @@
             RuntML.Name = "RuntML";
             resources.ApplyResources(RuntML, "RuntML");
             RuntML.Click += RuntML_Click;
+            // 
+            // OpenCsproj
+            // 
+            OpenCsproj.Name = "OpenCsproj";
+            resources.ApplyResources(OpenCsproj, "OpenCsproj");
+            OpenCsproj.Click += OpenCsproj_Click;
             // 
             // 关于ToolStripMenuItem
             // 
@@ -198,11 +181,11 @@
             resources.ApplyResources(settings, "settings");
             settings.Click += settings_Click;
             // 
-            // toolStrip1
+            // ToolList
             // 
-            toolStrip1.Items.AddRange(new ToolStripItem[] { fresh, save, additem });
-            resources.ApplyResources(toolStrip1, "toolStrip1");
-            toolStrip1.Name = "toolStrip1";
+            ToolList.Items.AddRange(new ToolStripItem[] { fresh, save, additem, toolStripSeparator4, ProjectName });
+            resources.ApplyResources(ToolList, "ToolList");
+            ToolList.Name = "ToolList";
             // 
             // fresh
             // 
@@ -228,35 +211,91 @@
             additem.Name = "additem";
             additem.Click += additem_Click;
             // 
+            // toolStripSeparator4
+            // 
+            toolStripSeparator4.Name = "toolStripSeparator4";
+            resources.ApplyResources(toolStripSeparator4, "toolStripSeparator4");
+            // 
+            // ProjectName
+            // 
+            ProjectName.Name = "ProjectName";
+            resources.ApplyResources(ProjectName, "ProjectName");
+            // 
+            // status
+            // 
+            status.Items.AddRange(new ToolStripItem[] { CodeCount, FilePropt });
+            resources.ApplyResources(status, "status");
+            status.Name = "status";
+            // 
+            // CodeCount
+            // 
+            CodeCount.BackColor = Color.White;
+            CodeCount.Name = "CodeCount";
+            resources.ApplyResources(CodeCount, "CodeCount");
+            // 
+            // FilePropt
+            // 
+            FilePropt.BackColor = Color.White;
+            FilePropt.Name = "FilePropt";
+            resources.ApplyResources(FilePropt, "FilePropt");
+            // 
+            // split
+            // 
+            resources.ApplyResources(split, "split");
+            split.Name = "split";
+            split.TabStop = false;
+            // 
+            // ImageBox
+            // 
+            resources.ApplyResources(ImageBox, "ImageBox");
+            ImageBox.Name = "ImageBox";
+            ImageBox.TabStop = false;
+            // 
+            // codes
+            // 
+            codes.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(codes, "codes");
+            codes.Name = "codes";
+            codes.TextChanged += codes_TextChanged;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(codes);
+            panel1.Controls.Add(ImageBox);
+            resources.ApplyResources(panel1, "panel1");
+            panel1.Name = "panel1";
+            // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
+            Controls.Add(panel1);
             Controls.Add(split);
-            Controls.Add(toolStrip1);
-            Controls.Add(menuStrip1);
+            Controls.Add(fileview);
+            Controls.Add(status);
+            Controls.Add(ToolList);
+            Controls.Add(MenuList);
             Name = "Main";
             Load += Main_Load;
-            split.Panel1.ResumeLayout(false);
-            split.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)split).EndInit();
-            split.ResumeLayout(false);
+            MenuList.ResumeLayout(false);
+            MenuList.PerformLayout();
+            ToolList.ResumeLayout(false);
+            ToolList.PerformLayout();
+            status.ResumeLayout(false);
+            status.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ImageBox).EndInit();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip menuStrip1;
+        private MenuStrip MenuList;
         private ToolStripMenuItem 文件ToolStripMenuItem;
         private ToolStripMenuItem 关于ToolStripMenuItem;
-        private ToolStrip toolStrip1;
+        private ToolStrip ToolList;
         private ToolStripButton fresh;
         private ToolStripMenuItem toolst_about;
         private ToolStripMenuItem toolst_newproj;
@@ -267,7 +306,6 @@
         private ToolStripMenuItem toolst_exitprog;
         private ToolStripButton save;
         private ToolStripButton additem;
-        private SplitContainer split;
         private ToolStripMenuItem settings;
         private ToolStripMenuItem addon;
         private ToolStripMenuItem Run;
@@ -275,8 +313,16 @@
         private ToolStripSeparator toolStripSeparator1;
         private ToolStripMenuItem toolst_SaveAs;
         private ToolStripSeparator toolStripSeparator3;
-        public static TreeView fileview;
-        public static RichTextBox codes;
+        private ToolStripMenuItem OpenCsproj;
+        private StatusStrip status;
+        private ToolStripSeparator toolStripSeparator4;
+        private Splitter split;
         public static PictureBox ImageBox;
-    }
+        public static RichTextBox codes;
+        private Panel panel1;
+        public static TreeView fileview;
+        public static ToolStripStatusLabel CodeCount;
+        public static ToolStripStatusLabel FilePropt;
+        public static ToolStripLabel ProjectName;
+    }             
 }
