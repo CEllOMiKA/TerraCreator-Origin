@@ -225,7 +225,7 @@ namespace TerraCreator
             ItemValueLabel.Text = "物品价值";
             ItemValueLabel.Location = new Point(r1, y * 10 + d * 10);
             NumericUpDown ItemValueNumeric = new NumericUpDown();//not support buyprice() sellprice() now,maybe later
-            ItemValueNumeric.Maximum = 1000000;
+            ItemValueNumeric.Maximum = 100000000;
             ItemValueNumeric.Minimum = 0;
             ItemValueNumeric.Width = w2;
             ItemValueNumeric.Font = new Font("Microsoft YaHei UI", 11);
@@ -349,7 +349,7 @@ namespace TerraCreator
                   $"               Item.knockBack = {knockbacktextbox.Value};" + Environment.NewLine +
                   $"               Item.useTime = {useTimeNumeric.Value};" + Environment.NewLine +
                   $"               Item.maxStack = {maxStackNumeric.Value};" + Environment.NewLine +
-                  $"               Item.value = Item.buyPrice(gold: {ItemValueNumeric.Value / 10000});" + Environment.NewLine +
+                  $"               Item.value = {ItemValueNumeric.Value};" + Environment.NewLine +
                     "          }" + Environment.NewLine +
                     "    }" + Environment.NewLine +
                     "}";

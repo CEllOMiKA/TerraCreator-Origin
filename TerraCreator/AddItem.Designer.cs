@@ -63,9 +63,10 @@
             listViewItem5.Group = listViewGroup2;
             listViewItem5.ToolTipText = "新建PNG材质";
             list.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3, listViewItem4, listViewItem5 });
-            list.Location = new Point(12, 43);
+            list.Location = new Point(8, 30);
+            list.Margin = new Padding(2, 2, 2, 2);
             list.Name = "list";
-            list.Size = new Size(253, 612);
+            list.Size = new Size(162, 435);
             list.TabIndex = 0;
             list.UseCompatibleStateImageBehavior = false;
             list.View = View.SmallIcon;
@@ -75,41 +76,45 @@
             // 
             itempanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             itempanel.BackColor = Color.FromArgb(192, 255, 255);
-            itempanel.Location = new Point(271, 43);
+            itempanel.Location = new Point(172, 30);
+            itempanel.Margin = new Padding(2, 2, 2, 2);
             itempanel.Name = "itempanel";
-            itempanel.Size = new Size(1196, 786);
+            itempanel.Size = new Size(761, 557);
             itempanel.TabIndex = 3;
             // 
             // newitemlabel
             // 
             newitemlabel.AutoSize = true;
             newitemlabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            newitemlabel.Location = new Point(12, 9);
+            newitemlabel.Location = new Point(8, 6);
+            newitemlabel.Margin = new Padding(2, 0, 2, 0);
             newitemlabel.Name = "newitemlabel";
-            newitemlabel.Size = new Size(86, 31);
+            newitemlabel.Size = new Size(58, 22);
             newitemlabel.TabIndex = 4;
             newitemlabel.Text = "新建项";
             // 
             // tips
             // 
             tips.AutoSize = true;
-            tips.Location = new Point(49, 681);
+            tips.Location = new Point(31, 482);
+            tips.Margin = new Padding(2, 0, 2, 0);
             tips.Name = "tips";
-            tips.Size = new Size(163, 72);
+            tips.Size = new Size(110, 51);
             tips.TabIndex = 5;
             tips.Text = "提示:\r\n你觉得功能太少了?\r\n那就快去催更作者!";
             // 
             // AddItem
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(1479, 841);
+            ClientSize = new Size(941, 596);
             Controls.Add(tips);
             Controls.Add(newitemlabel);
             Controls.Add(itempanel);
             Controls.Add(list);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2, 2, 2, 2);
             Name = "AddItem";
             Text = "新建项";
             Load += AddItem_Load;

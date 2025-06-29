@@ -119,18 +119,18 @@
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="fileview.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+    <value>Fill</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="fileview.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 49</value>
+    <value>3, 3</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="fileview.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="fileview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 599</value>
+    <value>172, 563</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="fileview.TabIndex" type="System.Int32, mscorlib">
@@ -143,14 +143,44 @@
     <value>System.Windows.Forms.TreeView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;fileview.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>TabFile</value>
   </data>
   <data name="&gt;&gt;fileview.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>0</value>
   </data>
   <metadata name="MenuList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 22</value>
+  </data>
+  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="ProjectSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="ProjectSettings.Text" xml:space="preserve">
+    <value>项目设置</value>
+  </data>
+  <data name="Project.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 22</value>
+  </data>
+  <data name="Project.Text" xml:space="preserve">
+    <value>项目</value>
+  </data>
+  <data name="Run.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 22</value>
+  </data>
+  <data name="Run.Text" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 22</value>
+  </data>
+  <data name="About.Text" xml:space="preserve">
+    <value>关于</value>
+  </data>
   <data name="MenuList.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -177,12 +207,6 @@
   </data>
   <data name="&gt;&gt;MenuList.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 22</value>
-  </data>
-  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
-    <value>文件</value>
   </data>
   <data name="toolst_newproj.Size" type="System.Drawing.Size, System.Drawing">
     <value>124, 22</value>
@@ -226,29 +250,17 @@
   <data name="toolst_exitprog.Text" xml:space="preserve">
     <value>退出</value>
   </data>
-  <data name="Run.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 22</value>
-  </data>
-  <data name="Run.Text" xml:space="preserve">
-    <value>运行</value>
-  </data>
   <data name="RuntML.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>172, 22</value>
   </data>
   <data name="RuntML.Text" xml:space="preserve">
     <value>运行tML</value>
   </data>
   <data name="OpenCsproj.Size" type="System.Drawing.Size, System.Drawing">
-    <value>163, 22</value>
+    <value>172, 22</value>
   </data>
   <data name="OpenCsproj.Text" xml:space="preserve">
-    <value>用VS打开此项目</value>
-  </data>
-  <data name="关于ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>44, 22</value>
-  </data>
-  <data name="关于ToolStripMenuItem.Text" xml:space="preserve">
-    <value>关于</value>
+    <value>打开本项目csproj</value>
   </data>
   <data name="toolst_about.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 22</value>
@@ -373,8 +385,14 @@
   <data name="FilePropt.Text" xml:space="preserve">
     <value>未打开文件</value>
   </data>
+  <data name="FileStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 17</value>
+  </data>
+  <data name="FileStatus.Text" xml:space="preserve">
+    <value>无状态</value>
+  </data>
   <data name="split.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 49</value>
+    <value>186, 49</value>
   </data>
   <data name="split.Size" type="System.Drawing.Size, System.Drawing">
     <value>3, 599</value>
@@ -404,7 +422,7 @@
     <value>0, 0</value>
   </data>
   <data name="ImageBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>655, 599</value>
+    <value>673, 599</value>
   </data>
   <data name="ImageBox.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -416,7 +434,7 @@
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;ImageBox.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>Panel</value>
   </data>
   <data name="&gt;&gt;ImageBox.ZOrder" xml:space="preserve">
     <value>1</value>
@@ -434,7 +452,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="codes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>655, 599</value>
+    <value>673, 599</value>
   </data>
   <data name="codes.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -456,34 +474,178 @@ BUG反馈:cmcello@outlook.com</value>
     <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;codes.Parent" xml:space="preserve">
-    <value>panel1</value>
+    <value>Panel</value>
   </data>
   <data name="&gt;&gt;codes.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="panel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+  <data name="Panel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>207, 49</value>
+  <data name="Panel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 49</value>
   </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>655, 599</value>
+  <data name="Panel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>673, 599</value>
   </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+  <data name="Panel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;Panel.Name" xml:space="preserve">
+    <value>Panel</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+  <data name="&gt;&gt;Panel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;Panel.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;Panel.ZOrder" xml:space="preserve">
     <value>0</value>
+  </data>
+  <data name="ObjectList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ObjectList.Items" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5DAMAAABRU3lzdGVtLkRyYXdpbmcsIFZlcnNp
+        b249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iMDNmNWY3ZjExZDUwYTNh
+        BQEAAAAhU3lzdGVtLldpbmRvd3MuRm9ybXMuTGlzdFZpZXdJdGVtBwAAAARUZXh0CkltYWdlSW5kZXgJ
+        QmFja0NvbG9yB0NoZWNrZWQERm9udAlGb3JlQ29sb3IXVXNlSXRlbVN0eWxlRm9yU3ViSXRlbXMBAAQA
+        BAQACBRTeXN0ZW0uRHJhd2luZy5Db2xvcgMAAAABE1N5c3RlbS5EcmF3aW5nLkZvbnQDAAAAFFN5c3Rl
+        bS5EcmF3aW5nLkNvbG9yAwAAAAECAAAABgQAAAAZ5byA5Y+R5LitLi4uKE1pbGVzdG9uZSMyKf////8F
+        +////xRTeXN0ZW0uRHJhd2luZy5Db2xvcgQAAAAEbmFtZQV2YWx1ZQprbm93bkNvbG9yBXN0YXRlAQAA
+        AAkHBwMAAAAK///A/wAAAAAAAAIAAAkGAAAAAfn////7////CgAAAAAAAAAAGgABAAEFBgAAABNTeXN0
+        ZW0uRHJhd2luZy5Gb250BAAAAAROYW1lBFNpemUFU3R5bGUEVW5pdAEABAQLGFN5c3RlbS5EcmF3aW5n
+        LkZvbnRTdHlsZQMAAAAbU3lzdGVtLkRyYXdpbmcuR3JhcGhpY3NVbml0AwAAAAMAAAAGCAAAABJNaWNy
+        b3NvZnQgWWFIZWkgVUkAABBBBff///8YU3lzdGVtLkRyYXdpbmcuRm9udFN0eWxlAQAAAAd2YWx1ZV9f
+        AAgDAAAAAAAAAAX2////G1N5c3RlbS5EcmF3aW5nLkdyYXBoaWNzVW5pdAEAAAAHdmFsdWVfXwAIAwAA
+        AAMAAAAL
+</value>
+  </data>
+  <data name="ObjectList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="ObjectList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 563</value>
+  </data>
+  <data name="ObjectList.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ObjectList.Name" xml:space="preserve">
+    <value>ObjectList</value>
+  </data>
+  <data name="&gt;&gt;ObjectList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ObjectList.Parent" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;ObjectList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabFile.Name" xml:space="preserve">
+    <value>TabFile</value>
+  </data>
+  <data name="&gt;&gt;TabFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabFile.Parent" xml:space="preserve">
+    <value>ListTab</value>
+  </data>
+  <data name="&gt;&gt;TabFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Name" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Parent" xml:space="preserve">
+    <value>ListTab</value>
+  </data>
+  <data name="&gt;&gt;TabObject.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ListTab.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="ListTab.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 49</value>
+  </data>
+  <data name="ListTab.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 599</value>
+  </data>
+  <data name="ListTab.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ListTab.Name" xml:space="preserve">
+    <value>ListTab</value>
+  </data>
+  <data name="&gt;&gt;ListTab.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ListTab.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ListTab.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabFile.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="TabFile.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabFile.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 569</value>
+  </data>
+  <data name="TabFile.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="TabFile.Text" xml:space="preserve">
+    <value>文件管理器</value>
+  </data>
+  <data name="&gt;&gt;TabFile.Name" xml:space="preserve">
+    <value>TabFile</value>
+  </data>
+  <data name="&gt;&gt;TabFile.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabFile.Parent" xml:space="preserve">
+    <value>ListTab</value>
+  </data>
+  <data name="&gt;&gt;TabFile.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TabObject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="TabObject.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="TabObject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 569</value>
+  </data>
+  <data name="TabObject.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabObject.Text" xml:space="preserve">
+    <value>对象查看器</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Name" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Parent" xml:space="preserve">
+    <value>ListTab</value>
+  </data>
+  <data name="&gt;&gt;TabObject.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -499,78 +661,78 @@ BUG反馈:cmcello@outlook.com</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAMIOAADCDgAAAAAAAAAA
-        AAAAAAAAAAAAAFxcXABhYmIAa21sAA8ACQBmZWcAX1xfAGFeYwBYVlgAc3eEAFtbXwBST1AASkJCBVxX
-        V05lYmLCZWJiwltYWE1GRUUFUU9QAFtaWgBrb3AAWFVXAF9cYQBdWl4AYV9hAISOiQBgYWEAXFxcAFhY
-        WAAAAAAAAAAAAAAAAAAAAAAAXl5eAGFiYgBqb24AUExOAHl+hgFbWV4GNTQgAFNSUwBLR0MAV1heBkpI
-        SxFKRkctaGVkkYyMieuMjInqaGVkkEpFRy1KSEkSVlZXB01HRgBTUVIALSsNAFlXXAdjZGoCTkpLAF5h
-        YQBbW1wAWVpaAAAAAAAAAAAAAAAAAAAAAABlaGgAaW5uAMb+/ABbWloJXVpaLmBdXk5WU1QlSUhIEFJR
-        USNeXF1RX11dgWFfXq98fHrlpamk/qWppP59fHrlYV5esV9dXIVeXVxUU1FRJUlHSBFXU1QmYF1eU1xa
-        WjVZWFgLdpObAF5iYwBdX2AAAAAAAAAAAAAAAAAAAAAAAFRRUQBRTk4ARkNDBV1aWTtraGetcnBv2GVi
-        YaVbWll+Y2JhrHJycNyBgH/uiYuI+JibmP6kqKT/pKik/5iamP+Ki4n4gYF/73Rzcd5kYmGwXFlagmVj
-        YqZzcnDabGpotVxaWUBFQkIFUE1NAFNQTwAAAAAAAAAAAAAAAAAzMzMASEFBAEM7OwAwJigMYl5daI2N
-        iuWZnJf/h4iF9nt6eO2Jiof4l5qW/5yemf+Zm5T/lJWM/5GRhv+RkYb/lJSL/5makv+bnpn/l5qW/4uM
-        ifl8e3ruh4iF9pqdmP+Oj4vnZGBdajIpKA1EPTsASUNBACoqKgAAAAAAAAAAAAIPDwA6Ly8AMCMkAAQA
-        AAdkX11TlJWQ36aqpf+kqaT/naGd/5ialf+OjoP/h4V0/4iFbP+Lh2j/jIhn/4yIZ/+Lh2n/iIVt/4iG
-        dP+OjoP/l5qU/52hnf+kqaT/pqql/5OUkOBjX1xTAAAABywjIwA2Li0AGhwcAAAAAAB2dXUAYGJiAEtG
-        RwA2LS0ABAAABlhUU1OGhoLdpamk/6GloP+PkIf/iodx/42JaP97eGD/a2xg/2tvZ/9udW//bXl1/2x4
-        df9pc3D/gIBn/4+Laf+Jh3D/jo+G/6Ckn/+kqKT/hoaC4FhVU1kSCgwIPjY2AFlTVABgY2MAaXl5AH+A
-        gABgYmIATk9PAP///wBOSUkramdmqpGSj/Wcn5v/iop9/4qHaf+bl2z/oJ1v/4SBZf9YXGH/R1Zz/0hm
-        j/9IcKD/SWyU/11uev+JiWz/op5w/5uYbf+LiGn/iYh7/5uemf+SlJH3bGposk5KSTIAAAABS0xMAGJl
-        ZQBuhIQA////AF1iYwRNWVwEQDs9GWJfXYCMjInpnJ+a/4qJfP+NiWn/nppu/6Kfcv+joHP/n5xw/4OC
-        Z/9XX2n/RF+K/0Vtof9gdID/j45u/6Kecf+koXT/o6Bz/56bb/+Pimn/iYh5/5uemv+Oj4ztZGFfi0I9
-        Ph1NV1kEYGdnBLn//wBfXV0WX11dQlpaWlBYVVVweXh21Zyfm/6Pj4T/jIhp/56bb/+joHP/oZ5y/6Ge
-        cv+koXP/oZ1w/3t7Zf9LXXn/RmeR/3B4cf+dmGz/mpZr/5mVa/+hnnL/o6Bz/5+bb/+NiWn/jY2C/52f
-        m/98e3nbWVVWdVpZWVFgX19DW11dGl9dXGJvbWzGcG5t43V0cuiSlJH7lZiS/4iFbf+bl23/o6Bz/6Ge
-        cv+hnnL/op9z/6SgdP+loXL/iYZn/1Bfdv9FZ5X/VWd6/29yYv9scFD/dXlW/5aUa/+in3P/o6Bz/5yZ
-        bf+Jhmz/lJaP/5SWk/x2dXPpcG5t43BubchgXFxtb21rqpiZlfGcnpr/naCb/56inv+KiXz/ko9q/6Ge
-        cf+in3L/oZ5y/6Kecv+gnHH/op5x/6Ofcf+CgWf/TV53/0hplP9baXX/V2Ja/1SAYf9ai2j/f4hk/6Cc
-        cP+joHP/oZ5x/5SQav+Jh3n/nqGd/52gnP+cn5r/mJqW9HJvbbhycGytoaOe56itqP+lqqb/mJqV/4iG
-        bv+dmW7/op9y/6Gecv+in3P/nJlv/4OCXf+Eglz/iolp/2NqbP9GW37/TWqQ/3V5bP9qe1r/VqN+/1il
-        g/9+jmv/oZxw/6Ofc/+in3P/nppv/4mGbf+WmJL/paml/6itqP+go57odHJvtFpVU0F9fHiVl5mU5qOn
-        o/6Rkon/jYpq/6CdcP+in3P/op9z/6Kecv+LimT/YnNR/1x3V/9baGT/UWB0/0Zdgf9Nao7/e4Bu/36K
-        Y/9pk3H/c5Jw/5KWbv+innL/op5y/6Kfc/+gnnH/j4tq/4+Qhv+jpqL+lpmU53x7eJVaVVRBAAAAA1tW
-        VCt9fHmjoKOf9Y6Ogv+Sj2r/oZ5x/6Kfc/+in3P/op1x/4iKZf9bkG3/U6B+/2B7Z/9ub2T/TF15/0po
-        jv9+hHP/nZpu/5iWbf+cmG7/oZ1x/6Gecv+hnnL/op9y/6Gecf+UkGr/jY1//6Cjn/Z/fnuqXVhWLQAA
-        AAJaVFMAVU9NFXx6eJCho5/xjYx+/5WSa/+hnnH/oZ5y/6Kfcv+jnXH/kZRs/2aXdf9bpIH/c49s/3h3
-        ZP9LXHr/SmiO/3+Fc/+jnnD/pJ9y/6Kecv+innL/oZ5y/6Gecv+hnnL/oZ5x/5eUbP+NjHv/oKOf9H9+
-        e5xfW1gYYFtZAGViXwBdV1QWf316lKGjn/KNjHz/lpJr/6Gecf+hnnL/oZ5y/6Kecv+fnHH/j5Rt/4aT
-        bf+Slm3/eXlo/0haev9JZ4//f4V0/6Sgcv+koXP/oZ5y/6Gecv+hnnL/oZ5y/6Gecv+hnnH/mJVs/42L
-        e/+go5/1goF/oGZjXxlramcApxQAAFFNTCd4dnOkn6Gd9Y2Mf/+VkWv/oZ1x/6Gecv+hnnL/oZ5y/6Kf
-        cv+jnnL/oZtw/5WQZ/9ycFf/SFZl/0hhgf96fmz/nphs/6Kecf+innL/oZ5y/6Gecv+hnnL/oZ5y/6Ge
-        cf+Wk2v/jIt8/56hnvd7enesVlNSKYRTOQBZWVotX1xcgnp6eN+doJz9jY2D/5CMav+hnnH/op9z/6Ge
-        cv+hnnL/op9z/5yZbv+DgFz/aW5N/11uTP9Tblb/UGZb/2JrUv9zdVP/h4Vf/52ab/+in3P/oZ5y/6Ge
-        cv+in3P/oZ5x/5GOav+MjID/naGd/nx8eeBfXFyCWlpbLWJgX5iCgX/fmZyY/qOno/+Qkoz/h4Rq/5+c
-        cP+joHP/oZ5y/6Kfc/+fnHD/gH9b/15tS/9Zh2L/W6N8/1yshP9boHj/WpRu/1iIZP9hgF7/iIxm/6Gd
-        cv+in3P/oZ5y/6Ogc/+gnXD/iIVp/46Qif+jp6P/mpyY/oGAfuBjYWCec3BtvKCjnvWpraf/pqqm/5qd
-        mf+Af2//lpNs/6Kfcv+hnnL/o59z/5qVbP9td1X/WJFs/1u3j/9cwZn/XMKZ/13Al/9cv5b/WbuT/1io
-        hP93jmv/n5pv/6Ofcv+hnnL/op9y/5iUbf+Afm7/mJuW/6aqpf+praf/oaOf93RycMluamZ+l5iUz5ye
-        meedoJvtoKOf/YeHgf+EgWf/nptw/6Ogc/+jn3P/l5Nq/2iBYf9Yr4n/W8Ka/1zBmf9cwJj/XMCY/1zB
-        mf9awpr/WbOO/3aRbv+emm//o59y/6Ogc/+fnHD/hoJn/4WFfv+go5/9naCb7pyemeeZmpbSb21qjFBH
-        RSRmYl5TaGRgY3JvbIaSlJDimZyZ/3x7cP+MiWn/op9y/6Sgcv+Zlm3/a49v/1i1kP9bwZj/XL+X/1y/
-        l/9cv5f/XL+X/1rBmP9Yso3/cJBu/5yYbv+koHP/op9y/46Laf97eW7/mJqX/5aYlOV0cm6LZ2NgZGdi
-        YFROSkgpAAAAAhYMCQgOAAAJTUZFJHt6d5igo5/ykJKO/3d1aP+Oi2n/op9y/6Gccf+AkG3/XKaD/1rA
-        mP9cwpn/XMCY/1zAmP9cwpr/Wb2W/1+gfv+Dj2v/oZxw/6Ofcv+QjWr/d3Vn/42Pi/+go5/1fn56olNO
-        TCgLAAAJFwgKCAAAAAIkFhQANy8sADgxLwAAAAACXVpYPImJhb2go5/5iIqG/3RyZv+Jh2j/nppv/5KT
-        bP9knHn/WbuU/1vAmP9bv5j/W8CY/1m9lv9dqYb/fpJu/5+bb/+fm3D/iohp/3VyZv+Gh4T/oKOf+4uN
-        h8VeW1hFAAAABDkxMAA3LS0AHhgZAC8iIQA7NDEAq5+aAH13cgAXEhAKZGJfXJCRjd2ipaH/iouI/3Nx
-        av98eWT/i4ho/3mNa/9omXf/YaB9/1uphf9dpoL/Y5t5/3WQbv+Ukmz/k49s/316Zf9ycWj/iImG/6Gk
-        oP+SlI/gaGZhZCYfHA2en5YA////ADsxMQApJCQAAAAAAAAAAAASDw0ABwIAAAAAAAJZVlRAiImF1qaq
-        pP+nq6b/lZeU/319ef9ycGj/dXJi/3h3Yv91e2P/bH1l/3F9ZP97fGP/fntj/3l2ZP9ycGf/fHt4/5SW
-        kv+mqqX/paql/4iIhddaV1VBAAAAAg4HBwAYEhEAAAAAAAAAAAAAAAAAAAAAAEQ9OwA8NTMAIhgWC2Zj
-        YGKXmZTkp6um/6Woo/qhpKDyn6Ke+5OVkv+FhIH/e3dz/3Rwa/9xbWf/cm5o/3Vxa/95eHT/goOA/5GT
-        kP+eoZ38oqWg86Woo/qnq6b/l5iU5mdjYWMjGRsLPjY2AEU+PgAPBwcAAAAAAAAAAAAAAAAAQDk4ADoy
-        MgAiGBkIXVhXTYmJhr6bnZjhhoWCuHVycJSIiYS9m52Z46KlofOfop77mZyY/5aYlP+VmJT/mZyY/56i
-        nvyipaHznJ6Z5YmJhsF1c3GYhYWBuZyemeSLi4fFYFpZUikdHwk/NTYARTw8AAAAAAAAAAAAAAAAAAAA
-        AAA7NDUANzAwACEaGgFFPj8QXVdXP2xoZmJhXVsySENDGGBdWi9wbWlif356lIqKh7+YmpbvqKyo/6is
-        p/+YmpbvioqHwYB/fJdwbmpmXltZM0lEQxlhX1wzbWpoZ19bWEZLREMSKx0gAT40NQBCOTkAAAAAAAAA
-        AAAAAAAAAAAAAD02NgAxKCkAFAgMALzFuAAAAAAELCEhCwAAAAFzbGoA////AC8kIwtaVVQVa2dmNn9+
-        e6mnqqX0p6ql8359e6hpZmU3XVdWFjIqKAwAAAABe3RyAAAAAAIzKikMAAAABfn//AAjFhcAOS8vAEM6
-        OgAAAAAAAAAAAAAAAAAAAAAAPTY2ACkfIQAOAAYAAAAAACEUGABEPDsAKyYlALmsqQAFAAAARz89AF1Y
-        VwAuIiQLZmFfaomJhduJiYXaZWBeaSkdHwtgWlkASEJAAAYCAQDm2dQAMCsqAEhBQAAsISEAAAAAACAU
-        FQAyKCgAQzo6AAAAAAAAAAAAwAAAA8AAAAPAAAADwAAAA4AAAAGAAAABAAAAAAAAAAAAAAAAAAAAAAAA
+        AAABAAEAICAAAAEAIACoEAAAFgAAACgAAAAgAAAAQAAAAAEAIAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA
+        AAAZJjb/GSY2/xglNfwYJTViGSY1ABkmNgAZJjYAGSY2ABkmNgAZJjYAAAAAAAAAAAAAAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AACAAAABgAAAAcAAAAPAAAADwAAAA8AAAAM=
+        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
+        AAD/8AAA//AAAP/wAAD/8AAA//wAAP/8AAA=
 </value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -633,6 +795,18 @@ BUG反馈:cmcello@outlook.com</value>
   <data name="&gt;&gt;toolst_exitprog.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;Project.Name" xml:space="preserve">
+    <value>Project</value>
+  </data>
+  <data name="&gt;&gt;Project.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectSettings.Name" xml:space="preserve">
+    <value>ProjectSettings</value>
+  </data>
+  <data name="&gt;&gt;ProjectSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;Run.Name" xml:space="preserve">
     <value>Run</value>
   </data>
@@ -651,10 +825,10 @@ BUG反馈:cmcello@outlook.com</value>
   <data name="&gt;&gt;OpenCsproj.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;关于ToolStripMenuItem.Name" xml:space="preserve">
-    <value>关于ToolStripMenuItem</value>
+  <data name="&gt;&gt;About.Name" xml:space="preserve">
+    <value>About</value>
   </data>
-  <data name="&gt;&gt;关于ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;About.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;toolst_about.Name" xml:space="preserve">
@@ -721,6 +895,12 @@ BUG反馈:cmcello@outlook.com</value>
     <value>FilePropt</value>
   </data>
   <data name="&gt;&gt;FilePropt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;FileStatus.Name" xml:space="preserve">
+    <value>FileStatus</value>
+  </data>
+  <data name="&gt;&gt;FileStatus.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripStatusLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">

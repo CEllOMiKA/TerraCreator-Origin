@@ -20,6 +20,8 @@ namespace TerraCreator
             fileview.BackColor = TerraCreatorData.FormToolColour;
             codes.BackColor = TerraCreatorData.FormToolColour;
             this.BackColor = TerraCreatorData.FormBackColour;
+            ObjectList.BackColor = TerraCreatorData.FormToolColour;
+
 
         }
 
@@ -79,9 +81,12 @@ namespace TerraCreator
 
         private void fresh_Click(object sender, EventArgs e)
         {
+
             fileview.Nodes.Clear();
             LoadFileTreeView(ProjectData.ProjectPath);
             fileview.ExpandAll();
+            codes.Text = "";
+
         }
 
         private void toolst_save_Click(object sender, EventArgs e)
@@ -107,7 +112,17 @@ namespace TerraCreator
             Settings.Show();
         }
 
+        private void ProjectSettings_Click(object sender, EventArgs e)
+        {
+            if(!ProjectData.ProjectChecked)
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            Form ProjectSettings = new ProjectSettings();
+            ProjectSettings.Show();
 
+        }
 
 
 
@@ -124,6 +139,7 @@ namespace TerraCreator
                 TreeNode rootNode = new TreeNode(rootDir.Name) { Tag = rootDir };
                 fileview.Nodes.Add(rootNode);
                 LoadFilesAndDirectories(rootDir, rootNode);
+
             }
             else
             {
@@ -174,7 +190,8 @@ namespace TerraCreator
                         FilePropt.Text = fileInfo.Name;
                         codes.Text = File.ReadAllText(fileInfo.FullName);
                         CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
-;                    }
+                        ;
+                    }
 
                 }
                 catch (Exception ex)
@@ -255,7 +272,7 @@ namespace TerraCreator
 
         private void addon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("制作中...", "提示");
+            MessageBox.Show("开发中...", "提示");
         }
 
 
@@ -283,8 +300,8 @@ namespace TerraCreator
         {
             if (ProjectData.ProjectChecked)
             {
-                MessageBox.Show(ProjectData.ProjectPath + "\\"+ProjectData.ProjectNamespace + ".csproj");
-                System.Diagnostics.Process.Start("explorer", ProjectData.ProjectPath + "\\"+ProjectData.ProjectNamespace + ".csproj");
+                MessageBox.Show(ProjectData.ProjectPath + "\\" + ProjectData.ProjectNamespace + ".csproj");
+                System.Diagnostics.Process.Start("explorer", ProjectData.ProjectPath + "\\" + ProjectData.ProjectNamespace + ".csproj");
             }
             else
             {
@@ -352,6 +369,7 @@ namespace TerraCreator
                         {
                             File.WriteAllText(fileInfo.FullName, codes.Text);
                             MessageBox.Show("文件已保存", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            RefreshFileViewAndSelect(fileInfo.FullName); // 保存
                         }
                         catch (Exception ex)
                         {
@@ -420,40 +438,42 @@ namespace TerraCreator
                             File.WriteAllText(filePath, codes.Text);
                             MessageBox.Show("文件另存为成功！", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // reflash fileview
-                            fileview.Nodes.Clear();
-                            LoadFileTreeView(ProjectData.ProjectPath);
-                            fileview.ExpandAll();
+                            RefreshFileViewAndSelect(fileInfo.FullName); // 保存
 
-                            // 选中新保存的文件
-                            SelectFileNode(fileview, filePath);
+                            //// reflash fileview
+                            //fileview.Nodes.Clear();
+                            //LoadFileTreeView(ProjectData.ProjectPath);
+                            //fileview.ExpandAll();
 
-                            // 递归查找并选中指定文件路径的节点
-                            void SelectFileNode(TreeView treeView, string filePath)
-                            {
-                                foreach (TreeNode node in treeView.Nodes)
-                                {
-                                    if (SelectFileNodeRecursive(node, filePath))
-                                        break;
-                                }
-                            }
+                            //// 选中新保存的文件
+                            //SelectFileNode(fileview, filePath);
 
-                            bool SelectFileNodeRecursive(TreeNode node, string filePath)
-                            {
-                                if (node.Tag is FileInfo fileInfo &&
-                                    string.Equals(fileInfo.FullName, filePath, StringComparison.OrdinalIgnoreCase))
-                                {
-                                    node.TreeView.SelectedNode = node;
-                                    node.TreeView.Focus();
-                                    return true;
-                                }
-                                foreach (TreeNode child in node.Nodes)
-                                {
-                                    if (SelectFileNodeRecursive(child, filePath))
-                                        return true;
-                                }
-                                return false;
-                            }
+                            //// 递归查找并选中指定文件路径的节点
+                            //void SelectFileNode(TreeView treeView, string filePath)
+                            //{
+                            //    foreach (TreeNode node in treeView.Nodes)
+                            //    {
+                            //        if (SelectFileNodeRecursive(node, filePath))
+                            //            break;
+                            //    }
+                            //}
+
+                            //bool SelectFileNodeRecursive(TreeNode node, string filePath)
+                            //{
+                            //    if (node.Tag is FileInfo fileInfo &&
+                            //        string.Equals(fileInfo.FullName, filePath, StringComparison.OrdinalIgnoreCase))
+                            //    {
+                            //        node.TreeView.SelectedNode = node;
+                            //        node.TreeView.Focus();
+                            //        return true;
+                            //    }
+                            //    foreach (TreeNode child in node.Nodes)
+                            //    {
+                            //        if (SelectFileNodeRecursive(child, filePath))
+                            //            return true;
+                            //    }
+                            //    return false;
+                            //}
 
 
                         }
@@ -476,6 +496,47 @@ namespace TerraCreator
                 MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+
+
+
+
+        // 在 Main 类内添加此方法
+        void RefreshFileViewAndSelect(string filePath)
+        {
+            fileview.Nodes.Clear();
+            LoadFileTreeView(ProjectData.ProjectPath);
+            fileview.ExpandAll();
+
+            // 递归查找并选中指定文件路径的节点
+            void SelectFileNode(TreeView treeView, string filePath)
+            {
+                foreach (TreeNode node in treeView.Nodes)
+                {
+                    if (SelectFileNodeRecursive(node, filePath))
+                        break;
+                }
+            }
+
+            bool SelectFileNodeRecursive(TreeNode node, string filePath)
+            {
+                if (node.Tag is FileInfo fileInfo &&
+                    string.Equals(fileInfo.FullName, filePath, StringComparison.OrdinalIgnoreCase))
+                {
+                    node.TreeView.SelectedNode = node;
+                    node.TreeView.Focus();
+                    return true;
+                }
+                foreach (TreeNode child in node.Nodes)
+                {
+                    if (SelectFileNodeRecursive(child, filePath))
+                        return true;
+                }
+                return false;
+            }
+
+            SelectFileNode(fileview, filePath);
         }
 
 

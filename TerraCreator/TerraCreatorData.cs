@@ -15,8 +15,7 @@ namespace TerraCreator
         public static Color FormToolColour = Color.FromArgb(192, 255, 255);
         public static Color FormBackColour = Color.FromArgb(128, 255, 255);
         public static Color FormFontColour = Color.Black;
-        public static Font FormTextFont = new Font("Microsoft YaHei UI", 9);
-
+        //public static Font FormTextFont = new Font("Microsoft YaHei UI", 9);
 
     }
 

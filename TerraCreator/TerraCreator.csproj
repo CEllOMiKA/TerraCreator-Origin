@@ -6,14 +6,16 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>icon.ico</ApplicationIcon>
-    <Version>2025.6.3.0</Version>
+    <ApplicationIcon>assets\Icon_M1.ico</ApplicationIcon>
+    <Version>2025.7.1</Version>
     <Authors>CEllOMiKA</Authors>
     <Copyright>GPL v3</Copyright>
+    <Company>CeniLab</Company>
+    <Description>Milestone #1</Description>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="icon.ico" />
+    <Content Include="assets\Icon_M1.ico" />
   </ItemGroup>
 
   <ItemGroup>

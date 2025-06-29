@@ -40,10 +40,12 @@
             toolst_save = new ToolStripMenuItem();
             toolStripSeparator3 = new ToolStripSeparator();
             toolst_exitprog = new ToolStripMenuItem();
+            Project = new ToolStripMenuItem();
+            ProjectSettings = new ToolStripMenuItem();
             Run = new ToolStripMenuItem();
             RuntML = new ToolStripMenuItem();
             OpenCsproj = new ToolStripMenuItem();
-            关于ToolStripMenuItem = new ToolStripMenuItem();
+            About = new ToolStripMenuItem();
             toolst_about = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             addon = new ToolStripMenuItem();
@@ -57,15 +59,23 @@
             status = new StatusStrip();
             CodeCount = new ToolStripStatusLabel();
             FilePropt = new ToolStripStatusLabel();
+            FileStatus = new ToolStripStatusLabel();
             split = new Splitter();
             ImageBox = new PictureBox();
             codes = new RichTextBox();
-            panel1 = new Panel();
+            Panel = new Panel();
+            ObjectList = new ListView();
+            ListTab = new TabControl();
+            TabFile = new TabPage();
+            TabObject = new TabPage();
             MenuList.SuspendLayout();
             ToolList.SuspendLayout();
             status.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ImageBox).BeginInit();
-            panel1.SuspendLayout();
+            Panel.SuspendLayout();
+            ListTab.SuspendLayout();
+            TabFile.SuspendLayout();
+            TabObject.SuspendLayout();
             SuspendLayout();
             // 
             // fileview
@@ -78,7 +88,7 @@
             // MenuList
             // 
             MenuList.ImageScalingSize = new Size(24, 24);
-            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, 关于ToolStripMenuItem });
+            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Project, Run, About });
             resources.ApplyResources(MenuList, "MenuList");
             MenuList.Name = "MenuList";
             // 
@@ -134,6 +144,18 @@
             resources.ApplyResources(toolst_exitprog, "toolst_exitprog");
             toolst_exitprog.Click += toolst_exitprog_Click;
             // 
+            // Project
+            // 
+            Project.DropDownItems.AddRange(new ToolStripItem[] { ProjectSettings });
+            Project.Name = "Project";
+            resources.ApplyResources(Project, "Project");
+            // 
+            // ProjectSettings
+            // 
+            ProjectSettings.Name = "ProjectSettings";
+            resources.ApplyResources(ProjectSettings, "ProjectSettings");
+            ProjectSettings.Click += ProjectSettings_Click;
+            // 
             // Run
             // 
             Run.DropDownItems.AddRange(new ToolStripItem[] { RuntML, OpenCsproj });
@@ -152,11 +174,11 @@
             resources.ApplyResources(OpenCsproj, "OpenCsproj");
             OpenCsproj.Click += OpenCsproj_Click;
             // 
-            // 关于ToolStripMenuItem
+            // About
             // 
-            关于ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolst_about, toolStripSeparator1, addon, settings });
-            关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            resources.ApplyResources(关于ToolStripMenuItem, "关于ToolStripMenuItem");
+            About.DropDownItems.AddRange(new ToolStripItem[] { toolst_about, toolStripSeparator1, addon, settings });
+            About.Name = "About";
+            resources.ApplyResources(About, "About");
             // 
             // toolst_about
             // 
@@ -223,7 +245,7 @@
             // 
             // status
             // 
-            status.Items.AddRange(new ToolStripItem[] { CodeCount, FilePropt });
+            status.Items.AddRange(new ToolStripItem[] { CodeCount, FilePropt, FileStatus });
             resources.ApplyResources(status, "status");
             status.Name = "status";
             // 
@@ -238,6 +260,12 @@
             FilePropt.BackColor = Color.White;
             FilePropt.Name = "FilePropt";
             resources.ApplyResources(FilePropt, "FilePropt");
+            // 
+            // FileStatus
+            // 
+            FileStatus.BackColor = Color.White;
+            FileStatus.Name = "FileStatus";
+            resources.ApplyResources(FileStatus, "FileStatus");
             // 
             // split
             // 
@@ -258,21 +286,52 @@
             codes.Name = "codes";
             codes.TextChanged += codes_TextChanged;
             // 
-            // panel1
+            // Panel
             // 
-            panel1.Controls.Add(codes);
-            panel1.Controls.Add(ImageBox);
-            resources.ApplyResources(panel1, "panel1");
-            panel1.Name = "panel1";
+            Panel.Controls.Add(codes);
+            Panel.Controls.Add(ImageBox);
+            resources.ApplyResources(Panel, "Panel");
+            Panel.Name = "Panel";
+            // 
+            // ObjectList
+            // 
+            ObjectList.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(ObjectList, "ObjectList");
+            ObjectList.Items.AddRange(new ListViewItem[] { (ListViewItem)resources.GetObject("ObjectList.Items") });
+            ObjectList.Name = "ObjectList";
+            ObjectList.UseCompatibleStateImageBehavior = false;
+            ObjectList.View = View.List;
+            // 
+            // ListTab
+            // 
+            ListTab.Controls.Add(TabFile);
+            ListTab.Controls.Add(TabObject);
+            resources.ApplyResources(ListTab, "ListTab");
+            ListTab.Name = "ListTab";
+            ListTab.SelectedIndex = 0;
+            // 
+            // TabFile
+            // 
+            TabFile.Controls.Add(fileview);
+            resources.ApplyResources(TabFile, "TabFile");
+            TabFile.Name = "TabFile";
+            TabFile.UseVisualStyleBackColor = true;
+            // 
+            // TabObject
+            // 
+            TabObject.Controls.Add(ObjectList);
+            resources.ApplyResources(TabObject, "TabObject");
+            TabObject.Name = "TabObject";
+            TabObject.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
             resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            Controls.Add(panel1);
+            Controls.Add(Panel);
             Controls.Add(split);
-            Controls.Add(fileview);
+            Controls.Add(ListTab);
             Controls.Add(status);
             Controls.Add(ToolList);
             Controls.Add(MenuList);
@@ -285,7 +344,10 @@
             status.ResumeLayout(false);
             status.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ImageBox).EndInit();
-            panel1.ResumeLayout(false);
+            Panel.ResumeLayout(false);
+            ListTab.ResumeLayout(false);
+            TabFile.ResumeLayout(false);
+            TabObject.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -294,7 +356,7 @@
 
         private MenuStrip MenuList;
         private ToolStripMenuItem 文件ToolStripMenuItem;
-        private ToolStripMenuItem 关于ToolStripMenuItem;
+        private ToolStripMenuItem About;
         private ToolStrip ToolList;
         private ToolStripButton fresh;
         private ToolStripMenuItem toolst_about;
@@ -317,12 +379,19 @@
         private StatusStrip status;
         private ToolStripSeparator toolStripSeparator4;
         private Splitter split;
+        private Panel Panel;
+        private ToolStripStatusLabel FileStatus;
+        private ListView ObjectList;
+        private TabControl ListTab;
+        private TabPage TabFile;
+        private TabPage TabObject;
         public static PictureBox ImageBox;
         public static RichTextBox codes;
-        private Panel panel1;
         public static TreeView fileview;
         public static ToolStripStatusLabel CodeCount;
         public static ToolStripStatusLabel FilePropt;
         public static ToolStripLabel ProjectName;
+        private ToolStripMenuItem Project;
+        private ToolStripMenuItem ProjectSettings;
     }             
 }

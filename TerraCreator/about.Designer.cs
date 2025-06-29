@@ -42,11 +42,11 @@
             // 
             name.Anchor = AnchorStyles.Top;
             name.AutoSize = true;
-            name.Font = new Font("Yu Gothic UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            name.Location = new Point(26, 6);
+            name.Font = new Font("等线", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            name.Location = new Point(22, 16);
             name.Margin = new Padding(2, 0, 2, 0);
             name.Name = "name";
-            name.Size = new Size(299, 65);
+            name.Size = new Size(298, 50);
             name.TabIndex = 0;
             name.Text = "TerraCreator";
             name.MouseEnter += name_MouseEnter;
@@ -59,7 +59,7 @@
             label2.Name = "label2";
             label2.Size = new Size(164, 51);
             label2.TabIndex = 1;
-            label2.Text = "v2025.6.3\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
+            label2.Text = "v2025.7.1\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
             // 
             // notice
             // 
@@ -86,11 +86,11 @@
             // icon
             // 
             icon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            icon.Image = Properties.Resources.icon;
-            icon.Location = new Point(269, 94);
+            icon.Image = Properties.Resources.Icon_M1;
+            icon.Location = new Point(265, 94);
             icon.Margin = new Padding(2);
             icon.Name = "icon";
-            icon.Size = new Size(41, 45);
+            icon.Size = new Size(45, 46);
             icon.SizeMode = PictureBoxSizeMode.StretchImage;
             icon.TabIndex = 10;
             icon.TabStop = false;

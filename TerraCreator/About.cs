@@ -25,7 +25,7 @@ namespace TerraCreator
 
         private void icon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("暂时就用TML图标吧");
+            MessageBox.Show("没错 我们有新图标了");
         }
 
 
