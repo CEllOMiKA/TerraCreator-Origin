@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Reflection.Emit;
 using System.Reflection;
 using TerraCreator;
+using System.Text.RegularExpressions;
 
 
 namespace TerraCreator
@@ -67,6 +68,21 @@ namespace TerraCreator
                         ProjectData.ProjectMain = ProjectMainFile;
                         ProjectData.ProjectNamespace = ProjectNameSpaceTextBox.Text;
 
+                        Regex ProjectMainFileNamespaceRegex = new Regex(@"[Pp]ublic\sclass\s(?<ProjectNamespaceInFile>\w+)\s*:\s*Mod");
+                        Match ProjectMainFileNamespaceMatch = ProjectMainFileNamespaceRegex.Match(ProjectData.ProjectMain);
+                        if (ProjectMainFileNamespaceMatch.Success)
+                        {
+                            string Namespace = ProjectMainFileNamespaceMatch.Groups["ProjectNamespaceInFile"].Value;
+                            if(Namespace != ProjectData.ProjectNamespace)
+                            {
+                                throw new Exception("Pay attention to capitalization");
+                            }
+                        }
+                        else 
+                        {
+                            throw new Exception($"Check {ProjectData.ProjectNamespace}.cs . Can't match namespace");
+                        }
+
                     }
                     catch (Exception ex)
                     {
@@ -81,11 +97,13 @@ namespace TerraCreator
                             $"无法找到文件或类\n" +
                             $"{ex.Message}\n" +
                             $"\n" +
-                            $"确保模组内部名称填写正确\n" +
+                            $"确保模组内部名称填写正确(注意大小写)\n" +
                             $"如果文件夹没有build.txt,description.txt,launchSettings.json文件\n" +
                             $"建议重新创建项目"
                         );
                     }
+
+
 
                     if (ProjectData.ProjectChecked)
                     {
@@ -101,6 +119,9 @@ namespace TerraCreator
                         Main.fileview.ExpandAll();
                         Main.codes.Text = "";
                         Main.ProjectName.Text = ProjectData.ProjectNamespace;
+                        Main.PutClassBaseTypesIntoObjectListView(ProjectData.ProjectPath);
+
+                        Main.FileSystem.Path = ProjectData.ProjectPath;
 
                         MessageBox.Show("已完成导入", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();
@@ -110,7 +131,7 @@ namespace TerraCreator
                 }
                 else
                 {
-                    MessageBox.Show("输入模组内部名称", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("请打开文件夹并输入模组内部名称", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -118,7 +139,7 @@ namespace TerraCreator
 
         private void NewProject_Load(object sender, EventArgs e)
         {
-            this.BackColor = TerraCreatorData.FormBackColour;
+            this.BackColor = TerraCreatorData.FormBackColor;
         }
 
         private void ProjectNameSpaceTextBox_KeyUp(object sender, KeyEventArgs e)

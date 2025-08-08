@@ -6,8 +6,8 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>assets\Icon_M1.ico</ApplicationIcon>
-    <Version>2025.7.1</Version>
+    <ApplicationIcon>assets\AquaIconTheme\Icon.ico</ApplicationIcon>
+    <Version>2025.8</Version>
     <Authors>CEllOMiKA</Authors>
     <Copyright>GPL v3</Copyright>
     <Company>CeniLab</Company>
@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="assets\Icon_M1.ico" />
+    <Content Include="assets\AquaIconTheme\Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

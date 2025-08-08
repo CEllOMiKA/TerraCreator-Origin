@@ -34,7 +34,10 @@
             notice = new Label();
             ok = new Button();
             icon = new PictureBox();
-            milestone = new Label();
+            Milestone = new Label();
+            label1 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)icon).BeginInit();
             SuspendLayout();
             // 
@@ -42,11 +45,11 @@
             // 
             name.Anchor = AnchorStyles.Top;
             name.AutoSize = true;
-            name.Font = new Font("等线", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            name.Location = new Point(22, 16);
+            name.Font = new Font("OCR A Extended", 42F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            name.Location = new Point(12, 9);
             name.Margin = new Padding(2, 0, 2, 0);
             name.Name = "name";
-            name.Size = new Size(298, 50);
+            name.Size = new Size(433, 58);
             name.TabIndex = 0;
             name.Text = "TerraCreator";
             name.MouseEnter += name_MouseEnter;
@@ -59,12 +62,12 @@
             label2.Name = "label2";
             label2.Size = new Size(164, 51);
             label2.TabIndex = 1;
-            label2.Text = "v2025.7.1\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
+            label2.Text = "v2025.8\r\n(c)CEllOMiKA\r\n邮箱:cmcello@outlook.com";
             // 
             // notice
             // 
             notice.AutoSize = true;
-            notice.Location = new Point(22, 149);
+            notice.Location = new Point(22, 154);
             notice.Margin = new Padding(2, 0, 2, 0);
             notice.Name = "notice";
             notice.Size = new Size(278, 119);
@@ -74,7 +77,7 @@
             // ok
             // 
             ok.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            ok.Location = new Point(256, 244);
+            ok.Location = new Point(435, 382);
             ok.Margin = new Padding(2);
             ok.Name = "ok";
             ok.Size = new Size(71, 24);
@@ -86,8 +89,8 @@
             // icon
             // 
             icon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            icon.Image = Properties.Resources.Icon_M1;
-            icon.Location = new Point(265, 94);
+            icon.Image = Properties.Resources.icon;
+            icon.Location = new Point(444, 94);
             icon.Margin = new Padding(2);
             icon.Name = "icon";
             icon.Size = new Size(45, 46);
@@ -96,26 +99,58 @@
             icon.TabStop = false;
             icon.Click += icon_Click;
             // 
-            // milestone
+            // Milestone
             // 
-            milestone.Anchor = AnchorStyles.Top;
-            milestone.AutoSize = true;
-            milestone.BackColor = Color.Transparent;
-            milestone.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            milestone.Location = new Point(111, 66);
-            milestone.Margin = new Padding(2, 0, 2, 0);
-            milestone.Name = "milestone";
-            milestone.Size = new Size(106, 23);
-            milestone.TabIndex = 11;
-            milestone.Text = "Milestone #1\r\n";
+            Milestone.Anchor = AnchorStyles.Top;
+            Milestone.AutoSize = true;
+            Milestone.BackColor = Color.Transparent;
+            Milestone.Font = new Font("Comic Sans MS", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Milestone.Location = new Point(200, 66);
+            Milestone.Margin = new Padding(2, 0, 2, 0);
+            Milestone.Name = "Milestone";
+            Milestone.Size = new Size(109, 23);
+            Milestone.TabIndex = 11;
+            Milestone.Text = "Milestone #2";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(22, 273);
+            label1.Name = "label1";
+            label1.Size = new Size(301, 68);
+            label1.TabIndex = 12;
+            label1.Text = "GitHub项目地址:\r\nhttps://github.com/CEllOMiKA/TerraCreator-Public\r\n后续作者会开放TerraCreator-Community仓库\r\n期待社区的提交!";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(22, 357);
+            label3.Name = "label3";
+            label3.Size = new Size(143, 17);
+            label3.TabIndex = 13;
+            label3.Text = "感谢你使用TerraCreator";
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Top;
+            label4.AutoSize = true;
+            label4.Font = new Font("OCR A Extended", 15F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(414, 38);
+            label4.Name = "label4";
+            label4.Size = new Size(75, 23);
+            label4.TabIndex = 14;
+            label4.Text = "inDev";
             // 
             // about
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(334, 276);
-            Controls.Add(milestone);
+            ClientSize = new Size(513, 414);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label1);
+            Controls.Add(Milestone);
             Controls.Add(icon);
             Controls.Add(ok);
             Controls.Add(notice);
@@ -138,6 +173,9 @@
         private Label notice;
         private Button ok;
         private PictureBox icon;
-        private Label milestone;
+        private Label Milestone;
+        private Label label1;
+        private Label label3;
+        private Label label4;
     }
 }

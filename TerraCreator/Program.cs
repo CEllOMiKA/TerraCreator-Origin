@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic.Logging;
+
 namespace TerraCreator
 {
     internal static class Program
@@ -21,24 +23,17 @@ namespace TerraCreator
 
 
             //CreateDataFile
-            string DataFilePath = "TerraCreatorData.tcdata";
+            string DataFilePath = TerraCreatorData.TerraCreatorConfigFileName;
             
             if (!File.Exists(DataFilePath))
             {
-                string DataSimpletext =
-                    "FormToolColour\r\n" +
-                    "192\r\n" +
-                    "255\r\n" +
-                    "255\r\n" +
-                    "FormBackColour\r\n" +
-                    "128\r\n" +
-                    "255\r\n" +
-                    "255\r\n" +
-                    "Program only read line 2,3,4,6,7,8 (inProgram is line 1,2,3,5,6,7). If this file is broken , just delete!";
+                MessageBox.Show($"未检测到配置文件\n我们会在此程序的根目录下创建配置文件\n文件名为:{TerraCreatorData.TerraCreatorConfigFileName}","TerraCreator");
+                string DataSimpletext = TerraCreatorData.ExampleTerraCreatorConfigFileContent;
                 File.Create(DataFilePath).Close();
                 File.WriteAllText(DataFilePath, DataSimpletext);
+                
             }
-
+            
             ////CreateAddonFolder
             //string FolderPath = "Addons";
             //if (!Directory.Exists(FolderPath))
@@ -57,12 +52,12 @@ namespace TerraCreator
             }
 
             //SetDataFile
-            TerraCreatorData.FormToolColour = Color.FromArgb(
+            TerraCreatorData.FormToolColor = Color.FromArgb(
                 Convert.ToInt32(Data[1]),
                 Convert.ToInt32(Data[2]),
                 Convert.ToInt32(Data[3])
             );
-            TerraCreatorData.FormBackColour = Color.FromArgb(
+            TerraCreatorData.FormBackColor = Color.FromArgb(
                 Convert.ToInt32(Data[5]),
                 Convert.ToInt32(Data[6]),
                 Convert.ToInt32(Data[7])

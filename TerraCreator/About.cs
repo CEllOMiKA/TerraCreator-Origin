@@ -32,7 +32,7 @@ namespace TerraCreator
 
         private void about_Load(object sender, EventArgs e)
         {
-            this.BackColor = TerraCreatorData.FormBackColour;
+            this.BackColor = TerraCreatorData.FormBackColor;
         }
 
         private void name_MouseEnter(object sender, EventArgs e)

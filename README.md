@@ -1,5 +1,5 @@
 # TerraCreator-Public
-### Milestone #1 (inDEV)
+### Milestone #2 (inDEV)
 ### 介绍:
 
 一个泰拉瑞亚tModLoader模组制作器

@@ -18,8 +18,8 @@ namespace TerraCreator
         }
 
 
-        Color FormBackColor = TerraCreatorData.FormBackColour;
-        Color FormToolColor = TerraCreatorData.FormToolColour;
+        Color FormBackColor = TerraCreatorData.FormBackColor;
+        Color FormToolColor = TerraCreatorData.FormToolColor;
 
 
         private void Settings_ColorSetting()
@@ -68,7 +68,7 @@ namespace TerraCreator
 
             void ResetChoosedBackgroundColor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
-                FormBackColor = TerraCreatorData.FormBackColour;
+                FormBackColor = TerraCreatorData.FormBackColor;
                 ShowChoosedBackgroundColor.Text = "未选择颜色";
                 ShowChoosedBackgroundColor.ForeColor = FormBackColor;
             }
@@ -76,7 +76,7 @@ namespace TerraCreator
 
             void ChooseBackgroundColorButton_Click(object sender, EventArgs e)
             {
-                ChooseBackgroundColor.Color = TerraCreatorData.FormBackColour;
+                ChooseBackgroundColor.Color = TerraCreatorData.FormBackColor;
                 DialogResult ChooseColorResult = ChooseBackgroundColor.ShowDialog();
 
                 if (ChooseColorResult == DialogResult.OK)
@@ -112,14 +112,14 @@ namespace TerraCreator
 
             void ResetChoosedToolColor_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
             {
-                FormToolColor = TerraCreatorData.FormToolColour;
+                FormToolColor = TerraCreatorData.FormToolColor;
                 ShowChoosedToolColor.Text = "未选择颜色";
                 ShowChoosedToolColor.ForeColor = FormToolColor;
             }
 
             void ChooseToolColorButton_Click(object sender, EventArgs e)
             {
-                ChooseToolColor.Color = TerraCreatorData.FormToolColour;
+                ChooseToolColor.Color = TerraCreatorData.FormToolColor;
                 DialogResult ChooseColorResult = ChooseToolColor.ShowDialog();
                 if (ChooseColorResult == DialogResult.OK)
                 {
@@ -180,16 +180,21 @@ namespace TerraCreator
             DeleteSettingFilesButton.Width = w3;
             DeleteSettingFilesButton.Click += new EventHandler(DeleteSettingFilesButton_Click);
 
+            Label AlertLabel = new Label();
+            AlertLabel.Text = "删除后别按保存!";
+            AlertLabel.Location = new Point(r1, y * 2 + d * 2);
+            AlertLabel.AutoSize = true;
+
             void DeleteSettingFilesButton_Click(object sender, EventArgs e)
             {
-                if (File.Exists("TerraCreatorData.tcdata"))
+                if (File.Exists(TerraCreatorData.TerraCreatorConfigFileName))
                 {
                     try
                     {
                         DialogResult CheckIfWant = MessageBox.Show("你确定要删除设置文件吗？\n删除后程序会在下次启动时重新生成设置文件！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (CheckIfWant == DialogResult.Yes)
                         {
-                            File.Delete("TerraCreatorData.tcdata");
+                            File.Delete(TerraCreatorData.TerraCreatorConfigFileName);
                             MessageBox.Show("设置文件已删除！\n重启程序会重生成", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                     }
@@ -208,7 +213,7 @@ namespace TerraCreator
             Panel.Controls.Add(title);
             Panel.Controls.Add(DeleteSettingFilesLabel);
             Panel.Controls.Add(DeleteSettingFilesButton);
-
+            Panel.Controls.Add(AlertLabel);
 
         }
 
@@ -223,9 +228,9 @@ namespace TerraCreator
 
         private void Settings_Load(object sender, EventArgs e)
         {
-            SettingSplit.Panel2.BackColor = TerraCreatorData.FormToolColour;
-            SettingList.BackColor = TerraCreatorData.FormToolColour;
-            this.BackColor = TerraCreatorData.FormBackColour;
+            SettingSplit.Panel2.BackColor = TerraCreatorData.FormToolColor;
+            SettingList.BackColor = TerraCreatorData.FormToolColor;
+            this.BackColor = TerraCreatorData.FormBackColor;
         }
 
 
@@ -256,16 +261,16 @@ namespace TerraCreator
             {
                 string Data = "";
                 Data =
-                        "FormToolColour\r\n" +
+                        "FormToolColor\r\n" +
                         FormToolColor.R + "\r\n" +
                         FormToolColor.G + "\r\n" +
                         FormToolColor.B + "\r\n" +
-                        "FormBackColour\r\n" +
+                        "FormBackColor\r\n" +
                         FormBackColor.R + "\r\n" +
                         FormBackColor.G + "\r\n" +
                         FormBackColor.B + "\r\n" +
                         "Program only read line 2,3,4,6,7,8 (inProgram is line 1,2,3,5,6,7). If this file is broken , just delete!";
-                File.WriteAllText("TerraCreatorData.tcdata", Data);
+                File.WriteAllText(TerraCreatorData.TerraCreatorConfigFileName, Data);
                 MessageBox.Show("保存成功！\n 设置重启程序有效", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
