@@ -1,8 +1,20 @@
-# TerraCreator-Public
-### Milestone #2 (inDEV)
+# TerraCreator-Origin (Abandoned)
+
+### Milestone #2
+
+### 开发者的话:
+
+此项目已停更!!!
+
+作者已经开始用WPF框架重新开发此项目
+
+新项目地址:
+
+https://github.com/CEllOMiKA/TerraCreator-Re
+
 ### 介绍:
 
-一个泰拉瑞亚tModLoader模组制作器
+一个的泰拉瑞亚tModLoader模组制作器
 
 不同于Darthsae和FunCrafter1234的tCreator
 
