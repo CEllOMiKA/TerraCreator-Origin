@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            fileview = new TreeView();
             MenuList = new MenuStrip();
             文件ToolStripMenuItem = new ToolStripMenuItem();
             toolst_newproj = new ToolStripMenuItem();
@@ -43,8 +42,12 @@
             Run = new ToolStripMenuItem();
             RuntML = new ToolStripMenuItem();
             OpenCsproj = new ToolStripMenuItem();
+            项目ToolStripMenuItem = new ToolStripMenuItem();
+            项目设置ToolStripMenuItem = new ToolStripMenuItem();
             About = new ToolStripMenuItem();
             toolst_about = new ToolStripMenuItem();
+            toolStripSeparator6 = new ToolStripSeparator();
+            terraCreatorReToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
             addon = new ToolStripMenuItem();
             settings = new ToolStripMenuItem();
@@ -62,44 +65,36 @@
             CodeCount = new ToolStripStatusLabel();
             FilePropt = new ToolStripStatusLabel();
             FileStatus = new ToolStripStatusLabel();
-            ImageBox = new PictureBox();
-            codes = new RichTextBox();
-            Panel = new Panel();
-            ListTab = new TabControl();
-            TabFile = new TabPage();
-            splitter1 = new Splitter();
+            FileSystem = new FileSystemWatcher();
+            tabPage1 = new TabPage();
+            label1 = new Label();
             TabObject = new TabPage();
             ObjectPanel = new Panel();
             splitter2 = new Splitter();
             ObjectListView = new ListView();
-            FileSystem = new FileSystemWatcher();
-            TabProjectSettings = new TabPage();
-            splitter3 = new Splitter();
-            panel1 = new Panel();
-            listView1 = new ListView();
+            TabFile = new TabPage();
+            Panel = new Panel();
+            codes = new RichTextBox();
+            ImageBox = new PictureBox();
+            splitter1 = new Splitter();
+            fileview = new TreeView();
+            ListTab = new TabControl();
             MenuList.SuspendLayout();
             ToolList.SuspendLayout();
             status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ImageBox).BeginInit();
-            Panel.SuspendLayout();
-            ListTab.SuspendLayout();
-            TabFile.SuspendLayout();
-            TabObject.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)FileSystem).BeginInit();
-            TabProjectSettings.SuspendLayout();
+            tabPage1.SuspendLayout();
+            TabObject.SuspendLayout();
+            TabFile.SuspendLayout();
+            Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)ImageBox).BeginInit();
+            ListTab.SuspendLayout();
             SuspendLayout();
-            // 
-            // fileview
-            // 
-            fileview.BackColor = Color.FromArgb(192, 255, 255);
-            resources.ApplyResources(fileview, "fileview");
-            fileview.Name = "fileview";
-            fileview.AfterSelect += fileview_AfterSelect;
             // 
             // MenuList
             // 
             MenuList.ImageScalingSize = new Size(24, 24);
-            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, About });
+            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, 项目ToolStripMenuItem, About });
             resources.ApplyResources(MenuList, "MenuList");
             MenuList.Name = "MenuList";
             // 
@@ -173,9 +168,21 @@
             resources.ApplyResources(OpenCsproj, "OpenCsproj");
             OpenCsproj.Click += OpenCsproj_Click;
             // 
+            // 项目ToolStripMenuItem
+            // 
+            项目ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 项目设置ToolStripMenuItem });
+            项目ToolStripMenuItem.Name = "项目ToolStripMenuItem";
+            resources.ApplyResources(项目ToolStripMenuItem, "项目ToolStripMenuItem");
+            // 
+            // 项目设置ToolStripMenuItem
+            // 
+            项目设置ToolStripMenuItem.Name = "项目设置ToolStripMenuItem";
+            resources.ApplyResources(项目设置ToolStripMenuItem, "项目设置ToolStripMenuItem");
+            项目设置ToolStripMenuItem.Click += 项目设置ToolStripMenuItem_Click;
+            // 
             // About
             // 
-            About.DropDownItems.AddRange(new ToolStripItem[] { toolst_about, toolStripSeparator1, addon, settings });
+            About.DropDownItems.AddRange(new ToolStripItem[] { toolst_about, toolStripSeparator6, terraCreatorReToolStripMenuItem, toolStripSeparator1, addon, settings });
             About.Name = "About";
             resources.ApplyResources(About, "About");
             // 
@@ -184,6 +191,17 @@
             toolst_about.Name = "toolst_about";
             resources.ApplyResources(toolst_about, "toolst_about");
             toolst_about.Click += toolst_about_Click;
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            resources.ApplyResources(toolStripSeparator6, "toolStripSeparator6");
+            // 
+            // terraCreatorReToolStripMenuItem
+            // 
+            terraCreatorReToolStripMenuItem.Name = "terraCreatorReToolStripMenuItem";
+            resources.ApplyResources(terraCreatorReToolStripMenuItem, "terraCreatorReToolStripMenuItem");
+            terraCreatorReToolStripMenuItem.Click += terraCreatorReToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
@@ -204,6 +222,7 @@
             // 
             // ToolList
             // 
+            ToolList.ImageScalingSize = new Size(24, 24);
             ToolList.Items.AddRange(new ToolStripItem[] { ImportProject, fresh, save, additem, toolStripSeparator5, OpenTML, OpenCsprojFile, toolStripSeparator4, ProjectName });
             resources.ApplyResources(ToolList, "ToolList");
             ToolList.Name = "ToolList";
@@ -273,6 +292,7 @@
             // 
             // status
             // 
+            status.ImageScalingSize = new Size(24, 24);
             status.Items.AddRange(new ToolStripItem[] { CodeCount, FilePropt, FileStatus });
             resources.ApplyResources(status, "status");
             status.Name = "status";
@@ -295,50 +315,22 @@
             FileStatus.Name = "FileStatus";
             resources.ApplyResources(FileStatus, "FileStatus");
             // 
-            // ImageBox
+            // FileSystem
             // 
-            resources.ApplyResources(ImageBox, "ImageBox");
-            ImageBox.Name = "ImageBox";
-            ImageBox.TabStop = false;
+            FileSystem.EnableRaisingEvents = true;
+            FileSystem.SynchronizingObject = this;
             // 
-            // codes
+            // tabPage1
             // 
-            codes.AcceptsTab = true;
-            codes.BackColor = Color.FromArgb(192, 255, 255);
-            resources.ApplyResources(codes, "codes");
-            codes.Name = "codes";
-            codes.TextChanged += codes_TextChanged;
+            tabPage1.Controls.Add(label1);
+            resources.ApplyResources(tabPage1, "tabPage1");
+            tabPage1.Name = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
             // 
-            // Panel
+            // label1
             // 
-            Panel.Controls.Add(codes);
-            Panel.Controls.Add(ImageBox);
-            resources.ApplyResources(Panel, "Panel");
-            Panel.Name = "Panel";
-            // 
-            // ListTab
-            // 
-            ListTab.Controls.Add(TabFile);
-            ListTab.Controls.Add(TabObject);
-            ListTab.Controls.Add(TabProjectSettings);
-            resources.ApplyResources(ListTab, "ListTab");
-            ListTab.Name = "ListTab";
-            ListTab.SelectedIndex = 0;
-            // 
-            // TabFile
-            // 
-            TabFile.Controls.Add(Panel);
-            TabFile.Controls.Add(splitter1);
-            TabFile.Controls.Add(fileview);
-            resources.ApplyResources(TabFile, "TabFile");
-            TabFile.Name = "TabFile";
-            TabFile.UseVisualStyleBackColor = true;
-            // 
-            // splitter1
-            // 
-            resources.ApplyResources(splitter1, "splitter1");
-            splitter1.Name = "splitter1";
-            splitter1.TabStop = false;
+            resources.ApplyResources(label1, "label1");
+            label1.Name = "label1";
             // 
             // TabObject
             // 
@@ -371,40 +363,57 @@
             ObjectListView.View = View.SmallIcon;
             ObjectListView.ItemSelectionChanged += ObjectListView_ItemSelectionChanged;
             // 
-            // FileSystem
+            // TabFile
             // 
-            FileSystem.EnableRaisingEvents = true;
-            FileSystem.SynchronizingObject = this;
+            TabFile.Controls.Add(Panel);
+            TabFile.Controls.Add(splitter1);
+            TabFile.Controls.Add(fileview);
+            resources.ApplyResources(TabFile, "TabFile");
+            TabFile.Name = "TabFile";
+            TabFile.UseVisualStyleBackColor = true;
             // 
-            // TabProjectSettings
+            // Panel
             // 
-            TabProjectSettings.BackColor = Color.FromArgb(128, 255, 255);
-            TabProjectSettings.Controls.Add(panel1);
-            TabProjectSettings.Controls.Add(splitter3);
-            TabProjectSettings.Controls.Add(listView1);
-            resources.ApplyResources(TabProjectSettings, "TabProjectSettings");
-            TabProjectSettings.Name = "TabProjectSettings";
+            Panel.Controls.Add(codes);
+            Panel.Controls.Add(ImageBox);
+            resources.ApplyResources(Panel, "Panel");
+            Panel.Name = "Panel";
             // 
-            // splitter3
+            // codes
             // 
-            resources.ApplyResources(splitter3, "splitter3");
-            splitter3.Name = "splitter3";
-            splitter3.TabStop = false;
+            codes.AcceptsTab = true;
+            codes.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(codes, "codes");
+            codes.Name = "codes";
+            codes.TextChanged += codes_TextChanged;
             // 
-            // panel1
+            // ImageBox
             // 
-            resources.ApplyResources(panel1, "panel1");
-            panel1.BackColor = Color.FromArgb(192, 255, 255);
-            panel1.Name = "panel1";
+            resources.ApplyResources(ImageBox, "ImageBox");
+            ImageBox.Name = "ImageBox";
+            ImageBox.TabStop = false;
             // 
-            // listView1
+            // splitter1
             // 
-            listView1.BackColor = Color.FromArgb(192, 255, 255);
-            resources.ApplyResources(listView1, "listView1");
-            listView1.Groups.AddRange(new ListViewGroup[] { (ListViewGroup)resources.GetObject("listView1.Groups"), (ListViewGroup)resources.GetObject("listView1.Groups1") });
-            listView1.Name = "listView1";
-            listView1.UseCompatibleStateImageBehavior = false;
-            listView1.View = View.SmallIcon;
+            resources.ApplyResources(splitter1, "splitter1");
+            splitter1.Name = "splitter1";
+            splitter1.TabStop = false;
+            // 
+            // fileview
+            // 
+            fileview.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(fileview, "fileview");
+            fileview.Name = "fileview";
+            fileview.AfterSelect += fileview_AfterSelect;
+            // 
+            // ListTab
+            // 
+            ListTab.Controls.Add(TabFile);
+            ListTab.Controls.Add(TabObject);
+            ListTab.Controls.Add(tabPage1);
+            resources.ApplyResources(ListTab, "ListTab");
+            ListTab.Name = "ListTab";
+            ListTab.SelectedIndex = 0;
             // 
             // Main
             // 
@@ -423,13 +432,14 @@
             ToolList.PerformLayout();
             status.ResumeLayout(false);
             status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ImageBox).EndInit();
-            Panel.ResumeLayout(false);
-            ListTab.ResumeLayout(false);
-            TabFile.ResumeLayout(false);
-            TabObject.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)FileSystem).EndInit();
-            TabProjectSettings.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            TabObject.ResumeLayout(false);
+            TabFile.ResumeLayout(false);
+            Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)ImageBox).EndInit();
+            ListTab.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -460,29 +470,31 @@
         private ToolStripMenuItem OpenCsproj;
         private StatusStrip status;
         private ToolStripSeparator toolStripSeparator4;
-        private Panel Panel;
         private ToolStripStatusLabel FileStatus;
-        private TabControl ListTab;
-        private TabPage TabFile;
-        private TabPage TabObject;
-        private Splitter splitter1;
-        private Splitter splitter2;
         private ToolStripButton ImportProject;
         private ToolStripButton OpenTML;
         private ToolStripButton OpenCsprojFile;
         private ToolStripSeparator toolStripSeparator5;
-        public static Panel ObjectPanel;
-        public static ListView ObjectListView;
-        public static PictureBox ImageBox;
-        public static RichTextBox codes;
-        public static TreeView fileview;
+        private TabControl ListTab;
+        private TabPage TabFile;
+        private Panel Panel;
+        private Splitter splitter1;
+        private TabPage TabObject;
+        private Splitter splitter2;
+        private TabPage tabPage1;
+        private ToolStripMenuItem 项目ToolStripMenuItem;
+        private ToolStripMenuItem 项目设置ToolStripMenuItem;
+        private ToolStripMenuItem terraCreatorReToolStripMenuItem;
+        private ToolStripSeparator toolStripSeparator6;
+        private Label label1;
         public static ToolStripStatusLabel CodeCount;
         public static ToolStripStatusLabel FilePropt;
         public static ToolStripLabel ProjectName;
         public static FileSystemWatcher FileSystem;
-        private TabPage TabProjectSettings;
-        public Panel panel1;
-        private Splitter splitter3;
-        public ListView listView1;
+        public static RichTextBox codes;
+        public static PictureBox ImageBox;
+        public static TreeView fileview;
+        public static Panel ObjectPanel;
+        public static ListView ObjectListView;
     }             
 }

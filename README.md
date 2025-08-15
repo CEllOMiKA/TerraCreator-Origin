@@ -1,16 +1,12 @@
-# TerraCreator-Origin (Abandoned)
+# TerraCreator-Origin (Community Edition)
 
 ### Milestone #2
 
 ### 开发者的话:
 
-此项目已停更!!!
+作者觉得放弃这个项目太可惜
 
-作者已经开始用WPF框架重新开发此项目
-
-新项目地址:
-
-https://github.com/CEllOMiKA/TerraCreator-Re
+决定开放给大家提交
 
 ### 介绍:
 
@@ -29,6 +25,8 @@ Windows7 SP1及以上
 .NET 8.0  (下载地址:https://dotnet.microsoft.com/)
 
 ### 贡献者:
+
+(如果你贡献了代码,别忘了在这标哦)
 
 CEllOMiKA (cmcello@outlook.com)
 

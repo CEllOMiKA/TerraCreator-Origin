@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using TerraCreator;
 using System.IO;
 using System.Collections.Generic;
+using System.Diagnostics;
 namespace TerraCreator
 {
     public partial class Main : Form
@@ -747,9 +748,21 @@ namespace TerraCreator
             }
 
         }
+
+        private void œÓƒø…Ë÷√ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form ProjectSettings = new ProjectSettings();
+            ProjectSettings.Show();
+
+        }
+
+        private void terraCreatorReToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer", "https://github.com/CEllOMiKA/TerraCreator-Origin");
+        }
     }
 
-    
+
 
 }
         
