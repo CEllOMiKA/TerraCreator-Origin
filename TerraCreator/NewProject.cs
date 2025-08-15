@@ -68,7 +68,7 @@ namespace TerraCreator
                         ProjectData.ProjectMain = ProjectMainFile;
                         ProjectData.ProjectNamespace = ProjectNameSpaceTextBox.Text;
 
-                        Regex ProjectMainFileNamespaceRegex = new Regex(@"[Pp]ublic\sclass\s(?<ProjectNamespaceInFile>\w+)\s*:\s*Mod");
+                        Regex ProjectMainFileNamespaceRegex = new Regex(@"[Pp]ublic\s+(?:partial\s+)?(?:static\s+)?class\s(?<ProjectNamespaceInFile>\w+)\s*:\s*Mod");
                         Match ProjectMainFileNamespaceMatch = ProjectMainFileNamespaceRegex.Match(ProjectData.ProjectMain);
                         if (ProjectMainFileNamespaceMatch.Success)
                         {
@@ -121,7 +121,12 @@ namespace TerraCreator
                         Main.ProjectName.Text = ProjectData.ProjectNamespace;
                         Main.PutClassBaseTypesIntoObjectListView(ProjectData.ProjectPath);
 
-                        Main.FileSystem.Path = ProjectData.ProjectPath;
+                        Main.ObjectProject.Controls.Clear();
+                        Form ProjectSettingsForm = new ProjectSettings();
+                        ProjectSettingsForm.TopLevel = false;
+                        Main.ObjectProject.Controls.Add(ProjectSettingsForm);
+                        ProjectSettingsForm.Show();
+                        //Main.FileSystem.Path = ProjectData.ProjectPath;
 
                         MessageBox.Show("已完成导入", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();

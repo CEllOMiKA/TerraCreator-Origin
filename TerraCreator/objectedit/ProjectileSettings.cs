@@ -32,10 +32,10 @@ namespace TerraCreator
             InitializeComponent();
             //初步重设窗体
             ProjectileNamespaceTextBox.Text = ProjectileNamespace;
-            OriginCodeFilePath.Text = ProjectilePath;
+            OriginCodeFilePath.Text = ProjectilePath.Replace(ProjectData.ProjectPath, "res:");
             try
             {
-                ProjectileImagePathLabel.Text = ProjectilePath.Replace(".cs", ".png");            //后续此处需改为代码内路径
+                ProjectileImagePathLabel.Text = (ProjectilePath.Replace(".cs", ".png")).Replace(ProjectData.ProjectPath, "res:");            //后续此处需改为代码内路径
                 ProjectileImagePictureBox.Image = Image.FromFile(ProjectilePath.Replace(".cs", ".png"));
             }
             catch (Exception e)

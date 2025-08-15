@@ -1,9 +1,10 @@
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TerraCreator;
-using System.IO;
-using System.Collections.Generic;
-using System.Diagnostics;
+using TerraCreator.objectedit;
 namespace TerraCreator
 {
     public partial class Main : Form
@@ -303,7 +304,17 @@ namespace TerraCreator
                         item.Group = ObjectListView.Groups[1];
                         item.Tag = file; // 设置 Tag 为 Projectile 路径
                     }
-                    ObjectListView.Items.Add(item);
+                    else if (baseType == "ModNPC" && ObjectListView.Groups.Count > 2)
+                    {
+                        item.Group = ObjectListView.Groups[2];
+                        item.Tag = file;
+                    }
+                    else if(baseType == "ModTile" && ObjectListView.Groups.Count > 3)
+                    {
+                        item.Group = ObjectListView.Groups[3];
+                        item.Tag = file;
+                    }
+                        ObjectListView.Items.Add(item);
                 }
             }
         }
@@ -315,34 +326,54 @@ namespace TerraCreator
 
         private void ObjectListView_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
-            if (e.Item.Tag == null)
+            if (ObjectListView.SelectedItems.Count > 0)
             {
-                MessageBox.Show("无法访问此对象的Tag\n(Tag中存放对象路径)", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            string SelectedObjectPath = e.Item.Tag.ToString();
-            string SelectedObjectNamespace = e.Item.Text;
-
-            if (e.Item.Group.Name == "ModItem")
-            {
-                ObjectPanel.Controls.Clear();
-            }
-            if (e.Item.Group.Name == "ModProjectile")
-            {
-                ObjectPanel.Controls.Clear();
-                try
+                if(e.Item.Group == null)
                 {
-                    Form ProjectileSettingForm = new ProjectileSettingForm(SelectedObjectPath, SelectedObjectNamespace);
-                    ProjectileSettingForm.TopLevel = false;
-                    ProjectileSettingForm.Parent = ObjectPanel;
-                    ProjectileSettingForm.Show();
+                    return;
                 }
-                catch (Exception ex)
+                if (e.Item.Tag == null)
                 {
-                    MessageBox.Show($"无法加载射弹设置: \n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("无法访问此对象的Tag\n(Tag中存放对象路径)", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string SelectedObjectPath = e.Item.Tag.ToString();
+                string SelectedObjectNamespace = e.Item.Text;
+
+                if (e.Item.Group.Name == "ModItem")
+                {
+                    ObjectPanel.Controls.Clear();
+                    try
+                    {
+                        Form ItemSettingForm = new ItemSettings(SelectedObjectPath, SelectedObjectNamespace);
+                        ItemSettingForm.TopLevel = false;
+                        ItemSettingForm.Parent = ObjectPanel;
+                        ItemSettingForm.Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"无法加载物品设置: \n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
 
+                if (e.Item.Group.Name == "ModProjectile")
+                {
+                    ObjectPanel.Controls.Clear();
+                    try
+                    {
+                        Form ProjectileSettingForm = new ProjectileSettingForm(SelectedObjectPath, SelectedObjectNamespace);
+                        ProjectileSettingForm.TopLevel = false;
+                        ProjectileSettingForm.Parent = ObjectPanel;
+                        ProjectileSettingForm.Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"无法加载射弹设置: \n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
             }
+
         }
 
 
@@ -751,8 +782,15 @@ namespace TerraCreator
 
         private void 项目设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form ProjectSettings = new ProjectSettings();
-            ProjectSettings.Show();
+            if (ProjectData.ProjectChecked)
+            {
+                Form ProjectSettings = new ProjectSettings();
+                ProjectSettings.Show();
+            }
+            else
+            {
+                MessageBox.Show("你还没有打开项目", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

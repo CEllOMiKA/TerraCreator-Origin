@@ -42,8 +42,6 @@
             Run = new ToolStripMenuItem();
             RuntML = new ToolStripMenuItem();
             OpenCsproj = new ToolStripMenuItem();
-            项目ToolStripMenuItem = new ToolStripMenuItem();
-            项目设置ToolStripMenuItem = new ToolStripMenuItem();
             About = new ToolStripMenuItem();
             toolst_about = new ToolStripMenuItem();
             toolStripSeparator6 = new ToolStripSeparator();
@@ -65,9 +63,8 @@
             CodeCount = new ToolStripStatusLabel();
             FilePropt = new ToolStripStatusLabel();
             FileStatus = new ToolStripStatusLabel();
-            FileSystem = new FileSystemWatcher();
-            tabPage1 = new TabPage();
-            label1 = new Label();
+            TabProjectSettings = new TabPage();
+            ObjectProject = new Panel();
             TabObject = new TabPage();
             ObjectPanel = new Panel();
             splitter2 = new Splitter();
@@ -82,8 +79,7 @@
             MenuList.SuspendLayout();
             ToolList.SuspendLayout();
             status.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)FileSystem).BeginInit();
-            tabPage1.SuspendLayout();
+            TabProjectSettings.SuspendLayout();
             TabObject.SuspendLayout();
             TabFile.SuspendLayout();
             Panel.SuspendLayout();
@@ -94,7 +90,7 @@
             // MenuList
             // 
             MenuList.ImageScalingSize = new Size(24, 24);
-            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, 项目ToolStripMenuItem, About });
+            MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, About });
             resources.ApplyResources(MenuList, "MenuList");
             MenuList.Name = "MenuList";
             // 
@@ -167,18 +163,6 @@
             OpenCsproj.Name = "OpenCsproj";
             resources.ApplyResources(OpenCsproj, "OpenCsproj");
             OpenCsproj.Click += OpenCsproj_Click;
-            // 
-            // 项目ToolStripMenuItem
-            // 
-            项目ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { 项目设置ToolStripMenuItem });
-            项目ToolStripMenuItem.Name = "项目ToolStripMenuItem";
-            resources.ApplyResources(项目ToolStripMenuItem, "项目ToolStripMenuItem");
-            // 
-            // 项目设置ToolStripMenuItem
-            // 
-            项目设置ToolStripMenuItem.Name = "项目设置ToolStripMenuItem";
-            resources.ApplyResources(项目设置ToolStripMenuItem, "项目设置ToolStripMenuItem");
-            项目设置ToolStripMenuItem.Click += 项目设置ToolStripMenuItem_Click;
             // 
             // About
             // 
@@ -315,22 +299,18 @@
             FileStatus.Name = "FileStatus";
             resources.ApplyResources(FileStatus, "FileStatus");
             // 
-            // FileSystem
+            // TabProjectSettings
             // 
-            FileSystem.EnableRaisingEvents = true;
-            FileSystem.SynchronizingObject = this;
+            TabProjectSettings.BackColor = Color.FromArgb(192, 255, 255);
+            TabProjectSettings.Controls.Add(ObjectProject);
+            TabProjectSettings.ForeColor = SystemColors.ControlText;
+            resources.ApplyResources(TabProjectSettings, "TabProjectSettings");
+            TabProjectSettings.Name = "TabProjectSettings";
             // 
-            // tabPage1
+            // ObjectProject
             // 
-            tabPage1.Controls.Add(label1);
-            resources.ApplyResources(tabPage1, "tabPage1");
-            tabPage1.Name = "tabPage1";
-            tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(label1, "label1");
-            label1.Name = "label1";
+            resources.ApplyResources(ObjectProject, "ObjectProject");
+            ObjectProject.Name = "ObjectProject";
             // 
             // TabObject
             // 
@@ -357,7 +337,7 @@
             // 
             ObjectListView.BackColor = Color.FromArgb(192, 255, 255);
             resources.ApplyResources(ObjectListView, "ObjectListView");
-            ObjectListView.Groups.AddRange(new ListViewGroup[] { (ListViewGroup)resources.GetObject("ObjectListView.Groups"), (ListViewGroup)resources.GetObject("ObjectListView.Groups1") });
+            ObjectListView.Groups.AddRange(new ListViewGroup[] { (ListViewGroup)resources.GetObject("ObjectListView.Groups"), (ListViewGroup)resources.GetObject("ObjectListView.Groups1"), (ListViewGroup)resources.GetObject("ObjectListView.Groups2"), (ListViewGroup)resources.GetObject("ObjectListView.Groups3") });
             ObjectListView.Name = "ObjectListView";
             ObjectListView.UseCompatibleStateImageBehavior = false;
             ObjectListView.View = View.SmallIcon;
@@ -410,7 +390,7 @@
             // 
             ListTab.Controls.Add(TabFile);
             ListTab.Controls.Add(TabObject);
-            ListTab.Controls.Add(tabPage1);
+            ListTab.Controls.Add(TabProjectSettings);
             resources.ApplyResources(ListTab, "ListTab");
             ListTab.Name = "ListTab";
             ListTab.SelectedIndex = 0;
@@ -432,9 +412,7 @@
             ToolList.PerformLayout();
             status.ResumeLayout(false);
             status.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)FileSystem).EndInit();
-            tabPage1.ResumeLayout(false);
-            tabPage1.PerformLayout();
+            TabProjectSettings.ResumeLayout(false);
             TabObject.ResumeLayout(false);
             TabFile.ResumeLayout(false);
             Panel.ResumeLayout(false);
@@ -481,16 +459,13 @@
         private Splitter splitter1;
         private TabPage TabObject;
         private Splitter splitter2;
-        private TabPage tabPage1;
-        private ToolStripMenuItem 项目ToolStripMenuItem;
-        private ToolStripMenuItem 项目设置ToolStripMenuItem;
+        private TabPage TabProjectSettings;
         private ToolStripMenuItem terraCreatorReToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator6;
-        private Label label1;
+        public static Panel ObjectProject;
         public static ToolStripStatusLabel CodeCount;
         public static ToolStripStatusLabel FilePropt;
         public static ToolStripLabel ProjectName;
-        public static FileSystemWatcher FileSystem;
         public static RichTextBox codes;
         public static PictureBox ImageBox;
         public static TreeView fileview;

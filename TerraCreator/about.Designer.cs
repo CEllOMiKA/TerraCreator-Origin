@@ -59,7 +59,7 @@
             label2.Name = "label2";
             label2.Size = new Size(237, 96);
             label2.TabIndex = 1;
-            label2.Text = "TerraCreator Origin 社区版\r\nv2025.8.1\r\n(c)CEllOMiKA\r\n(c)所有为此项目付出的你";
+            label2.Text = "TerraCreator Origin 社区版\r\nv2025.8.2\r\n(c)CEllOMiKA\r\n(c)所有为此项目付出的你";
             // 
             // notice
             // 
