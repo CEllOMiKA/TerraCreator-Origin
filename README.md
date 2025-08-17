@@ -26,7 +26,7 @@ Windows7 SP1及以上
 
 ### 贡献者:
 
-(如果你贡献了代码,别忘了在这标哦)
+(如果你贡献了代码,别忘了在这标哦)(About.cs里也写上©+你的名字)
 
 CEllOMiKA (cmcello@outlook.com)
 
