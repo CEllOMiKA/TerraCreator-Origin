@@ -117,173 +117,187 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;create.Name" xml:space="preserve">
-    <value>create</value>
-  </data>
-  <data name="&gt;&gt;clickto.Name" xml:space="preserve">
-    <value>clickto</value>
-  </data>
-  <data name="&gt;&gt;newprojlabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;create.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="folderpositiontext.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>NewProject</value>
-  </data>
-  <data name="&gt;&gt;folderpositiontext.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectNameSpaceTextBox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="typenamespace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 215</value>
+  <data name="toolst_newproj.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 34</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="folderpositiontext.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+  <data name="toolst_newproj.Text" xml:space="preserve">
+    <value>Import Project</value>
   </data>
-  <data name="&gt;&gt;newprojlabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="toolst_newitem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 34</value>
   </data>
-  <data name="clickto.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="toolst_newitem.Text" xml:space="preserve">
+    <value>New Object</value>
   </data>
-  <data name="newprojlabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 12pt, style=Bold</value>
+  <data name="toolst_additemintoproj.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 34</value>
   </data>
-  <data name="clickto.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 126</value>
+  <data name="toolst_additemintoproj.Text" xml:space="preserve">
+    <value>Import Object</value>
   </data>
-  <data name="&gt;&gt;tmlyouneed.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="toolStripSeparator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 6</value>
   </data>
-  <data name="&gt;&gt;typenamespace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="toolst_SaveAs.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 34</value>
   </data>
-  <data name="clickto.Text" xml:space="preserve">
-    <value>点我查看教程</value>
+  <data name="toolst_SaveAs.Text" xml:space="preserve">
+    <value>Save As</value>
   </data>
-  <data name="create.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="toolst_save.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 34</value>
   </data>
-  <data name="typenamespace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>158, 24</value>
+  <data name="toolst_save.Text" xml:space="preserve">
+    <value>Save</value>
   </data>
-  <data name="&gt;&gt;choosefolder.Name" xml:space="preserve">
-    <value>choosefolder</value>
+  <data name="toolStripSeparator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>231, 6</value>
   </data>
-  <data name="tmlyouneed.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="toolst_exitprog.Size" type="System.Drawing.Size, System.Drawing">
+    <value>234, 34</value>
   </data>
-  <data name="typenamespace.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
+  <data name="toolst_exitprog.Text" xml:space="preserve">
+    <value>Exit</value>
   </data>
-  <data name="create.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 34</value>
+  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 28</value>
   </data>
-  <data name="&gt;&gt;newprojlabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
   </data>
-  <data name="&gt;&gt;tmlyouneed.ZOrder" xml:space="preserve">
-    <value>6</value>
+  <data name="RuntML.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 34</value>
   </data>
-  <data name="&gt;&gt;clickto.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="RuntML.Text" xml:space="preserve">
+    <value>Run tModLoader</value>
   </data>
-  <data name="&gt;&gt;ProjectNameSpaceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="OpenCsproj.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 34</value>
   </data>
-  <data name="tmlyouneed.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="OpenCsproj.Text" xml:space="preserve">
+    <value>Open .csproj File</value>
   </data>
-  <data name="tmlyouneed.Text" xml:space="preserve">
-    <value>你需要在tModLoader中创建项目
-然后在下面选择项目文件夹
-(注意:有些软件会阻止TerraCreator访问User文件夹)
+  <data name="Run.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 28</value>
+  </data>
+  <data name="Run.Text" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="toolst_about.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 34</value>
+  </data>
+  <data name="toolst_about.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="toolStripSeparator6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 6</value>
+  </data>
+  <data name="terraCreatorReToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 34</value>
+  </data>
+  <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 6</value>
+  </data>
+  <data name="addon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 34</value>
+  </data>
+  <data name="addon.Text" xml:space="preserve">
+    <value>Addons</value>
+  </data>
+  <data name="settings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 34</value>
+  </data>
+  <data name="settings.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="About.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 28</value>
+  </data>
+  <data name="About.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ProjectName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 28</value>
+  </data>
+  <data name="ProjectName.Text" xml:space="preserve">
+    <value>No Project Opened</value>
+  </data>
+  <data name="CodeCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 24</value>
+  </data>
+  <data name="CodeCount.Text" xml:space="preserve">
+    <value>Word Count:0</value>
+  </data>
+  <data name="FilePropt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 24</value>
+  </data>
+  <data name="FilePropt.Text" xml:space="preserve">
+    <value>No File Opened</value>
+  </data>
+  <data name="FileStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="FileStatus.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="TabProjectSettings.Text" xml:space="preserve">
+    <value>Project Settings</value>
+  </data>
+  <data name="ObjectListView.Groups" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
+        ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABueJ
+        qeWTgQX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVl
+        X18ACAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAAB01vZEl0ZW0GCAAAAAdNb2RJdGVtCw==
 </value>
   </data>
-  <data name="&gt;&gt;tmlyouneed.Name" xml:space="preserve">
-    <value>tmlyouneed</value>
+  <data name="ObjectListView.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
+        ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABuWw
+        hOW8uQX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVl
+        X18ACAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAADU1vZFByb2plY3RpbGUGCAAAAA1Nb2RQ
+        cm9qZWN0aWxlCw==
+</value>
   </data>
-  <data name="tmlyouneed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>424, 72</value>
+  <data name="ObjectListView.Groups2" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
+        ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAAA05Q
+        QwX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVlX18A
+        CAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAABk1vZE5QQwYIAAAABk1vZE5QQws=
+</value>
   </data>
-  <data name="&gt;&gt;ProjectNameSpaceTextBox.Name" xml:space="preserve">
-    <value>ProjectNameSpaceTextBox</value>
+  <data name="ObjectListView.Groups3" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAEZTeXN0ZW0uV2luZG93cy5Gb3JtcywgQ3VsdHVyZT1uZXV0cmFs
+        LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
+        TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
+        ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABueJ
+        qeWdlwX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVl
+        X18ACAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAAB01vZFRpbGUGCAAAAAdNb2RUaWxlCw==
+</value>
   </data>
-  <data name="tmlyouneed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 54</value>
+  <data name="TabObject.Text" xml:space="preserve">
+    <value>Object Viewer</value>
   </data>
-  <data name="choosefolder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 32</value>
+  <data name="codes.Text" xml:space="preserve">
+    <value>English translation production progress
+22%</value>
   </data>
-  <data name="choosefolder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 152</value>
-  </data>
-  <data name="&gt;&gt;create.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="newprojlabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 31</value>
-  </data>
-  <data name="&gt;&gt;clickto.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="typenamespace.Text" xml:space="preserve">
-    <value>输入模组内部名称:</value>
-  </data>
-  <data name="folderpositiontext.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProjectNameSpaceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>347, 30</value>
-  </data>
-  <data name="&gt;&gt;typenamespace.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;newprojlabel.Name" xml:space="preserve">
-    <value>newprojlabel</value>
-  </data>
-  <data name="ProjectNameSpaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 212</value>
-  </data>
-  <data name="&gt;&gt;tmlyouneed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>553, 292</value>
-  </data>
-  <data name="newprojlabel.Text" xml:space="preserve">
-    <value>导入项目</value>
-  </data>
-  <data name="newprojlabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>11, 24</value>
-  </data>
-  <data name="newprojlabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="newprojlabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 8</value>
-  </data>
-  <data name="&gt;&gt;create.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectNameSpaceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="create.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 241</value>
+  <data name="TabFile.Text" xml:space="preserve">
+    <value>File Manager</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -361,82 +375,4 @@
         AAD/8AAA//AAAP/wAAD/8AAA//wAAP/8AAA=
 </value>
   </data>
-  <data name="folderpositiontext.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 188</value>
-  </data>
-  <data name="&gt;&gt;typenamespace.Name" xml:space="preserve">
-    <value>typenamespace</value>
-  </data>
-  <data name="&gt;&gt;choosefolder.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="typenamespace.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="folderpositiontext.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 24</value>
-  </data>
-  <data name="ProjectNameSpaceTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="folderpositiontext.Text" xml:space="preserve">
-    <value>你选择的文件夹地址:</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;clickto.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;choosefolder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectNameSpaceTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;typenamespace.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="choosefolder.Text" xml:space="preserve">
-    <value>选择</value>
-  </data>
-  <data name="&gt;&gt;folderpositiontext.Name" xml:space="preserve">
-    <value>folderpositiontext</value>
-  </data>
-  <data name="clickto.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 24</value>
-  </data>
-  <data name="create.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="typenamespace.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>导入项目</value>
-  </data>
-  <data name="choosefolder.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="create.Text" xml:space="preserve">
-    <value>导入</value>
-  </data>
-  <data name="clickto.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="choosefolder.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;choosefolder.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;folderpositiontext.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;folderpositiontext.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

@@ -55,9 +55,11 @@ namespace TerraCreator
                 Regex ReadProjectilePenetrateFromFile = new Regex(@"Projectile.[Pp]enetrate\s*=\s*(\d+);");
                 Regex ReadProjectileFriendlyFromFile = new Regex(@"Projectile.[Ff]riendly\s*=\s*([Tt]rue|[Ff]alse);");
                 Regex ReadProjectileHostileFromFile = new Regex(@"Projectile.[Hh]ostile\s*=\s*([Tt]rue|[Ff]alse);");
-                Regex ReadSetDafaultsCodesFromFile = new Regex(@"[Pp]ublic\soverride\svoid\sSetDefaults()");
                 Regex ReadProjectileDamageFromFile = new Regex(@"Projectile.[Dd]amage\s*=\s*(\d+);");
                 Regex ReadProjectileAIStyleFromFile = new Regex(@"Projectile.[Aa][Ii][Ss]tyle\s*=\s*(\d+);");
+
+                Regex ReadSetDefaultsCodesFromFile = new Regex(@"[Pp]ublic\soverride\svoid\sSetDefaults()\s*{(?<ProjectileSetDefaultsContent>\w+)\s*}");
+
 
 
                 if (ProjectileContent[0] != " ")
@@ -103,9 +105,9 @@ namespace TerraCreator
                         {
                             ProjectileAIStyleNumericUpDown.Value = Convert.ToInt16(ReadProjectileAIStyleFromFile.Match(EachLineFromFile).Groups[1].Value);
                         }
-                        if (Regex.Match(EachLineFromFile, ReadSetDafaultsCodesFromFile.ToString()).Success)
+                        if (Regex.Match(EachLineFromFile, ReadSetDefaultsCodesFromFile.ToString()).Success)
                         {
-                            //Working...
+                            ProjectileSetDefaultsCodesRichTextBox.Text = Convert.ToString(ReadSetDefaultsCodesFromFile.Match(EachLineFromFile).Groups["ProjectileSetDefaultsContent"].Value);
                         }
                         ProjectileContentWithoutLineRead += EachLineFromFile;
                         ProjectileContentWithoutLineRead += Environment.NewLine;
@@ -130,7 +132,7 @@ namespace TerraCreator
 
             @WrittedCodes =
                 "using Microsoft.Xna.Framework;" + Environment.NewLine +
-                "using Terraria;" + Environment.NewLine+
+                "using Terraria;" + Environment.NewLine +
                 "using Terraria.ID;" + Environment.NewLine +
                 "using Terraria.ModLoader;" + Environment.NewLine +
               $"namespace {ClassDefine}" + Environment.NewLine +
@@ -142,12 +144,12 @@ namespace TerraCreator
               $"            Projectile.Height = {ProjectileHeightNumericUpDown.Value};//射弹高度" + Environment.NewLine +
               $"            Projectile.Width = {ProjectileWidthNumericUpDown.Value};//射弹宽度" + Environment.NewLine +
               $"            Projectile.Friendly = {ProjectileFriendlyComboBox.Text};//射弹是否可以攻击敌方" + Environment.NewLine +
-              $"            Projectile.timeLeft = {ProjectileTimeLeftNumericUpDown.Value};//射弹存在时间"+ Environment.NewLine +
-              $"            Projectile.Scale = {ProjectileScaleTextBox.Text};//射弹缩放倍率"+ Environment.NewLine +
-              $"            Projectile.Hostile = {ProjectileHostileComboBox.Text};//射弹是否可以攻击友方和NPC"+ Environment.NewLine +
-              $"            Projectile.Alpha = {ProjectileAlphaNumericUpDown.Value};//射弹透明度"+ Environment.NewLine +
-              $"            Projectile.Penetrate = {ProjectilePenetrateNumericUpDown.Value};//射弹穿透次数"+ Environment.NewLine +
-              $"            Projectile.Damage = {ProjectileDamageNumericUpDown.Value};//射弹伤害"+ Environment.NewLine +
+              $"            Projectile.timeLeft = {ProjectileTimeLeftNumericUpDown.Value};//射弹存在时间" + Environment.NewLine +
+              $"            Projectile.Scale = {ProjectileScaleTextBox.Text};//射弹缩放倍率" + Environment.NewLine +
+              $"            Projectile.Hostile = {ProjectileHostileComboBox.Text};//射弹是否可以攻击友方和NPC" + Environment.NewLine +
+              $"            Projectile.Alpha = {ProjectileAlphaNumericUpDown.Value};//射弹透明度" + Environment.NewLine +
+              $"            Projectile.Penetrate = {ProjectilePenetrateNumericUpDown.Value};//射弹穿透次数" + Environment.NewLine +
+              $"            Projectile.Damage = {ProjectileDamageNumericUpDown.Value};//射弹伤害" + Environment.NewLine +
               $"            Projectile.aiStyle = {ProjectileAIStyleNumericUpDown.Value};//射弹AI" + Environment.NewLine +
               $"            //自定义" + Environment.NewLine +
                 "        }" + Environment.NewLine +
@@ -162,7 +164,7 @@ namespace TerraCreator
             this.BackColor = TerraCreatorData.FormBackColor;
             SetDefaultsTabPage.BackColor = TerraCreatorData.FormToolColor;
             AITabPage.BackColor = TerraCreatorData.FormToolColor;
-
+            OtherTabPage.BackColor = TerraCreatorData.FormToolColor;
         }
 
         private void OriginalCode_Click(object sender, EventArgs e)
@@ -179,6 +181,11 @@ namespace TerraCreator
         private void SaveButton_Click(object sender, EventArgs e)
         {
             CodeViewRichTextBox.Text = "开发中 2025.8.5";
+        }
+
+        private void ProjectileSetDefaultsCodesRichTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

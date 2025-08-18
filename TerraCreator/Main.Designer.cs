@@ -89,108 +89,108 @@
             // 
             // MenuList
             // 
+            resources.ApplyResources(MenuList, "MenuList");
             MenuList.ImageScalingSize = new Size(24, 24);
             MenuList.Items.AddRange(new ToolStripItem[] { 文件ToolStripMenuItem, Run, About });
-            resources.ApplyResources(MenuList, "MenuList");
             MenuList.Name = "MenuList";
             // 
             // 文件ToolStripMenuItem
             // 
+            resources.ApplyResources(文件ToolStripMenuItem, "文件ToolStripMenuItem");
             文件ToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolst_newproj, toolst_newitem, toolst_additemintoproj, toolStripSeparator2, toolst_SaveAs, toolst_save, toolStripSeparator3, toolst_exitprog });
             文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            resources.ApplyResources(文件ToolStripMenuItem, "文件ToolStripMenuItem");
             // 
             // toolst_newproj
             // 
-            toolst_newproj.Name = "toolst_newproj";
             resources.ApplyResources(toolst_newproj, "toolst_newproj");
+            toolst_newproj.Name = "toolst_newproj";
             toolst_newproj.Click += toolst_newproj_Click;
             // 
             // toolst_newitem
             // 
-            toolst_newitem.Name = "toolst_newitem";
             resources.ApplyResources(toolst_newitem, "toolst_newitem");
+            toolst_newitem.Name = "toolst_newitem";
             toolst_newitem.Click += toolst_newitem_Click;
             // 
             // toolst_additemintoproj
             // 
-            toolst_additemintoproj.Name = "toolst_additemintoproj";
             resources.ApplyResources(toolst_additemintoproj, "toolst_additemintoproj");
+            toolst_additemintoproj.Name = "toolst_additemintoproj";
             toolst_additemintoproj.Click += toolst_additemintoproj_Click;
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
             resources.ApplyResources(toolStripSeparator2, "toolStripSeparator2");
+            toolStripSeparator2.Name = "toolStripSeparator2";
             // 
             // toolst_SaveAs
             // 
-            toolst_SaveAs.Name = "toolst_SaveAs";
             resources.ApplyResources(toolst_SaveAs, "toolst_SaveAs");
+            toolst_SaveAs.Name = "toolst_SaveAs";
             toolst_SaveAs.Click += toolst_SaveAs_Click;
             // 
             // toolst_save
             // 
-            toolst_save.Name = "toolst_save";
             resources.ApplyResources(toolst_save, "toolst_save");
+            toolst_save.Name = "toolst_save";
             toolst_save.Click += toolst_save_Click;
             // 
             // toolStripSeparator3
             // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
             resources.ApplyResources(toolStripSeparator3, "toolStripSeparator3");
+            toolStripSeparator3.Name = "toolStripSeparator3";
             // 
             // toolst_exitprog
             // 
-            toolst_exitprog.Name = "toolst_exitprog";
             resources.ApplyResources(toolst_exitprog, "toolst_exitprog");
+            toolst_exitprog.Name = "toolst_exitprog";
             toolst_exitprog.Click += toolst_exitprog_Click;
             // 
             // Run
             // 
+            resources.ApplyResources(Run, "Run");
             Run.DropDownItems.AddRange(new ToolStripItem[] { RuntML, OpenCsproj });
             Run.Name = "Run";
-            resources.ApplyResources(Run, "Run");
             // 
             // RuntML
             // 
-            RuntML.Name = "RuntML";
             resources.ApplyResources(RuntML, "RuntML");
+            RuntML.Name = "RuntML";
             RuntML.Click += RuntML_Click;
             // 
             // OpenCsproj
             // 
-            OpenCsproj.Name = "OpenCsproj";
             resources.ApplyResources(OpenCsproj, "OpenCsproj");
+            OpenCsproj.Name = "OpenCsproj";
             OpenCsproj.Click += OpenCsproj_Click;
             // 
             // About
             // 
+            resources.ApplyResources(About, "About");
             About.DropDownItems.AddRange(new ToolStripItem[] { toolst_about, toolStripSeparator6, terraCreatorReToolStripMenuItem, toolStripSeparator1, addon, settings });
             About.Name = "About";
-            resources.ApplyResources(About, "About");
             // 
             // toolst_about
             // 
-            toolst_about.Name = "toolst_about";
             resources.ApplyResources(toolst_about, "toolst_about");
+            toolst_about.Name = "toolst_about";
             toolst_about.Click += toolst_about_Click;
             // 
             // toolStripSeparator6
             // 
-            toolStripSeparator6.Name = "toolStripSeparator6";
             resources.ApplyResources(toolStripSeparator6, "toolStripSeparator6");
+            toolStripSeparator6.Name = "toolStripSeparator6";
             // 
             // terraCreatorReToolStripMenuItem
             // 
-            terraCreatorReToolStripMenuItem.Name = "terraCreatorReToolStripMenuItem";
             resources.ApplyResources(terraCreatorReToolStripMenuItem, "terraCreatorReToolStripMenuItem");
+            terraCreatorReToolStripMenuItem.Name = "terraCreatorReToolStripMenuItem";
             terraCreatorReToolStripMenuItem.Click += terraCreatorReToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
             resources.ApplyResources(toolStripSeparator1, "toolStripSeparator1");
+            toolStripSeparator1.Name = "toolStripSeparator1";
             // 
             // addon
             // 
@@ -200,111 +200,111 @@
             // 
             // settings
             // 
-            settings.Name = "settings";
             resources.ApplyResources(settings, "settings");
+            settings.Name = "settings";
             settings.Click += settings_Click;
             // 
             // ToolList
             // 
+            resources.ApplyResources(ToolList, "ToolList");
             ToolList.ImageScalingSize = new Size(24, 24);
             ToolList.Items.AddRange(new ToolStripItem[] { ImportProject, fresh, save, additem, toolStripSeparator5, OpenTML, OpenCsprojFile, toolStripSeparator4, ProjectName });
-            resources.ApplyResources(ToolList, "ToolList");
             ToolList.Name = "ToolList";
             // 
             // ImportProject
             // 
+            resources.ApplyResources(ImportProject, "ImportProject");
             ImportProject.DisplayStyle = ToolStripItemDisplayStyle.Image;
             ImportProject.Image = Properties.Resources.Open;
-            resources.ApplyResources(ImportProject, "ImportProject");
             ImportProject.Name = "ImportProject";
             ImportProject.Click += ImportProject_Click;
             // 
             // fresh
             // 
+            resources.ApplyResources(fresh, "fresh");
             fresh.DisplayStyle = ToolStripItemDisplayStyle.Image;
             fresh.Image = Properties.Resources.Reflash;
-            resources.ApplyResources(fresh, "fresh");
             fresh.Name = "fresh";
             fresh.Click += fresh_Click;
             // 
             // save
             // 
+            resources.ApplyResources(save, "save");
             save.DisplayStyle = ToolStripItemDisplayStyle.Image;
             save.Image = Properties.Resources.Save;
-            resources.ApplyResources(save, "save");
             save.Name = "save";
             save.Click += save_Click;
             // 
             // additem
             // 
+            resources.ApplyResources(additem, "additem");
             additem.DisplayStyle = ToolStripItemDisplayStyle.Image;
             additem.Image = Properties.Resources.NewItem;
-            resources.ApplyResources(additem, "additem");
             additem.Name = "additem";
             additem.Click += additem_Click;
             // 
             // toolStripSeparator5
             // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
             resources.ApplyResources(toolStripSeparator5, "toolStripSeparator5");
+            toolStripSeparator5.Name = "toolStripSeparator5";
             // 
             // OpenTML
             // 
+            resources.ApplyResources(OpenTML, "OpenTML");
             OpenTML.DisplayStyle = ToolStripItemDisplayStyle.Image;
             OpenTML.Image = Properties.Resources.OpenTML;
-            resources.ApplyResources(OpenTML, "OpenTML");
             OpenTML.Name = "OpenTML";
             OpenTML.Click += OpenTML_Click;
             // 
             // OpenCsprojFile
             // 
+            resources.ApplyResources(OpenCsprojFile, "OpenCsprojFile");
             OpenCsprojFile.DisplayStyle = ToolStripItemDisplayStyle.Image;
             OpenCsprojFile.Image = Properties.Resources.OpenCsproj;
-            resources.ApplyResources(OpenCsprojFile, "OpenCsprojFile");
             OpenCsprojFile.Name = "OpenCsprojFile";
             OpenCsprojFile.Click += OpenCsprojFile_Click;
             // 
             // toolStripSeparator4
             // 
-            toolStripSeparator4.Name = "toolStripSeparator4";
             resources.ApplyResources(toolStripSeparator4, "toolStripSeparator4");
+            toolStripSeparator4.Name = "toolStripSeparator4";
             // 
             // ProjectName
             // 
-            ProjectName.Name = "ProjectName";
             resources.ApplyResources(ProjectName, "ProjectName");
+            ProjectName.Name = "ProjectName";
             // 
             // status
             // 
+            resources.ApplyResources(status, "status");
             status.ImageScalingSize = new Size(24, 24);
             status.Items.AddRange(new ToolStripItem[] { CodeCount, FilePropt, FileStatus });
-            resources.ApplyResources(status, "status");
             status.Name = "status";
             // 
             // CodeCount
             // 
+            resources.ApplyResources(CodeCount, "CodeCount");
             CodeCount.BackColor = Color.White;
             CodeCount.Name = "CodeCount";
-            resources.ApplyResources(CodeCount, "CodeCount");
             // 
             // FilePropt
             // 
+            resources.ApplyResources(FilePropt, "FilePropt");
             FilePropt.BackColor = Color.White;
             FilePropt.Name = "FilePropt";
-            resources.ApplyResources(FilePropt, "FilePropt");
             // 
             // FileStatus
             // 
+            resources.ApplyResources(FileStatus, "FileStatus");
             FileStatus.BackColor = Color.White;
             FileStatus.Name = "FileStatus";
-            resources.ApplyResources(FileStatus, "FileStatus");
             // 
             // TabProjectSettings
             // 
+            resources.ApplyResources(TabProjectSettings, "TabProjectSettings");
             TabProjectSettings.BackColor = Color.FromArgb(192, 255, 255);
             TabProjectSettings.Controls.Add(ObjectProject);
             TabProjectSettings.ForeColor = SystemColors.ControlText;
-            resources.ApplyResources(TabProjectSettings, "TabProjectSettings");
             TabProjectSettings.Name = "TabProjectSettings";
             // 
             // ObjectProject
@@ -314,10 +314,10 @@
             // 
             // TabObject
             // 
+            resources.ApplyResources(TabObject, "TabObject");
             TabObject.Controls.Add(ObjectPanel);
             TabObject.Controls.Add(splitter2);
             TabObject.Controls.Add(ObjectListView);
-            resources.ApplyResources(TabObject, "TabObject");
             TabObject.Name = "TabObject";
             TabObject.UseVisualStyleBackColor = true;
             // 
@@ -335,8 +335,8 @@
             // 
             // ObjectListView
             // 
-            ObjectListView.BackColor = Color.FromArgb(192, 255, 255);
             resources.ApplyResources(ObjectListView, "ObjectListView");
+            ObjectListView.BackColor = Color.FromArgb(192, 255, 255);
             ObjectListView.Groups.AddRange(new ListViewGroup[] { (ListViewGroup)resources.GetObject("ObjectListView.Groups"), (ListViewGroup)resources.GetObject("ObjectListView.Groups1"), (ListViewGroup)resources.GetObject("ObjectListView.Groups2"), (ListViewGroup)resources.GetObject("ObjectListView.Groups3") });
             ObjectListView.Name = "ObjectListView";
             ObjectListView.UseCompatibleStateImageBehavior = false;
@@ -345,25 +345,25 @@
             // 
             // TabFile
             // 
+            resources.ApplyResources(TabFile, "TabFile");
             TabFile.Controls.Add(Panel);
             TabFile.Controls.Add(splitter1);
             TabFile.Controls.Add(fileview);
-            resources.ApplyResources(TabFile, "TabFile");
             TabFile.Name = "TabFile";
             TabFile.UseVisualStyleBackColor = true;
             // 
             // Panel
             // 
+            resources.ApplyResources(Panel, "Panel");
             Panel.Controls.Add(codes);
             Panel.Controls.Add(ImageBox);
-            resources.ApplyResources(Panel, "Panel");
             Panel.Name = "Panel";
             // 
             // codes
             // 
             codes.AcceptsTab = true;
-            codes.BackColor = Color.FromArgb(192, 255, 255);
             resources.ApplyResources(codes, "codes");
+            codes.BackColor = Color.FromArgb(192, 255, 255);
             codes.Name = "codes";
             codes.TextChanged += codes_TextChanged;
             // 
@@ -381,17 +381,17 @@
             // 
             // fileview
             // 
-            fileview.BackColor = Color.FromArgb(192, 255, 255);
             resources.ApplyResources(fileview, "fileview");
+            fileview.BackColor = Color.FromArgb(192, 255, 255);
             fileview.Name = "fileview";
             fileview.AfterSelect += fileview_AfterSelect;
             // 
             // ListTab
             // 
+            resources.ApplyResources(ListTab, "ListTab");
             ListTab.Controls.Add(TabFile);
             ListTab.Controls.Add(TabObject);
             ListTab.Controls.Add(TabProjectSettings);
-            resources.ApplyResources(ListTab, "ListTab");
             ListTab.Name = "ListTab";
             ListTab.SelectedIndex = 0;
             // 
