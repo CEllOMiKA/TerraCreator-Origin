@@ -108,10 +108,10 @@ namespace TerraCreator
                     if (ProjectData.ProjectChecked)
                     {
 
-                        ProjectDictInfo.Create();
-                        ProjectDictInfo.CreateSubdirectory("Items");
-                        ProjectDictInfo.CreateSubdirectory("Projectiles");
-                        ProjectDictInfo.CreateSubdirectory("Localization");
+                        //ProjectDictInfo.Create();
+                        //ProjectDictInfo.CreateSubdirectory("Items");
+                        //ProjectDictInfo.CreateSubdirectory("Projectiles");
+                        //ProjectDictInfo.CreateSubdirectory("Localization");
 
                         ProjectData.ProjectPath = ProjectFolderPath;
                         Main.fileview.Nodes.Clear();

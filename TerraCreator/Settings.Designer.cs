@@ -32,6 +32,7 @@
             ListViewGroup listViewGroup2 = new ListViewGroup("其他", HorizontalAlignment.Left);
             ListViewItem listViewItem1 = new ListViewItem("颜色");
             ListViewItem listViewItem2 = new ListViewItem("其他");
+            ListViewItem listViewItem3 = new ListViewItem("语言");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             settinglabel = new Label();
             SettingSplit = new SplitContainer();
@@ -48,10 +49,9 @@
             // 
             settinglabel.AutoSize = true;
             settinglabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 134);
-            settinglabel.Location = new Point(8, 6);
-            settinglabel.Margin = new Padding(2, 0, 2, 0);
+            settinglabel.Location = new Point(13, 8);
             settinglabel.Name = "settinglabel";
-            settinglabel.Size = new Size(42, 22);
+            settinglabel.Size = new Size(62, 31);
             settinglabel.TabIndex = 5;
             settinglabel.Text = "设置";
             // 
@@ -59,8 +59,7 @@
             // 
             SettingSplit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             SettingSplit.IsSplitterFixed = true;
-            SettingSplit.Location = new Point(8, 30);
-            SettingSplit.Margin = new Padding(2, 2, 2, 2);
+            SettingSplit.Location = new Point(13, 42);
             SettingSplit.Name = "SettingSplit";
             // 
             // SettingSplit.Panel1
@@ -71,9 +70,9 @@
             // 
             SettingSplit.Panel2.BackColor = Color.FromArgb(192, 255, 255);
             SettingSplit.Panel2.Controls.Add(Panel);
-            SettingSplit.Size = new Size(773, 458);
-            SettingSplit.SplitterDistance = 176;
-            SettingSplit.SplitterWidth = 3;
+            SettingSplit.Size = new Size(1354, 888);
+            SettingSplit.SplitterDistance = 307;
+            SettingSplit.SplitterWidth = 5;
             SettingSplit.TabIndex = 7;
             // 
             // SettingList
@@ -88,11 +87,11 @@
             listViewItem1.Group = listViewGroup1;
             listViewItem1.ToolTipText = "设置窗体和控件颜色";
             listViewItem2.Group = listViewGroup2;
-            SettingList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2 });
+            listViewItem3.Group = listViewGroup2;
+            SettingList.Items.AddRange(new ListViewItem[] { listViewItem1, listViewItem2, listViewItem3 });
             SettingList.Location = new Point(0, 0);
-            SettingList.Margin = new Padding(2, 2, 2, 2);
             SettingList.Name = "SettingList";
-            SettingList.Size = new Size(176, 458);
+            SettingList.Size = new Size(307, 888);
             SettingList.TabIndex = 0;
             SettingList.UseCompatibleStateImageBehavior = false;
             SettingList.View = View.SmallIcon;
@@ -102,18 +101,16 @@
             // 
             Panel.Dock = DockStyle.Fill;
             Panel.Location = new Point(0, 0);
-            Panel.Margin = new Padding(2, 2, 2, 2);
             Panel.Name = "Panel";
-            Panel.Size = new Size(594, 458);
+            Panel.Size = new Size(1042, 888);
             Panel.TabIndex = 0;
             // 
             // SaveChanges
             // 
             SaveChanges.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            SaveChanges.Location = new Point(709, 493);
-            SaveChanges.Margin = new Padding(2, 2, 2, 2);
+            SaveChanges.Location = new Point(1253, 937);
             SaveChanges.Name = "SaveChanges";
-            SaveChanges.Size = new Size(71, 24);
+            SaveChanges.Size = new Size(112, 34);
             SaveChanges.TabIndex = 8;
             SaveChanges.Text = "保存";
             SaveChanges.UseVisualStyleBackColor = true;
@@ -121,15 +118,14 @@
             // 
             // Settings
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(11F, 24F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(788, 526);
+            ClientSize = new Size(1377, 984);
             Controls.Add(SaveChanges);
             Controls.Add(SettingSplit);
             Controls.Add(settinglabel);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(2, 2, 2, 2);
             Name = "Settings";
             Text = "设置";
             Load += Settings_Load;

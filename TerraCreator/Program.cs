@@ -1,4 +1,5 @@
 using Microsoft.VisualBasic.Logging;
+using System.Runtime.CompilerServices;
 
 namespace TerraCreator
 {
@@ -52,18 +53,30 @@ namespace TerraCreator
             }
 
             //SetDataFile
-            TerraCreatorData.FormToolColor = Color.FromArgb(
-                Convert.ToInt32(Data[1]),
-                Convert.ToInt32(Data[2]),
-                Convert.ToInt32(Data[3])
-            );
-            TerraCreatorData.FormBackColor = Color.FromArgb(
-                Convert.ToInt32(Data[5]),
-                Convert.ToInt32(Data[6]),
-                Convert.ToInt32(Data[7])
-            );
+            try
+            {
+                //Color Settings
+                TerraCreatorData.FormToolColor = Color.FromArgb(
+                    Convert.ToInt32(Data[1]),
+                    Convert.ToInt32(Data[2]),
+                    Convert.ToInt32(Data[3])
+                );
+                TerraCreatorData.FormBackColor = Color.FromArgb(
+                    Convert.ToInt32(Data[5]),
+                    Convert.ToInt32(Data[6]),
+                    Convert.ToInt32(Data[7])
+                );
 
+                //Language Settings
+                TerraCreatorData.Language = Data[9];
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(Data[9]);
 
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show($"配置文件读取错误\n{ex.Message}\n如果不能排查问题,请删除配置文件\n注意:新版本不支持旧版本配置文件","错误",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return;
+            }
 
 
             Console.WriteLine("Starting TerraCreator...");

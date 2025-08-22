@@ -20,6 +20,7 @@ namespace TerraCreator
 
         Color FormBackColor = TerraCreatorData.FormBackColor;
         Color FormToolColor = TerraCreatorData.FormToolColor;
+        string Language = TerraCreatorData.Language;
 
 
         private void Settings_ColorSetting()
@@ -247,10 +248,73 @@ namespace TerraCreator
                 Panel.Controls.Clear();
                 OtherSettings();
             }
+            if (this.SettingList.Groups[1].Items[1].Selected)
+            {
+                Panel.Controls.Clear();
+                LanguageSettings();
+            }
 
         }
 
 
+        public void LanguageSettings()
+        {
+            int y = 40; //distance
+            int d = 2; //distance down
+
+            int w1 = 800; //main
+            int w2 = 500; //other
+            int w3 = 120; //button
+
+            int h3 = y - 5; //button
+            int h4 = 145; //richbox
+
+            int r1 = 16;//right
+            int r2 = 132;//mid
+
+
+            //title
+            Label title = new Label();
+            title.Text = "语言";
+            title.Height = 35;
+            title.Location = new Point(2, y * 0);
+            title.Font = new Font("Microsoft YaHei UI", 12);
+
+            //
+            Label LanguageNameLabel = new Label();
+            LanguageNameLabel.Text = "语言:";
+            LanguageNameLabel.Location = new Point(r1, y + 2);
+            LanguageNameLabel.AutoSize = true;
+            ComboBox LanguageComboBox = new ComboBox();
+            LanguageComboBox.Width = w1;
+            LanguageComboBox.Text = Language;
+            LanguageComboBox.Items.Add("zh-CN");
+            LanguageComboBox.Items.Add("en-US");
+            LanguageComboBox.Font = new Font("Microsoft YaHei UI", 11);
+            LanguageComboBox.Location = new Point(r2, y);
+            Button ConfirmButton = new Button();
+            ConfirmButton.Width = w3;
+            ConfirmButton.Height =h3;
+            ConfirmButton.Location = new Point(r1, y * 2 + d * 2);
+            ConfirmButton.AutoSize = true;
+            ConfirmButton.Text = "Confirm";
+            ConfirmButton.Click += ConfirmButton_Click;
+
+            void ConfirmButton_Click(object? sender, EventArgs e)
+            {
+                if (LanguageComboBox.Text == "zh-CN" || LanguageComboBox.Text == "en-US")
+                    Language = LanguageComboBox.Text;
+                else
+                    MessageBox.Show($"我们不能保证{LanguageComboBox.Text}是否存在\n如果发现报错,请删除配置文件");
+                        Language = LanguageComboBox.Text;
+            }
+
+            Panel.Controls.Add(LanguageComboBox);
+            Panel.Controls.Add(LanguageNameLabel);
+            Panel.Controls.Add(ConfirmButton);
+
+
+        }
 
 
 
@@ -269,7 +333,9 @@ namespace TerraCreator
                         FormBackColor.R + "\r\n" +
                         FormBackColor.G + "\r\n" +
                         FormBackColor.B + "\r\n" +
-                        "Program only read line 2,3,4,6,7,8 (inProgram is line 1,2,3,5,6,7). If this file is broken , just delete!";
+                        "Language\r\n" +
+                        Language;
+                        
                 File.WriteAllText(TerraCreatorData.TerraCreatorConfigFileName, Data);
                 MessageBox.Show("保存成功！\n 设置重启程序有效", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

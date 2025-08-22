@@ -191,6 +191,7 @@
             ProjectilePenetrateNumericUpDown.Location = new Point(732, 75);
             ProjectilePenetrateNumericUpDown.Margin = new Padding(5, 4, 5, 4);
             ProjectilePenetrateNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            ProjectilePenetrateNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, int.MinValue });
             ProjectilePenetrateNumericUpDown.Name = "ProjectilePenetrateNumericUpDown";
             ProjectilePenetrateNumericUpDown.Size = new Size(434, 30);
             ProjectilePenetrateNumericUpDown.TabIndex = 11;

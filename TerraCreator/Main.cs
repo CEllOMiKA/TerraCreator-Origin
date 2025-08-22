@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TerraCreator;
@@ -24,6 +25,7 @@ namespace TerraCreator
             ObjectListView.BackColor = TerraCreatorData.FormToolColor;
             Panel.BackColor = TerraCreatorData.FormToolColor;
             ObjectPanel.BackColor = TerraCreatorData.FormToolColor;
+            ObjectProject.BackColor = TerraCreatorData.FormToolColor;
         }
 
 
@@ -99,7 +101,104 @@ namespace TerraCreator
 
             CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
 
+            Main.codes.SuspendLayout();
+            //ColortheCode();
+            
         }
+
+
+        private void codes_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Control && e.KeyCode == Keys.Z)
+            {
+                Main.codes.ResumeLayout();
+            }
+        }
+
+        //突出代码
+        public static void ColortheCode()
+        {
+            // C# 关键字列表
+            string[] keywords = new string[]
+            {
+                "abstract","as","base","bool","break","byte","case","catch","char","checked","class","const","continue",
+                "decimal","default","delegate","do","double","else","enum","event","explicit","extern","false","finally",
+                "fixed","float","for","foreach","goto","if","implicit","in","int","interface","internal","is","lock",
+                "long","namespace","new","null","object","operator","out","override","params","private","protected",
+                "public","readonly","ref","return","sbyte","sealed","short","sizeof","stackalloc","static","string",
+                "struct","switch","this","throw","true","try","typeof","uint","ulong","unchecked","unsafe","ushort",
+                "using","virtual","void","volatile","while","var","dynamic","get","set","value","partial","record",
+                "init","when","with","yield"
+            };
+
+            // 获取主窗体实例
+            if (Application.OpenForms[0] is not Main mainForm) return;
+            var rtb = Main.codes;
+
+            // 冻结重绘，防止闪烁
+            NativeMethods.SendMessage(rtb.Handle, NativeMethods.WM_SETREDRAW, false, 0);
+
+            int selStart = rtb.SelectionStart;
+            int selLength = rtb.SelectionLength;
+            Color defaultColor = Color.Black;
+            Color keywordColor = Color.DeepSkyBlue;
+            Color commentColor = Color.Green;
+
+            rtb.SuspendLayout();
+
+            // 先重置所有文本颜色
+            rtb.SelectAll();
+            rtb.SelectionColor = defaultColor;
+
+            // 高亮关键字
+            foreach (string keyword in keywords)
+            {
+                var matches = Regex.Matches(rtb.Text, $@"\b{Regex.Escape(keyword)}\b");
+                foreach (Match match in matches)
+                {
+                    rtb.Select(match.Index, match.Length);
+                    rtb.SelectionColor = keywordColor;
+                }
+            }
+
+            // 高亮单行注释 //
+            var singleLineMatches = Regex.Matches(rtb.Text, @"//.*?$", RegexOptions.Multiline);
+            foreach (Match match in singleLineMatches)
+            {
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = commentColor;
+            }
+
+            // 高亮多行注释 /* ... */
+            var multiLineMatches = Regex.Matches(rtb.Text, @"/\*.*?\*/", RegexOptions.Singleline);
+            foreach (Match match in multiLineMatches)
+            {
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = commentColor;
+            }
+
+            // 恢复光标和选区
+            rtb.SelectionStart = selStart;
+            rtb.SelectionLength = selLength;
+            rtb.SelectionColor = defaultColor;
+           
+
+            rtb.ResumeLayout();
+            NativeMethods.SendMessage(rtb.Handle, NativeMethods.WM_SETREDRAW, true, 0);
+            rtb.Invalidate();
+        }
+
+
+
+        // Win32 API 用于冻结/恢复重绘
+        internal static class NativeMethods
+        {
+            public const int WM_SETREDRAW = 0x0b;
+            [System.Runtime.InteropServices.DllImport("user32.dll")]
+            public static extern int SendMessage(IntPtr hWnd, int wMsg, bool wParam, int lParam);
+        }
+
+
 
         //刷新文件视图和对象视图
         private void fresh_Click(object sender, EventArgs e)
@@ -207,7 +306,8 @@ namespace TerraCreator
                         ImageBox.Visible = true;
                         codes.Text = "";
                         FilePropt.Text = fileInfo.Name;
-                        CodeCount.Text = "字数:0";
+                        CodeCount.Text = "图片";
+                        ImageBox.SizeMode = PictureBoxSizeMode.CenterImage;
                         ImageBox.Image = Image.FromFile(fileInfo.FullName);
                     }
                     else
@@ -218,7 +318,7 @@ namespace TerraCreator
                         FilePropt.Text = fileInfo.Name;
                         codes.Text = File.ReadAllText(fileInfo.FullName);
                         CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
-                        ;
+                        ColortheCode();
                     }
 
                 }
@@ -309,12 +409,12 @@ namespace TerraCreator
                         item.Group = ObjectListView.Groups[2];
                         item.Tag = file;
                     }
-                    else if(baseType == "ModTile" && ObjectListView.Groups.Count > 3)
+                    else if (baseType == "ModTile" && ObjectListView.Groups.Count > 3)
                     {
                         item.Group = ObjectListView.Groups[3];
                         item.Tag = file;
                     }
-                        ObjectListView.Items.Add(item);
+                    ObjectListView.Items.Add(item);
                 }
             }
         }
@@ -328,7 +428,7 @@ namespace TerraCreator
         {
             if (ObjectListView.SelectedItems.Count > 0)
             {
-                if(e.Item.Group == null)
+                if (e.Item.Group == null)
                 {
                     return;
                 }
@@ -340,15 +440,17 @@ namespace TerraCreator
                 string SelectedObjectPath = e.Item.Tag.ToString();
                 string SelectedObjectNamespace = e.Item.Text;
 
+                //Item
                 if (e.Item.Group.Name == "ModItem")
                 {
                     ObjectPanel.Controls.Clear();
                     try
                     {
-                        Form ItemSettingForm = new ItemSettings(SelectedObjectPath, SelectedObjectNamespace);
-                        ItemSettingForm.TopLevel = false;
-                        ItemSettingForm.Parent = ObjectPanel;
-                        ItemSettingForm.Show();
+                        Form ItemSettingFormVar = new ItemSettings(SelectedObjectPath, SelectedObjectNamespace);
+                        //ItemSetting.ItemPathGlobal = SelectedObjectPath;
+                        ItemSettingFormVar.TopLevel = false;
+                        ItemSettingFormVar.Parent = ObjectPanel;
+                        ItemSettingFormVar.Show();
                     }
                     catch (Exception ex)
                     {
@@ -356,15 +458,17 @@ namespace TerraCreator
                     }
                 }
 
+                //Projectile
                 if (e.Item.Group.Name == "ModProjectile")
                 {
                     ObjectPanel.Controls.Clear();
                     try
                     {
-                        Form ProjectileSettingForm = new ProjectileSettingForm(SelectedObjectPath, SelectedObjectNamespace);
-                        ProjectileSettingForm.TopLevel = false;
-                        ProjectileSettingForm.Parent = ObjectPanel;
-                        ProjectileSettingForm.Show();
+                        Form ProjectileSettingFormVar = new ProjectileSettingForm(SelectedObjectPath, SelectedObjectNamespace);
+                        ProjectileSettingForm.ProjectilePathGlobal = SelectedObjectPath;
+                        ProjectileSettingFormVar.TopLevel = false;
+                        ProjectileSettingFormVar.Parent = ObjectPanel;
+                        ProjectileSettingFormVar.Show();
                     }
                     catch (Exception ex)
                     {
@@ -372,6 +476,8 @@ namespace TerraCreator
                     }
 
                 }
+
+
             }
 
         }
@@ -531,34 +637,6 @@ namespace TerraCreator
             }
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -798,12 +876,40 @@ namespace TerraCreator
         {
             Process.Start("explorer", "https://github.com/CEllOMiKA/TerraCreator-Origin");
         }
+
+
+        //图片缩放
+        private void ImageBox_Click(object sender, EventArgs e)
+        {
+
+            ImageBox.SizeMode = PictureBoxSizeMode.Zoom;
+
+        }
+
+
     }
 
 
 
 }
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

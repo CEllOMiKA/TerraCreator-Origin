@@ -15,6 +15,7 @@ namespace TerraCreator
     {
 
         string ProjectileContentWithoutLineRead = "";
+        public static string ProjectilePathGlobal = "";
 
         public ProjectileSettingForm(string ProjectilePath, string ProjectileNamespace)
         {
@@ -47,19 +48,30 @@ namespace TerraCreator
             try
             {
                 //正则表达式匹配每项
-                Regex ReadProjectileHeightFromFile = new Regex(@"Projectile.[Hh]eight\s*=\s*(\d+);");
-                Regex ReadProjectileWidthFromFile = new Regex(@"Projectile.[Ww]idth\s*=\s*(\d+);");
-                Regex ReadProjectileScaleFromFile = new Regex(@"Projectile.[Ss]cale\s*=\s*(\d+(\.\d+)?)f;");
-                Regex ReadProjectileAlphaFromFile = new Regex(@"Projectile.[Aa]lpha\s*=\s*(\d+);");
-                Regex ReadProjectileTimeLeftFromFile = new Regex(@"Projectile.[Tt]ime[Ll]eft\s*=\s*(\d+);");
-                Regex ReadProjectilePenetrateFromFile = new Regex(@"Projectile.[Pp]enetrate\s*=\s*(\d+);");
-                Regex ReadProjectileFriendlyFromFile = new Regex(@"Projectile.[Ff]riendly\s*=\s*([Tt]rue|[Ff]alse);");
-                Regex ReadProjectileHostileFromFile = new Regex(@"Projectile.[Hh]ostile\s*=\s*([Tt]rue|[Ff]alse);");
-                Regex ReadProjectileDamageFromFile = new Regex(@"Projectile.[Dd]amage\s*=\s*(\d+);");
-                Regex ReadProjectileAIStyleFromFile = new Regex(@"Projectile.[Aa][Ii][Ss]tyle\s*=\s*(\d+);");
+                Regex ReadProjectileHeightFromFile = new Regex(@"[Pp]rojectile.[Hh]eight\s*=\s*(\d+);");
+                Regex ReadProjectileWidthFromFile = new Regex(@"[Pp]rojectile.[Ww]idth\s*=\s*(\d+);");
+                Regex ReadProjectileScaleFromFile = new Regex(@"[Pp]rojectile.[Ss]cale\s*=\s*(\d+(\.\d+)?)f;");
+                Regex ReadProjectileAlphaFromFile = new Regex(@"[Pp]rojectile.[Aa]lpha\s*=\s*(\d+);");
+                Regex ReadProjectileTimeLeftFromFile = new Regex(@"[Pp]rojectile.[Tt]ime[Ll]eft\s*=\s*(\d+);");
+                Regex ReadProjectilePenetrateFromFile = new Regex(@"[Pp]rojectile.[Pp]enetrate\s*=\s*([-]?\d+);");
+                Regex ReadProjectileFriendlyFromFile = new Regex(@"[Pp]rojectile.[Ff]riendly\s*=\s*([Tt]rue|[Ff]alse);");
+                Regex ReadProjectileHostileFromFile = new Regex(@"[Pp]rojectile.[Hh]ostile\s*=\s*([Tt]rue|[Ff]alse);");
+                Regex ReadProjectileDamageFromFile = new Regex(@"[Pp]rojectile.[Dd]amage\s*=\s*(\d+);");
+                Regex ReadProjectileAIStyleFromFile = new Regex(@"[Pp]rojectile.[Aa][Ii][Ss]tyle\s*=\s*([-]?\d+);");
 
-                Regex ReadSetDefaultsCodesFromFile = new Regex(@"[Pp]ublic\soverride\svoid\sSetDefaults()\s*{(?<ProjectileSetDefaultsContent>\w+)\s*}");
-
+                Regex[] PatternsToRemove =
+                {
+                    ReadProjectileHeightFromFile,
+                    ReadProjectileWidthFromFile,
+                    ReadProjectileScaleFromFile,
+                    ReadProjectileAlphaFromFile,
+                    ReadProjectileTimeLeftFromFile,
+                    ReadProjectilePenetrateFromFile,
+                    ReadProjectileFriendlyFromFile,
+                    ReadProjectileHostileFromFile,
+                    ReadProjectileDamageFromFile,
+                    ReadProjectileAIStyleFromFile
+                };
 
 
                 if (ProjectileContent[0] != " ")
@@ -75,7 +87,7 @@ namespace TerraCreator
                         }
                         if (Regex.Match(EachLineFromFile, ReadProjectileScaleFromFile.ToString()).Success)
                         {
-                            ProjectileScaleTextBox.Text = ReadProjectileScaleFromFile.Match(EachLineFromFile).Groups[1].Value;
+                            ProjectileScaleTextBox.Text = ReadProjectileScaleFromFile.Match(EachLineFromFile).Groups[1].Value+"f";
                         }
                         if (Regex.Match(EachLineFromFile, ReadProjectileAlphaFromFile.ToString()).Success)
                         {
@@ -105,17 +117,19 @@ namespace TerraCreator
                         {
                             ProjectileAIStyleNumericUpDown.Value = Convert.ToInt16(ReadProjectileAIStyleFromFile.Match(EachLineFromFile).Groups[1].Value);
                         }
-                        if (Regex.Match(EachLineFromFile, ReadSetDefaultsCodesFromFile.ToString()).Success)
-                        {
-                            ProjectileSetDefaultsCodesRichTextBox.Text = Convert.ToString(ReadSetDefaultsCodesFromFile.Match(EachLineFromFile).Groups["ProjectileSetDefaultsContent"].Value);
-                        }
+
                         ProjectileContentWithoutLineRead += EachLineFromFile;
                         ProjectileContentWithoutLineRead += Environment.NewLine;
                     }
                 CodeViewRichTextBox.Text = ProjectileContentWithoutLineRead;
+
+                string result = ExtractSetDefaultsBodyAndRemoveMatches(ProjectileContentWithoutLineRead, PatternsToRemove);
+                ProjectileSetDefaultsCodesRichTextBox.Text = result;
+
             }
             catch (Exception e)
             {
+                MessageBox.Show("稀有错误,匹配错误", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             //刷新窗体
@@ -151,7 +165,7 @@ namespace TerraCreator
               $"            Projectile.Penetrate = {ProjectilePenetrateNumericUpDown.Value};//射弹穿透次数" + Environment.NewLine +
               $"            Projectile.Damage = {ProjectileDamageNumericUpDown.Value};//射弹伤害" + Environment.NewLine +
               $"            Projectile.aiStyle = {ProjectileAIStyleNumericUpDown.Value};//射弹AI" + Environment.NewLine +
-              $"            //自定义" + Environment.NewLine +
+              $"            {ProjectileSetDefaultsCodesRichTextBox.Text}" + Environment.NewLine +
                 "        }" + Environment.NewLine +
                 "    }" + Environment.NewLine +
                 "}";
@@ -180,7 +194,19 @@ namespace TerraCreator
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            CodeViewRichTextBox.Text = "开发中 2025.8.5";
+            DialogResult ConfirmSaveProjectileCode = MessageBox.Show("你确定要保存当前代码吗", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (ConfirmSaveProjectileCode == DialogResult.OK)
+            {
+                try
+                {
+                    File.WriteAllText(ProjectilePathGlobal, CodeViewRichTextBox.Text);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"保存错误\n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
         }
 
         private void ProjectileSetDefaultsCodesRichTextBox_TextChanged(object sender, EventArgs e)
@@ -188,5 +214,31 @@ namespace TerraCreator
 
         }
 
+    
+        public static string ExtractSetDefaultsBodyAndRemoveMatches(string code, Regex[] patternsToRemove)
+        {
+            // 匹配 public override void SetDefaults() { ... }
+            var match = Regex.Match(
+                code,
+                @"public\s+override\s+void\s+SetDefaults\s*\(\s*\)\s*\{([\s\S]*?)\}",
+                RegexOptions.Multiline);
+
+            if (!match.Success)
+                return string.Empty;
+
+            string body = match.Groups[1].Value;
+
+            // 依次移除所有需要去除的内容（整行）
+            foreach (var pattern in patternsToRemove)
+            {
+                // 直接用 pattern 替换整行（含注释）
+                body = pattern.Replace(body, "");
+            }
+
+            return body.Trim();
+        }
     }
+    
 }
+
+

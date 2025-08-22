@@ -118,8 +118,62 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="newprojlabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 31</value>
+  </data>
+  <data name="newprojlabel.Text" xml:space="preserve">
+    <value>Import Project
+</value>
+  </data>
+  <data name="tmlyouneed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>683, 72</value>
+  </data>
+  <data name="tmlyouneed.Text" xml:space="preserve">
+    <value>You need to create the project in tModLoader
+Then select the project folder below
+(Note: Some software will prevent TerraCreator from accessing the User folder)</value>
+  </data>
+  <data name="clickto.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 24</value>
+  </data>
+  <data name="clickto.Text" xml:space="preserve">
+    <value>Tutorial(zh-CN)</value>
+  </data>
+  <data name="choosefolder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 163</value>
+  </data>
+  <data name="choosefolder.Text" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="folderpositiontext.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 199</value>
+  </data>
+  <data name="folderpositiontext.Size" type="System.Drawing.Size, System.Drawing">
+    <value>259, 24</value>
+  </data>
+  <data name="folderpositiontext.Text" xml:space="preserve">
+    <value>The folder path you selected:</value>
+  </data>
   <data name="create.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 257</value>
+    <value>13, 256</value>
+  </data>
+  <data name="create.Text" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="typenamespace.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 229</value>
+  </data>
+  <data name="typenamespace.Size" type="System.Drawing.Size, System.Drawing">
+    <value>239, 24</value>
+  </data>
+  <data name="typenamespace.Text" xml:space="preserve">
+    <value>Enter the mod namespace:</value>
+  </data>
+  <data name="ProjectNameSpaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>257, 226</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>712, 303</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -196,5 +250,8 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         AACAAAABgAAAAcAAAAPAAAADwAAAA8AAAAM=
 </value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Import Projcet</value>
   </data>
 </root>

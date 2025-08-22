@@ -217,6 +217,24 @@
   <data name="About.Text" xml:space="preserve">
     <value>About</value>
   </data>
+  <data name="ImportProject.Text" xml:space="preserve">
+    <value>Import Project</value>
+  </data>
+  <data name="fresh.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
+  <data name="save.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="additem.Text" xml:space="preserve">
+    <value>New Object</value>
+  </data>
+  <data name="OpenTML.Text" xml:space="preserve">
+    <value>Run tML</value>
+  </data>
+  <data name="OpenCsprojFile.Text" xml:space="preserve">
+    <value>Open .csproj File</value>
+  </data>
   <data name="ProjectName.Size" type="System.Drawing.Size, System.Drawing">
     <value>176, 28</value>
   </data>
@@ -250,9 +268,9 @@
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
         TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
         ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
-        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABueJ
-        qeWTgQX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVl
-        X18ACAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAAB01vZEl0ZW0GCAAAAAdNb2RJdGVtCw==
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABEl0
+        ZW0F/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAAAAd2YWx1ZV9f
+        AAgCAAAAAAAAAAYFAAAAAAH6/////P///wAAAAAGBwAAAAdNb2RJdGVtBggAAAAHTW9kSXRlbQs=
 </value>
   </data>
   <data name="ObjectListView.Groups1" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -261,10 +279,10 @@
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
         TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
         ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
-        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABuWw
-        hOW8uQX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVl
-        X18ACAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAADU1vZFByb2plY3RpbGUGCAAAAA1Nb2RQ
-        cm9qZWN0aWxlCw==
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAAClBy
+        b2plY3RpbGUF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAAAAd2
+        YWx1ZV9fAAgCAAAAAAAAAAYFAAAAAAH6/////P///wAAAAAGBwAAAA1Nb2RQcm9qZWN0aWxlBggAAAAN
+        TW9kUHJvamVjdGlsZQs=
 </value>
   </data>
   <data name="ObjectListView.Groups2" mimetype="application/x-microsoft.net.object.binary.base64">
@@ -284,9 +302,9 @@
         LCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5BQEAAAAiU3lzdGVtLldpbmRvd3MuRm9ybXMu
         TGlzdFZpZXdHcm91cAYAAAAGSGVhZGVyD0hlYWRlckFsaWdubWVudAZGb290ZXIPRm9vdGVyQWxpZ25t
         ZW50A1RhZwROYW1lAQQBBAEBKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQC
-        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABueJ
-        qeWdlwX8////KFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQBAAAAB3ZhbHVl
-        X18ACAIAAAAAAAAABgUAAAAAAfr////8////AAAAAAYHAAAAB01vZFRpbGUGCAAAAAdNb2RUaWxlCw==
+        AAAAKFN5c3RlbS5XaW5kb3dzLkZvcm1zLkhvcml6b250YWxBbGlnbm1lbnQCAAAAAgAAAAYDAAAABFRp
+        bGUF/P///yhTeXN0ZW0uV2luZG93cy5Gb3Jtcy5Ib3Jpem9udGFsQWxpZ25tZW50AQAAAAd2YWx1ZV9f
+        AAgCAAAAAAAAAAYFAAAAAAH6/////P///wAAAAAGBwAAAAdNb2RUaWxlBggAAAAHTW9kVGlsZQs=
 </value>
   </data>
   <data name="TabObject.Text" xml:space="preserve">
