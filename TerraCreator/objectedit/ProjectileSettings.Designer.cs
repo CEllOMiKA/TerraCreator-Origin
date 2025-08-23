@@ -70,6 +70,7 @@
             SetDefaultsTabPage = new TabPage();
             AITabPage = new TabPage();
             OtherTabPage = new TabPage();
+            HeadTabPage = new TabPage();
             ((System.ComponentModel.ISupportInitialize)ProjectileAIStyleNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ProjectileDamageNumericUpDown).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ProjectilePenetrateNumericUpDown).BeginInit();
@@ -129,9 +130,9 @@
             ProjectileSetDefaultsCodesRichTextBox.Location = new Point(9, 265);
             ProjectileSetDefaultsCodesRichTextBox.Margin = new Padding(5, 4, 5, 4);
             ProjectileSetDefaultsCodesRichTextBox.Name = "ProjectileSetDefaultsCodesRichTextBox";
-            ProjectileSetDefaultsCodesRichTextBox.Size = new Size(1154, 202);
+            ProjectileSetDefaultsCodesRichTextBox.Size = new Size(1154, 440);
             ProjectileSetDefaultsCodesRichTextBox.TabIndex = 17;
-            ProjectileSetDefaultsCodesRichTextBox.Text = "//此处自定义在SetDefaults下的代码\n//开发中 暂时在左边直接改吧\n//小心按下 预览代码 按钮";
+            ProjectileSetDefaultsCodesRichTextBox.Text = "//可能会出错请注意";
             ProjectileSetDefaultsCodesRichTextBox.TextChanged += ProjectileSetDefaultsCodesRichTextBox_TextChanged;
             // 
             // ProjectileSetDefaultsCodesLabel
@@ -466,6 +467,7 @@
             ProjectileTabControl.Controls.Add(SetDefaultsTabPage);
             ProjectileTabControl.Controls.Add(AITabPage);
             ProjectileTabControl.Controls.Add(OtherTabPage);
+            ProjectileTabControl.Controls.Add(HeadTabPage);
             ProjectileTabControl.Location = new Point(19, 165);
             ProjectileTabControl.Margin = new Padding(5, 4, 5, 4);
             ProjectileTabControl.Name = "ProjectileTabControl";
@@ -525,6 +527,16 @@
             OtherTabPage.Size = new Size(1207, 713);
             OtherTabPage.TabIndex = 2;
             OtherTabPage.Text = "Other";
+            // 
+            // HeadTabPage
+            // 
+            HeadTabPage.BackColor = Color.FromArgb(192, 255, 255);
+            HeadTabPage.Location = new Point(4, 33);
+            HeadTabPage.Name = "HeadTabPage";
+            HeadTabPage.Padding = new Padding(3);
+            HeadTabPage.Size = new Size(1207, 713);
+            HeadTabPage.TabIndex = 3;
+            HeadTabPage.Text = "Head";
             // 
             // ProjectileSettingForm
             // 
@@ -611,5 +623,6 @@
         private TabPage SetDefaultsTabPage;
         private TabPage AITabPage;
         private TabPage OtherTabPage;
+        private TabPage HeadTabPage;
     }
 }

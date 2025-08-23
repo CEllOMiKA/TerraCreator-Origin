@@ -15,7 +15,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="assets\AquaIconTheme\Icon.ico" />
+    <Content Include="Assets\AquaIconTheme\Icon.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,10 +31,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="projectsettings\" />
   </ItemGroup>
 
 </Project>

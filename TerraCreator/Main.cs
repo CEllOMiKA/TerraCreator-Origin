@@ -143,6 +143,7 @@ namespace TerraCreator
             Color defaultColor = Color.Black;
             Color keywordColor = Color.DeepSkyBlue;
             Color commentColor = Color.Green;
+            Color functionColor = Color.Red;
 
             rtb.SuspendLayout();
 
@@ -159,6 +160,18 @@ namespace TerraCreator
                     rtb.Select(match.Index, match.Length);
                     rtb.SelectionColor = keywordColor;
                 }
+            }
+
+            // 高亮函数名
+            var funcRegex = new Regex(@"\b(public|private|protected|internal|static|virtual|override|sealed|async|extern|unsafe|partial|new)\s+[\w<>\[\],\s]+\s+(\w+)\s*\([^\)]*\)\s*\{", RegexOptions.Compiled);
+            var funcMatches = funcRegex.Matches(rtb.Text);
+            foreach (Match match in funcMatches)
+            {
+                // match.Groups[2] 是函数名
+                int funcNameIndex = match.Groups[2].Index;
+                int funcNameLength = match.Groups[2].Length;
+                rtb.Select(funcNameIndex, funcNameLength);
+                rtb.SelectionColor = functionColor;
             }
 
             // 高亮单行注释 //
@@ -893,6 +906,40 @@ namespace TerraCreator
 
 }
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

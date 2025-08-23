@@ -179,6 +179,7 @@ namespace TerraCreator
             SetDefaultsTabPage.BackColor = TerraCreatorData.FormToolColor;
             AITabPage.BackColor = TerraCreatorData.FormToolColor;
             OtherTabPage.BackColor = TerraCreatorData.FormToolColor;
+            HeadTabPage.BackColor = TerraCreatorData.FormToolColor;
         }
 
         private void OriginalCode_Click(object sender, EventArgs e)
@@ -200,6 +201,7 @@ namespace TerraCreator
                 try
                 {
                     File.WriteAllText(ProjectilePathGlobal, CodeViewRichTextBox.Text);
+                    this.Close();
                 }
                 catch (Exception ex)
                 {

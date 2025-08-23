@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TerraCreator.projectsettings;
 
 namespace TerraCreator
 {
@@ -31,7 +32,11 @@ namespace TerraCreator
             if (this.SettingsListView.Groups[0].Items[0].Selected)
             {
                 SettingsPanel.Controls.Clear();
-                BasicSettings();
+                Form OutlookSettingsForm = new OutlookSettings();
+                OutlookSettingsForm.TopLevel = false;
+
+                OutlookSettingsForm.Show();
+                SettingsPanel.Controls.Add(OutlookSettingsForm);
             }
             if (this.SettingsListView.Groups[0].Items[1].Selected)
             {
@@ -40,6 +45,30 @@ namespace TerraCreator
             }
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //OldCode
         void DefaultCodesSaveLocationSettings()
         {
             int y = 40; //distance
@@ -71,7 +100,7 @@ namespace TerraCreator
             ModProjectileSavePathLabel.AutoSize = true;
 
             Label Notice = new Label();
-            Notice.Text = "预计2025.8.2更新";
+            Notice.Text = "预计2025.9.1更新";
             Notice.Location = new Point(r1, y * 3 + d * 3);
             Notice.AutoSize = true;
 
@@ -82,6 +111,23 @@ namespace TerraCreator
 
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         void BasicSettings()
         {

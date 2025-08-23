@@ -130,7 +130,7 @@
   <data name="label2.Text" xml:space="preserve">
     <value>TerraCreator Origin 
 Community Edition
-v2025.8.4
+v2025.9
 (c)CEllOMiKA
 (c)Your Name
 </value>
@@ -157,12 +157,6 @@ Thank you for your understanding</value>
   </data>
   <data name="Milestone.Location" type="System.Drawing.Point, System.Drawing">
     <value>551, 76</value>
-  </data>
-  <data name="Milestone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 33</value>
-  </data>
-  <data name="Milestone.Text" xml:space="preserve">
-    <value>Milestone #2¼</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
     <value>40, 458</value>

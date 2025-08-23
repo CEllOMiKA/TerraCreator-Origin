@@ -38,6 +38,10 @@ namespace TerraCreator
             {
                 ProjectFolderPath = choosefolderpath.SelectedPath;
                 folderpositiontext.Text = "你选择的文件夹地址:" + ProjectFolderPath;
+
+
+
+
             }
         }
 
@@ -124,6 +128,7 @@ namespace TerraCreator
                         Main.ObjectProject.Controls.Clear();
                         Form ProjectSettingsForm = new ProjectSettings();
                         ProjectSettingsForm.TopLevel = false;
+                        //ProjectSettingsForm.FormBorderStyle = FormBorderStyle.None;
                         Main.ObjectProject.Controls.Add(ProjectSettingsForm);
                         ProjectSettingsForm.Show();
                         //Main.FileSystem.Path = ProjectData.ProjectPath;

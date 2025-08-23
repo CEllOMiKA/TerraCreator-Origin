@@ -21,8 +21,8 @@ namespace TerraCreator
         public static string ProjectLaunchSettings = "";
         public static string ProjectMain = "";
 
-        public static string ProjectModItemSavePath = "";
-        public static string ProjectModProjectileSavePath = "";
+        public static string ProjectModItemSavePath = "\\Items";
+        public static string ProjectModProjectileSavePath = "\\Projectiles";
         public static string ProjectModNPCSavePath = "";
         public static string ProjectModTileSavePath = "";
         public static string ProjectModBuffSavePath = "";
