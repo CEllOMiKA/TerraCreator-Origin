@@ -340,7 +340,7 @@
             ObjectListView.Groups.AddRange(new ListViewGroup[] { (ListViewGroup)resources.GetObject("ObjectListView.Groups"), (ListViewGroup)resources.GetObject("ObjectListView.Groups1"), (ListViewGroup)resources.GetObject("ObjectListView.Groups2"), (ListViewGroup)resources.GetObject("ObjectListView.Groups3") });
             ObjectListView.Name = "ObjectListView";
             ObjectListView.UseCompatibleStateImageBehavior = false;
-            ObjectListView.View = View.SmallIcon;
+            ObjectListView.View = View.Tile;
             ObjectListView.ItemSelectionChanged += ObjectListView_ItemSelectionChanged;
             // 
             // TabFile
@@ -359,6 +359,7 @@
             Panel.Controls.Add(status);
             resources.ApplyResources(Panel, "Panel");
             Panel.Name = "Panel";
+            Panel.TabStop = true;
             // 
             // codes
             // 

@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using TerraCreator;
 using TerraCreator.objectedit;
+using System.Media;
 namespace TerraCreator
 {
     public partial class Main : Form
@@ -441,6 +442,10 @@ namespace TerraCreator
         {
             if (ObjectListView.SelectedItems.Count > 0)
             {
+                if(ObjectListView.SelectedItems.Count > 1)
+                {
+                    return;
+                }
                 if (e.Item.Group == null)
                 {
                     return;

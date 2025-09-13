@@ -121,6 +121,41 @@
     <value>17, 17</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="MenuList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuList.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 1, 0, 1</value>
+  </data>
+  <data name="MenuList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1505, 30</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="MenuList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="MenuList.Text" xml:space="preserve">
+    <value>menuStrip1</value>
+  </data>
+  <data name="&gt;&gt;MenuList.Name" xml:space="preserve">
+    <value>MenuList</value>
+  </data>
+  <data name="&gt;&gt;MenuList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;MenuList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;MenuList.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 28</value>
+  </data>
+  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
+    <value>文件</value>
+  </data>
   <data name="toolst_newproj.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 34</value>
   </data>
@@ -163,11 +198,11 @@
   <data name="toolst_exitprog.Text" xml:space="preserve">
     <value>退出</value>
   </data>
-  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="Run.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 28</value>
   </data>
-  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
-    <value>文件</value>
+  <data name="Run.Text" xml:space="preserve">
+    <value>运行</value>
   </data>
   <data name="RuntML.Size" type="System.Drawing.Size, System.Drawing">
     <value>252, 34</value>
@@ -181,11 +216,11 @@
   <data name="OpenCsproj.Text" xml:space="preserve">
     <value>打开本项目csproj</value>
   </data>
-  <data name="Run.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="About.Size" type="System.Drawing.Size, System.Drawing">
     <value>62, 28</value>
   </data>
-  <data name="Run.Text" xml:space="preserve">
-    <value>运行</value>
+  <data name="About.Text" xml:space="preserve">
+    <value>关于</value>
   </data>
   <data name="toolst_about.Size" type="System.Drawing.Size, System.Drawing">
     <value>172, 34</value>
@@ -205,7 +240,6 @@
   <data name="toolStripSeparator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>169, 6</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="addon.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -221,43 +255,36 @@
   <data name="settings.Text" xml:space="preserve">
     <value>设置</value>
   </data>
-  <data name="About.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 28</value>
-  </data>
-  <data name="About.Text" xml:space="preserve">
-    <value>关于</value>
-  </data>
-  <data name="MenuList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="MenuList.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 1, 0, 1</value>
-  </data>
-  <data name="MenuList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1505, 30</value>
-  </data>
-  <data name="MenuList.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="MenuList.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;MenuList.Name" xml:space="preserve">
-    <value>MenuList</value>
-  </data>
-  <data name="&gt;&gt;MenuList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;MenuList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;MenuList.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="ToolList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>125, 19</value>
   </metadata>
+  <data name="ToolList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 30</value>
+  </data>
+  <data name="ToolList.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 3, 0</value>
+  </data>
+  <data name="ToolList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1505, 33</value>
+  </data>
+  <data name="ToolList.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="ToolList.Text" xml:space="preserve">
+    <value>toolStrip1</value>
+  </data>
+  <data name="&gt;&gt;ToolList.Name" xml:space="preserve">
+    <value>ToolList</value>
+  </data>
+  <data name="&gt;&gt;ToolList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolList.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ToolList.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="ImportProject.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
@@ -324,54 +351,9 @@
   <data name="ProjectName.Text" xml:space="preserve">
     <value>未打开项目</value>
   </data>
-  <data name="ToolList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 30</value>
-  </data>
-  <data name="ToolList.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 3, 0</value>
-  </data>
-  <data name="ToolList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1505, 33</value>
-  </data>
-  <data name="ToolList.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ToolList.Text" xml:space="preserve">
-    <value>toolStrip1</value>
-  </data>
-  <data name="&gt;&gt;ToolList.Name" xml:space="preserve">
-    <value>ToolList</value>
-  </data>
-  <data name="&gt;&gt;ToolList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ToolList.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ToolList.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="status.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>225, 19</value>
   </metadata>
-  <data name="CodeCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 24</value>
-  </data>
-  <data name="CodeCount.Text" xml:space="preserve">
-    <value>字数:0</value>
-  </data>
-  <data name="FilePropt.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 24</value>
-  </data>
-  <data name="FilePropt.Text" xml:space="preserve">
-    <value>未打开文件</value>
-  </data>
-  <data name="FileStatus.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
-  </data>
-  <data name="FileStatus.Text" xml:space="preserve">
-    <value>无状态</value>
-  </data>
   <data name="status.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 794</value>
   </data>
@@ -399,18 +381,23 @@
   <data name="&gt;&gt;status.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ObjectProject.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="CodeCount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
   </data>
-  <data name="ObjectProject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="CodeCount.Text" xml:space="preserve">
+    <value>字数:0</value>
   </data>
-  <data name="ObjectProject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1491, 827</value>
+  <data name="FilePropt.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
   </data>
-  <data name="ObjectProject.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="FilePropt.Text" xml:space="preserve">
+    <value>未打开文件</value>
+  </data>
+  <data name="FileStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
+  </data>
+  <data name="FileStatus.Text" xml:space="preserve">
+    <value>无状态</value>
   </data>
   <data name="&gt;&gt;ObjectProject.Name" xml:space="preserve">
     <value>ObjectProject</value>
@@ -450,6 +437,97 @@
   </data>
   <data name="&gt;&gt;TabProjectSettings.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ObjectProject.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="ObjectProject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="ObjectProject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1491, 827</value>
+  </data>
+  <data name="ObjectProject.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ObjectProject.Name" xml:space="preserve">
+    <value>ObjectProject</value>
+  </data>
+  <data name="&gt;&gt;ObjectProject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ObjectProject.Parent" xml:space="preserve">
+    <value>TabProjectSettings</value>
+  </data>
+  <data name="&gt;&gt;ObjectProject.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ObjectPanel.Name" xml:space="preserve">
+    <value>ObjectPanel</value>
+  </data>
+  <data name="&gt;&gt;ObjectPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ObjectPanel.Parent" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;ObjectPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitter2.Name" xml:space="preserve">
+    <value>splitter2</value>
+  </data>
+  <data name="&gt;&gt;splitter2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Splitter, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitter2.Parent" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;splitter2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ObjectListView.Name" xml:space="preserve">
+    <value>ObjectListView</value>
+  </data>
+  <data name="&gt;&gt;ObjectListView.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ObjectListView.Parent" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;ObjectListView.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="TabObject.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 33</value>
+  </data>
+  <data name="TabObject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="TabObject.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="TabObject.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1497, 833</value>
+  </data>
+  <data name="TabObject.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="TabObject.Text" xml:space="preserve">
+    <value>对象查看器</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Name" xml:space="preserve">
+    <value>TabObject</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TabObject.Parent" xml:space="preserve">
+    <value>ListTab</value>
+  </data>
+  <data name="&gt;&gt;TabObject.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="ObjectPanel.AutoScroll" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -579,36 +657,6 @@
   </data>
   <data name="&gt;&gt;ObjectListView.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="TabObject.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
-  </data>
-  <data name="TabObject.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="TabObject.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="TabObject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1497, 833</value>
-  </data>
-  <data name="TabObject.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="TabObject.Text" xml:space="preserve">
-    <value>对象查看器</value>
-  </data>
-  <data name="&gt;&gt;TabObject.Name" xml:space="preserve">
-    <value>TabObject</value>
-  </data>
-  <data name="&gt;&gt;TabObject.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;TabObject.Parent" xml:space="preserve">
-    <value>ListTab</value>
-  </data>
-  <data name="&gt;&gt;TabObject.ZOrder" xml:space="preserve">
-    <value>1</value>
   </data>
   <data name="codes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>

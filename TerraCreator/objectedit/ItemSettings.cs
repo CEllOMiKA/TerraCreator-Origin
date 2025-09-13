@@ -107,7 +107,7 @@ namespace TerraCreator.objectedit
                     }
                     else
                     {
-                        MessageBox.Show("未匹配到SetDefauts","提示",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                        MessageBox.Show("未匹配到SetDefauts", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                     //正则表达式匹配每一项 同时去除
@@ -258,9 +258,21 @@ namespace TerraCreator.objectedit
 
                     }
 
+                    //获取Projectile并放入ItemShootUOPComboBox
+                    List<string> ProjectileAllItemNamespace = null;
+                    List<string> ProjectileAllItemPath = null;
+                    int CycleTime = 0;
+                    while (CycleTime < Main.ObjectListView.Groups[1].Items.Count)
+                    {
+                        ItemShootUOPComboBox.Items.Add($"ModContent.ProjectileType<{Main.ObjectListView.Groups[1].Items[CycleTime].ToString().Replace("ListViewItem: {", "").Replace("}","")}>()");
+                        //ModContent.ProjectileType<ExampleSimpleMinion>()
+                        //using <Modname>.<Projectile>
+                        CycleTime++;
+                    } 
+
 
                 }
-                
+
 
 
             }

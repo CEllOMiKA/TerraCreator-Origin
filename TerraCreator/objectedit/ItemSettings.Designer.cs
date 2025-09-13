@@ -233,6 +233,7 @@
             // 
             // ItemSettingsTabControl
             // 
+            ItemSettingsTabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             ItemSettingsTabControl.Controls.Add(ItemSetDefaultsTabPage);
             ItemSettingsTabControl.Controls.Add(ItemAddRecipesTabPage);
             ItemSettingsTabControl.Location = new Point(14, 174);
