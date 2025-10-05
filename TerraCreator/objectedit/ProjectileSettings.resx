@@ -117,25 +117,1056 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;ProjectileHostileLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;NewProjectileTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ProjectileImagePathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="OriginCodeFilePathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1243, 51</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAlphaLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OtherTabPage.Text" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="CodeViewRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1243, 79</value>
+  </data>
+  <data name="ProjectileHostileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 116</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ProjectileDamageNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="SetDefaultsTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
-  <data name="&gt;&gt;ProjectileImagePictureBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ProjectileSetDefaultsCodesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleTextBox.Name" xml:space="preserve">
+    <value>ProjectileScaleTextBox</value>
+  </data>
+  <data name="ProjectileFriendlyComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>375, 32</value>
+  </data>
+  <data name="ProjectileScaleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 42</value>
+  </data>
+  <data name="&gt;&gt;ProjectileWidthNumericUpDown.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="SetDefaultsTabPage.Text" xml:space="preserve">
+    <value>SetDefaults</value>
+  </data>
+  <data name="ProjectileFriendlyLabel.Text" xml:space="preserve">
+    <value>射弹是否可攻击敌方:</value>
+  </data>
+  <data name="ProjectileNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 55</value>
+  </data>
+  <data name="ProjectileHeightLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightNumericUpDown.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ProjectileHostileComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>847, 112</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="OriginalCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1243, 881</value>
+  </data>
+  <data name="OriginCodeFilePath.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileWidthNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileImageChooseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileAlphaNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>713, 38</value>
+  </data>
+  <data name="ProjectileAIStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="ProjectilePenetrateNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 78</value>
+  </data>
+  <data name="PreviewCode.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePathLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyComboBox.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileDamageLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="AITabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 33</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="CodeViewRichTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="ProjectileHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 30</value>
+  </data>
+  <data name="AITabPage.Text" xml:space="preserve">
+    <value>AI</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyComboBox.Name" xml:space="preserve">
+    <value>ProjectileFriendlyComboBox</value>
+  </data>
+  <data name="ProjectileImageChooseButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="SetDefaultsTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 33</value>
+  </data>
+  <data name="&gt;&gt;SetDefaultsTabPage.Parent" xml:space="preserve">
+    <value>ProjectileTabControl</value>
+  </data>
+  <data name="OriginalCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAlphaNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectileAlphaNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;PreviewCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 165</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.Name" xml:space="preserve">
+    <value>ProjectileSetDefaultsCodesRichTextBox</value>
+  </data>
+  <data name="ProjectileTimeLeftLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileImagePathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="ProjectileNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="ProjectileDamageNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 151</value>
+  </data>
+  <data name="&gt;&gt;SetDefaultsTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OtherTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesLabel.Text" xml:space="preserve">
+    <value>自定义代码:</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTabControl.Name" xml:space="preserve">
+    <value>ProjectileTabControl</value>
+  </data>
+  <data name="ProjectileScaleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileWidthNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectileWidthNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;AITabPage.Name" xml:space="preserve">
+    <value>AITabPage</value>
+  </data>
+  <data name="HeadTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 33</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHostileLabel.Name" xml:space="preserve">
+    <value>ProjectileHostileLabel</value>
+  </data>
+  <data name="ProjectileScaleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleTextBox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="ProjectileNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
   </data>
   <data name="&gt;&gt;SaveButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ProjectileAlphaLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="ProjectileAlphaNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>453, 30</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="ProjectileAIStyleNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 30</value>
+  </data>
+  <data name="ProjectileWidthNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ProjectileTimeLeftLabel.Text" xml:space="preserve">
+    <value>射弹存在时间:</value>
+  </data>
+  <data name="NewProjectileTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="SaveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;AITabPage.Parent" xml:space="preserve">
+    <value>ProjectileTabControl</value>
+  </data>
+  <data name="ProjectileFriendlyComboBox.Text" xml:space="preserve">
+    <value>true</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyComboBox.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ProjectileDamageNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 30</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHostileLabel.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageChooseButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AITabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;OriginalCode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="ProjectileDamageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 154</value>
+  </data>
+  <data name="&gt;&gt;ProjectileWidthNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;OriginalCode.Name" xml:space="preserve">
+    <value>OriginalCode</value>
+  </data>
+  <data name="ProjectileImageLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageChooseButton.Name" xml:space="preserve">
+    <value>ProjectileImageChooseButton</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.Text" xml:space="preserve">
+    <value>//可能会出错请注意</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1950, 929</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>ProjectileSettingForm</value>
+  </data>
+  <data name="ProjectileAlphaNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTabControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ProjectileHostileLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="ProjectileFriendlyLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 24</value>
+  </data>
+  <data name="ProjectileHeightLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileScaleTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileImageLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;NewProjectileTitle.Name" xml:space="preserve">
+    <value>NewProjectileTitle</value>
+  </data>
+  <data name="ProjectileAlphaLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTabControl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileNamespaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 88</value>
+  </data>
+  <data name="ProjectileAlphaLabel.Text" xml:space="preserve">
+    <value>射弹透明度:</value>
+  </data>
+  <data name="ProjectileHostileComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleTextBox.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileScaleTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 38</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.Name" xml:space="preserve">
+    <value>ProjectileSetDefaultsCodesLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameLabel.Name" xml:space="preserve">
+    <value>ProjectileNameLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageLabel.Name" xml:space="preserve">
+    <value>ProjectileImageLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAlphaLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>11, 24</value>
+  </data>
+  <data name="ProjectileHeightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="NewProjectileTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileAlphaLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="ProjectileFriendlyComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="NewProjectileTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft YaHei UI, 12pt</value>
+  </data>
+  <data name="ProjectileTabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileDamageLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;HeadTabPage.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.Text" xml:space="preserve">
+    <value>射弹名称:</value>
+  </data>
+  <data name="ProjectileWidthNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>695, 1</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectilePenetrateNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAlphaLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="ProjectileImageChooseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 32</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHostileComboBox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="ProjectileAlphaNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="ProjectileScaleTextBox.Text" xml:space="preserve">
+    <value>1f</value>
+  </data>
+  <data name="ProjectileScaleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="ProjectileWidthLabel.Text" xml:space="preserve">
+    <value>射弹宽度:</value>
+  </data>
+  <data name="ProjectileHostileComboBox.Text" xml:space="preserve">
+    <value>true</value>
+  </data>
+  <data name="&gt;&gt;OtherTabPage.Name" xml:space="preserve">
+    <value>OtherTabPage</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePathLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OriginalCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 32</value>
+  </data>
+  <data name="ProjectileHostileLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
   <data name="&gt;&gt;ProjectileTabControl.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;ProjectileDamageLabel.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;NewProjectileTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePictureBox.Name" xml:space="preserve">
+    <value>ProjectileImagePictureBox</value>
+  </data>
+  <data name="CodeViewRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>686, 788</value>
+  </data>
+  <data name="NewProjectileTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 13</value>
+  </data>
+  <data name="OtherTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ProjectileWidthLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceTextBox.Name" xml:space="preserve">
+    <value>ProjectileNamespaceTextBox</value>
+  </data>
+  <data name="HeadTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="ProjectileAIStyleNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;ProjectileWidthLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAlphaNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="OriginCodeFilePath.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;OriginalCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileImagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1108, 51</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SetDefaultsTabPage.Name" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileImageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 128</value>
+  </data>
+  <data name="PreviewCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 32</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.Text" xml:space="preserve">
+    <value>射弹穿透次数:</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileFriendlyComboBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>206, 112</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 265</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleLabel.Name" xml:space="preserve">
+    <value>ProjectileScaleLabel</value>
+  </data>
+  <data name="NewProjectileTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 31</value>
+  </data>
+  <data name="ProjectileTimeLeftNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 30</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageLabel.Name" xml:space="preserve">
+    <value>ProjectileDamageLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHostileComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectileAIStyleNumericUpDown</value>
+  </data>
+  <data name="ProjectileHostileComboBox.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="ProjectileHostileComboBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 32</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.Name" xml:space="preserve">
+    <value>SaveButton</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHostileComboBox.Name" xml:space="preserve">
+    <value>ProjectileHostileComboBox</value>
+  </data>
+  <data name="ProjectileDamageNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;OtherTabPage.Parent" xml:space="preserve">
+    <value>ProjectileTabControl</value>
+  </data>
+  <data name="ProjectileFriendlyLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;CodeViewRichTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyComboBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileHostileComboBox.Items" xml:space="preserve">
+    <value>true</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePath.Name" xml:space="preserve">
+    <value>OriginCodeFilePath</value>
+  </data>
+  <data name="ProjectileAIStyleLabel.Text" xml:space="preserve">
+    <value>射弹AI:</value>
+  </data>
+  <data name="ProjectileNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;PreviewCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ProjectileImageLabel.Text" xml:space="preserve">
+    <value>射弹贴图:</value>
+  </data>
+  <data name="ProjectilePenetrateNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>732, 75</value>
+  </data>
+  <data name="ProjectileImagePathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 128</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectileTimeLeftNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleLabel.Name" xml:space="preserve">
+    <value>ProjectileAIStyleLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateLabel.Name" xml:space="preserve">
+    <value>ProjectilePenetrateLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;OtherTabPage.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OtherTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 33</value>
+  </data>
+  <data name="ProjectileHeightLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageLabel.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="SaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileImageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="&gt;&gt;HeadTabPage.Parent" xml:space="preserve">
+    <value>ProjectileTabControl</value>
+  </data>
+  <data name="CodeViewRichTextBox.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PreviewCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1383, 881</value>
+  </data>
+  <data name="ProjectileWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="ProjectileTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="AITabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="AITabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileFriendlyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 116</value>
+  </data>
+  <data name="PreviewCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ProjectileHostileComboBox.Items1" xml:space="preserve">
+    <value>false</value>
+  </data>
+  <data name="ProjectilePenetrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>434, 30</value>
+  </data>
+  <data name="OriginalCode.Text" xml:space="preserve">
+    <value>源文件代码</value>
+  </data>
+  <data name="ProjectileNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="ProjectileTimeLeftNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 75</value>
+  </data>
+  <data name="ProjectileDamageLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="ProjectileImageChooseButton.Text" xml:space="preserve">
+    <value>选择图片</value>
+  </data>
+  <data name="ProjectileAIStyleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAlphaNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileHeightNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 1</value>
+  </data>
+  <data name="ProjectileNamespaceTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectilePenetrateNumericUpDown</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightLabel.Name" xml:space="preserve">
+    <value>ProjectileHeightLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyLabel.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="ProjectileScaleTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 30</value>
+  </data>
+  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.Type" xml:space="preserve">
+    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="OriginCodeFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageChooseButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="OriginCodeFilePathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;OriginalCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ProjectileAIStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceLabel.Name" xml:space="preserve">
+    <value>ProjectileNamespaceLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="PreviewCode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="OriginCodeFilePath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 24</value>
+  </data>
+  <data name="NewProjectileTitle.Text" xml:space="preserve">
+    <value>射弹</value>
+  </data>
+  <data name="ProjectileTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1215, 750</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileHeightNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="ProjectileImageLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileAlphaLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;HeadTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;HeadTabPage.Name" xml:space="preserve">
+    <value>HeadTabPage</value>
+  </data>
+  <data name="OriginCodeFilePath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="ProjectileHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="OriginCodeFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1383, 51</value>
+  </data>
+  <data name="OriginCodeFilePathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="SetDefaultsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HeadTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="ProjectileTabControl.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="ProjectileWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>471, 30</value>
+  </data>
+  <data name="ProjectileFriendlyLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileNamespaceTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;SaveButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="ProjectileTimeLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 92</value>
+  </data>
+  <data name="HeadTabPage.Text" xml:space="preserve">
+    <value>Head</value>
+  </data>
+  <data name="ProjectileTimeLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 78</value>
+  </data>
+  <data name="&gt;&gt;NewProjectileTitle.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileFriendlyComboBox.Items1" xml:space="preserve">
+    <value>false</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameTextBox.Name" xml:space="preserve">
+    <value>ProjectileNameTextBox</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileFriendlyLabel.Name" xml:space="preserve">
+    <value>ProjectileFriendlyLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileFriendlyComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="CodeViewRichTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="ProjectileDamageLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="ProjectileAlphaLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;ProjectileAIStyleLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileImagePathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;CodeViewRichTextBox.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="ProjectileScaleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 0, 5, 0</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePathLabel.Name" xml:space="preserve">
+    <value>OriginCodeFilePathLabel</value>
+  </data>
+  <data name="ProjectileImagePictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="ProjectileTimeLeftNumericUpDown.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHostileLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileWidthNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;CodeViewRichTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftLabel.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="&gt;&gt;SetDefaultsTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="AITabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1207, 713</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.Parent" xml:space="preserve">
+    <value>SetDefaultsTabPage</value>
+  </data>
+  <data name="ProjectileNamespaceTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>975, 30</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 237</value>
+  </data>
+  <data name="ProjectileImagePathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 24</value>
+  </data>
+  <data name="OriginalCode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="ProjectileImagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 113</value>
+  </data>
+  <data name="OtherTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1207, 713</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftLabel.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageChooseButton.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectileDamageNumericUpDown</value>
+  </data>
+  <data name="ProjectileDamageNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileWidthLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="OriginalCode.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePath.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileDamageLabel.Text" xml:space="preserve">
+    <value>射弹伤害:</value>
+  </data>
+  <data name="ProjectileWidthLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 4</value>
+  </data>
+  <data name="&gt;&gt;CodeViewRichTextBox.Name" xml:space="preserve">
+    <value>CodeViewRichTextBox</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePathLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="ProjectileHostileLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>232, 24</value>
+  </data>
+  <data name="ProjectileHeightLabel.Text" xml:space="preserve">
+    <value>射弹高度:</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="SetDefaultsTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1207, 713</value>
+  </data>
+  <data name="&gt;&gt;ProjectileHeightNumericUpDown.Name" xml:space="preserve">
+    <value>ProjectileHeightNumericUpDown</value>
+  </data>
+  <data name="OriginCodeFilePath.Text" xml:space="preserve">
+    <value>无位置</value>
+  </data>
+  <data name="SetDefaultsTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="SaveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>294, 34</value>
+  </data>
+  <data name="ProjectileTimeLeftLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1154, 440</value>
+  </data>
+  <data name="OriginCodeFilePathLabel.Text" xml:space="preserve">
+    <value>射弹代码位置:</value>
+  </data>
+  <data name="ProjectileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 51</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePathLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="ProjectileHostileLabel.Text" xml:space="preserve">
+    <value>射弹是否可攻击友方和NPC:</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImageLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ProjectileImagePictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageNumericUpDown.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="ProjectileHeightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 4</value>
   </data>
   <data name="ProjectileTimeLeftLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -143,207 +1174,38 @@
   <data name="&gt;&gt;ProjectileNameTextBox.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
-  <data name="ProjectileFriendlyLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="NewProjectileTitle.Text" xml:space="preserve">
-    <value>射弹</value>
-  </data>
-  <data name="&gt;&gt;PreviewCode.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="OriginCodeFilePathLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesRichTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="AITabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
-  <data name="&gt;&gt;OriginalCode.Name" xml:space="preserve">
-    <value>OriginalCode</value>
-  </data>
-  <data name="ProjectileHostileLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="ProjectileFriendlyLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 24</value>
-  </data>
-  <data name="HeadTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceTextBox.Parent" xml:space="preserve">
+  <data name="&gt;&gt;ProjectileImageLabel.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyComboBox.Name" xml:space="preserve">
-    <value>ProjectileFriendlyComboBox</value>
-  </data>
-  <data name="AITabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesLabel.Text" xml:space="preserve">
-    <value>自定义代码:</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>射弹设置</value>
-  </data>
-  <data name="OtherTabPage.Text" xml:space="preserve">
-    <value>Other</value>
-  </data>
-  <data name="ProjectileNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 30</value>
-  </data>
-  <data name="OriginalCode.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="ProjectileHeightLabel.Text" xml:space="preserve">
-    <value>射弹高度:</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyComboBox.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImagePictureBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNameLabel.Name" xml:space="preserve">
-    <value>ProjectileNameLabel</value>
-  </data>
-  <data name="CodeViewRichTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileImageLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;SetDefaultsTabPage.Parent" xml:space="preserve">
-    <value>ProjectileTabControl</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.Name" xml:space="preserve">
-    <value>ProjectileSetDefaultsCodesRichTextBox</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 237</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1154, 440</value>
-  </data>
-  <data name="OriginalCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 32</value>
-  </data>
-  <data name="ProjectilePenetrateLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProjectileImageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 128</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectileTimeLeftNumericUpDown</value>
-  </data>
-  <data name="ProjectileTimeLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 78</value>
-  </data>
-  <data name="&gt;&gt;AITabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileAlphaLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 42</value>
-  </data>
-  <data name="ProjectileAIStyleNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 151</value>
-  </data>
-  <data name="ProjectilePenetrateNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
   </data>
   <data name="&gt;&gt;ProjectileHostileComboBox.Parent" xml:space="preserve">
     <value>SetDefaultsTabPage</value>
   </data>
-  <data name="&gt;&gt;ProjectileNameLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
-  <data name="ProjectileImageLabel.Text" xml:space="preserve">
-    <value>射弹贴图:</value>
-  </data>
-  <data name="HeadTabPage.Text" xml:space="preserve">
-    <value>Head</value>
-  </data>
-  <data name="PreviewCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="OriginalCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;OtherTabPage.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="ProjectileImageLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileTimeLeftLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="ProjectileTimeLeftNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 30</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;OriginCodeFilePath.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ProjectileImagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1108, 51</value>
+  <data name="ProjectileImageChooseButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>121, 124</value>
   </data>
-  <data name="&gt;&gt;ProjectileNamespaceTextBox.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileNamespaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 88</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="HeadTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="ProjectileFriendlyComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+  <data name="ProjectileTimeLeftNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 4, 5, 4</value>
   </data>
-  <data name="ProjectileTabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1215, 750</value>
+  <data name="ProjectileAIStyleNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>695, 151</value>
   </data>
-  <data name="&gt;&gt;ProjectileNameTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;ProjectileAlphaLabel.Name" xml:space="preserve">
+    <value>ProjectileAlphaLabel</value>
   </data>
-  <data name="ProjectileFriendlyComboBox.Text" xml:space="preserve">
-    <value>true</value>
+  <data name="ProjectileNameLabel.Text" xml:space="preserve">
+    <value>射弹名称:</value>
   </data>
-  <data name="ProjectileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 51</value>
+  <data name="ProjectileFriendlyLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="ProjectileFriendlyLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 265</value>
-  </data>
-  <data name="AITabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileNamespaceLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 92</value>
+  <data name="ProjectileImagePathLabel.Text" xml:space="preserve">
+    <value>未选择图片</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -421,990 +1283,128 @@
         AAD/8AAA//AAAP/wAAD/8AAA//wAAP/8AAA=
 </value>
   </data>
-  <data name="ProjectileHostileLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="ProjectileAIStyleNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="&gt;&gt;OriginCodeFilePathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="NewProjectileTitle.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="ProjectileDamageLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="&gt;&gt;AITabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ProjectileTabControl.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 165</value>
+  <data name="ProjectileAIStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 154</value>
   </data>
-  <data name="&gt;&gt;AITabPage.Parent" xml:space="preserve">
-    <value>ProjectileTabControl</value>
+  <data name="HeadTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1207, 713</value>
   </data>
-  <data name="&gt;&gt;ProjectileHeightLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileAIStyleNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="OtherTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="ProjectilePenetrateNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="SaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>294, 34</value>
-  </data>
-  <data name="&gt;&gt;OtherTabPage.Name" xml:space="preserve">
-    <value>OtherTabPage</value>
-  </data>
-  <data name="HeadTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="ProjectileScaleTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 38</value>
-  </data>
-  <data name="ProjectileAIStyleLabel.Text" xml:space="preserve">
-    <value>射弹AI:</value>
-  </data>
-  <data name="AITabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
-  </data>
-  <data name="NewProjectileTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 13</value>
-  </data>
-  <data name="ProjectileDamageNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OriginCodeFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 24</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceTextBox.Name" xml:space="preserve">
-    <value>ProjectileNamespaceTextBox</value>
+  <data name="ProjectileScaleLabel.Text" xml:space="preserve">
+    <value>射弹缩放倍率:</value>
   </data>
   <data name="&gt;&gt;PreviewCode.Name" xml:space="preserve">
     <value>PreviewCode</value>
   </data>
-  <data name="&gt;&gt;ProjectileHeightLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;ProjectilePenetrateLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
   </data>
-  <data name="&gt;&gt;ProjectileTimeLeftLabel.Type" xml:space="preserve">
+  <data name="SaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="&gt;&gt;ProjectileImagePictureBox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ProjectileHeightNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="ProjectileScaleTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="ProjectileHostileComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>847, 112</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePath.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceLabel.Name" xml:space="preserve">
-    <value>ProjectileNamespaceLabel</value>
-  </data>
-  <data name="OriginCodeFilePathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1950, 929</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ProjectileTabControl.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="ProjectileNamespaceTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
+  <data name="ProjectileWidthLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="ProjectileHostileLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
-  <data name="&gt;&gt;ProjectileScaleTextBox.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;ProjectileScaleTextBox.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="ProjectileAIStyleLabel.AutoSize" type="System.Boolean, mscorlib">
+  <data name="ProjectileSetDefaultsCodesLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="ProjectileFriendlyComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>375, 32</value>
+  <data name="&gt;&gt;ProjectileWidthLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="ProjectileTabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
+  <data name="&gt;&gt;ProjectileWidthLabel.Name" xml:space="preserve">
+    <value>ProjectileWidthLabel</value>
   </data>
-  <data name="ProjectileWidthLabel.Text" xml:space="preserve">
-    <value>射弹宽度:</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTabControl.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileTimeLeftNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>149, 75</value>
-  </data>
-  <data name="ProjectileNamespaceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="&gt;&gt;ProjectileScaleLabel.Type" xml:space="preserve">
+  <data name="&gt;&gt;ProjectileHeightLabel.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="ProjectileWidthLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>5, 0, 5, 0</value>
   </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHeightLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="NewProjectileTitle.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHeightNumericUpDown.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePath.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ProjectileAlphaNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>453, 30</value>
-  </data>
-  <data name="ProjectileWidthLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthLabel.Name" xml:space="preserve">
-    <value>ProjectileWidthLabel</value>
-  </data>
-  <data name="SetDefaultsTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1207, 713</value>
-  </data>
-  <data name="ProjectileNamespaceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>975, 30</value>
-  </data>
-  <data name="ProjectileAIStyleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;NewProjectileTitle.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectileDamageNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectilePenetrateNumericUpDown</value>
-  </data>
-  <data name="NewProjectileTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>62, 31</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTabControl.Name" xml:space="preserve">
-    <value>ProjectileTabControl</value>
-  </data>
-  <data name="ProjectileWidthLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;HeadTabPage.Parent" xml:space="preserve">
-    <value>ProjectileTabControl</value>
-  </data>
-  <data name="ProjectileImagePictureBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileHostileComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleLabel.Name" xml:space="preserve">
-    <value>ProjectileAIStyleLabel</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHeightNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;SaveButton.Name" xml:space="preserve">
-    <value>SaveButton</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;PreviewCode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PreviewCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1383, 881</value>
-  </data>
-  <data name="&gt;&gt;AITabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="ProjectileHeightLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 4</value>
-  </data>
-  <data name="OtherTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1207, 713</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthNumericUpDown.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;CodeViewRichTextBox.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImagePathLabel.Name" xml:space="preserve">
-    <value>ProjectileImagePathLabel</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageChooseButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ProjectileWidthNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 1</value>
-  </data>
-  <data name="ProjectileWidthLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="PreviewCode.Text" xml:space="preserve">
-    <value>预览代码</value>
-  </data>
-  <data name="ProjectileImagePathLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHeightNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>ProjectileSettingForm</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;OriginalCode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileImageLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileScaleLabel.Text" xml:space="preserve">
-    <value>射弹缩放倍率:</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNameTextBox.Name" xml:space="preserve">
-    <value>ProjectileNameTextBox</value>
-  </data>
-  <data name="ProjectileScaleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 42</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageChooseButton.Name" xml:space="preserve">
-    <value>ProjectileImageChooseButton</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateLabel.ZOrder" xml:space="preserve">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;SetDefaultsTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;HeadTabPage.Name" xml:space="preserve">
-    <value>HeadTabPage</value>
-  </data>
-  <data name="&gt;&gt;OriginalCode.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleLabel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ProjectilePenetrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>434, 30</value>
-  </data>
-  <data name="&gt;&gt;CodeViewRichTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileScaleLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="ProjectileImageChooseButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="PreviewCode.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;ProjectileScaleLabel.Name" xml:space="preserve">
-    <value>ProjectileScaleLabel</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileHeightLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileHostileComboBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesRichTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageLabel.Name" xml:space="preserve">
-    <value>ProjectileImageLabel</value>
-  </data>
-  <data name="ProjectileScaleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 24</value>
-  </data>
-  <data name="ProjectileAlphaLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileImageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="SetDefaultsTabPage.Text" xml:space="preserve">
-    <value>SetDefaults</value>
-  </data>
-  <data name="CodeViewRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1243, 79</value>
-  </data>
-  <data name="ProjectileAlphaLabel.Text" xml:space="preserve">
-    <value>射弹透明度:</value>
-  </data>
-  <data name="ProjectileAlphaNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="OtherTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
-  </data>
-  <data name="ProjectilePenetrateLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="ProjectileHostileComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 32</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyLabel.ZOrder" xml:space="preserve">
-    <value>19</value>
-  </data>
-  <data name="ProjectileAIStyleNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;NewProjectileTitle.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="OriginalCode.Text" xml:space="preserve">
-    <value>源文件代码</value>
-  </data>
-  <data name="&gt;&gt;CodeViewRichTextBox.Name" xml:space="preserve">
-    <value>CodeViewRichTextBox</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;OtherTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CodeViewRichTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="ProjectileScaleTextBox.Text" xml:space="preserve">
-    <value>1f</value>
-  </data>
-  <data name="&gt;&gt;PreviewCode.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="SetDefaultsTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageChooseButton.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="ProjectileImagePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 24</value>
-  </data>
-  <data name="&gt;&gt;CodeViewRichTextBox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ProjectileHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="SetDefaultsTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePathLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ProjectileAlphaNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>713, 38</value>
-  </data>
-  <data name="&gt;&gt;NewProjectileTitle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HeadTabPage.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;SaveButton.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="ProjectileNameTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageNumericUpDown.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="ProjectileImagePathLabel.Text" xml:space="preserve">
-    <value>未选择图片</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="ProjectileHostileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>232, 24</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImagePathLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="ProjectileImageChooseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>121, 124</value>
-  </data>
-  <data name="ProjectileScaleTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyComboBox.ZOrder" xml:space="preserve">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;ProjectileScaleTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;HeadTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftLabel.Name" xml:space="preserve">
-    <value>ProjectileTimeLeftLabel</value>
-  </data>
-  <data name="SetDefaultsTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 33</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileDamageLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="PreviewCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 32</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImagePictureBox.Name" xml:space="preserve">
-    <value>ProjectileImagePictureBox</value>
-  </data>
-  <data name="ProjectileHeightLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileHostileComboBox.Text" xml:space="preserve">
-    <value>true</value>
-  </data>
-  <data name="AITabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1207, 713</value>
-  </data>
-  <data name="OriginCodeFilePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 24</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectilePenetrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 24</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>11, 24</value>
-  </data>
-  <data name="ProjectileNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 55</value>
-  </data>
-  <data name="ProjectileWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 30</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftNumericUpDown.ZOrder" xml:space="preserve">
-    <value>18</value>
-  </data>
-  <data name="ProjectileWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="&gt;&gt;SaveButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="ProjectileWidthNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="ProjectileNameTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;ProjectileScaleLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesRichTextBox.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileAIStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 154</value>
-  </data>
-  <data name="ProjectileScaleTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 30</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileLabel.Name" xml:space="preserve">
-    <value>ProjectileHostileLabel</value>
-  </data>
-  <data name="OriginCodeFilePath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1383, 51</value>
-  </data>
-  <data name="ProjectileImageChooseButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;OriginalCode.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="&gt;&gt;NewProjectileTitle.Name" xml:space="preserve">
-    <value>NewProjectileTitle</value>
-  </data>
-  <data name="CodeViewRichTextBox.Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SetDefaultsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageChooseButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileImageChooseButton.Text" xml:space="preserve">
-    <value>选择图片</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePathLabel.Name" xml:space="preserve">
-    <value>OriginCodeFilePathLabel</value>
-  </data>
-  <data name="ProjectileFriendlyComboBox.Items" xml:space="preserve">
-    <value>true</value>
-  </data>
-  <data name="ProjectileNameLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProjectilePenetrateNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>732, 75</value>
-  </data>
-  <data name="ProjectileTabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTabControl.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="OriginalCode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="HeadTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1207, 713</value>
-  </data>
-  <data name="ProjectileDamageNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 30</value>
-  </data>
-  <data name="ProjectileTimeLeftNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageLabel.Name" xml:space="preserve">
-    <value>ProjectileDamageLabel</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNameLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceLabel.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="ProjectileFriendlyLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 116</value>
-  </data>
-  <data name="ProjectileAIStyleNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 30</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePathLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1637, 881</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectileAIStyleNumericUpDown</value>
-  </data>
-  <data name="ProjectileNamespaceTextBox.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="ProjectileHostileComboBox.Items1" xml:space="preserve">
-    <value>false</value>
-  </data>
-  <data name="ProjectileImagePathLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyLabel.Name" xml:space="preserve">
-    <value>ProjectileFriendlyLabel</value>
-  </data>
-  <data name="OriginCodeFilePath.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.Name" xml:space="preserve">
-    <value>ProjectileSetDefaultsCodesLabel</value>
-  </data>
-  <data name="OriginalCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1243, 881</value>
-  </data>
-  <data name="ProjectileNamespaceLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileComboBox.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePath.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="OriginCodeFilePathLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectileWidthNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateLabel.Name" xml:space="preserve">
-    <value>ProjectilePenetrateLabel</value>
-  </data>
-  <data name="&gt;&gt;SetDefaultsTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileScaleLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ProjectileFriendlyLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="CodeViewRichTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="ProjectileNamespaceLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="NewProjectileTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft YaHei UI, 12pt</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImageLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectilePenetrateLabel.Text" xml:space="preserve">
-    <value>射弹穿透次数:</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProjectileScaleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileImageChooseButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 32</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileComboBox.Name" xml:space="preserve">
-    <value>ProjectileHostileComboBox</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileHeightLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;ProjectileScaleTextBox.Name" xml:space="preserve">
-    <value>ProjectileScaleTextBox</value>
-  </data>
-  <data name="AITabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="SaveButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="ProjectileFriendlyComboBox.Items1" xml:space="preserve">
-    <value>false</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImagePictureBox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="ProjectileFriendlyComboBox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="ProjectileTimeLeftLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHeightNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectileHeightNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="OriginCodeFilePathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1243, 51</value>
-  </data>
-  <data name="ProjectileHostileLabel.Text" xml:space="preserve">
-    <value>射弹是否可攻击友方和NPC:</value>
-  </data>
-  <data name="ProjectileFriendlyComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>206, 112</value>
-  </data>
-  <data name="&gt;&gt;OtherTabPage.Parent" xml:space="preserve">
-    <value>ProjectileTabControl</value>
-  </data>
-  <data name="ProjectileTimeLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 24</value>
-  </data>
-  <data name="ProjectileDamageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="ProjectileDamageLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="ProjectileImagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 113</value>
-  </data>
-  <data name="ProjectileHeightNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="ProjectileNamespaceLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;AITabPage.Name" xml:space="preserve">
-    <value>AITabPage</value>
-  </data>
-  <data name="ProjectileWidthNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="ProjectileHeightNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 1</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHostileLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="ProjectileFriendlyLabel.Text" xml:space="preserve">
-    <value>射弹是否可攻击敌方:</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNameTextBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OriginCodeFilePathLabel.Text" xml:space="preserve">
-    <value>射弹代码位置:</value>
-  </data>
-  <data name="ProjectileFriendlyLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;ProjectileTimeLeftLabel.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="ProjectileAlphaLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="ProjectilePenetrateLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 78</value>
-  </data>
-  <data name="ProjectileImagePathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectilePenetrateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileTimeLeftLabel.Text" xml:space="preserve">
-    <value>射弹存在时间:</value>
-  </data>
-  <data name="ProjectileNamespaceLabel.Text" xml:space="preserve">
-    <value>射弹名称:</value>
-  </data>
-  <data name="ProjectileHostileComboBox.Items" xml:space="preserve">
-    <value>true</value>
-  </data>
-  <data name="ProjectileHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 30</value>
-  </data>
-  <data name="PreviewCode.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Left</value>
-  </data>
-  <data name="&gt;&gt;ProjectileDamageLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="SaveButton.Text" xml:space="preserve">
-    <value>保存当前显示的代码并保存图片</value>
-  </data>
-  <data name="NewProjectileTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
+  <data name="ProjectileAlphaLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>592, 42</value>
   </data>
   <data name="&gt;&gt;ProjectileAlphaNumericUpDown.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="SaveButton.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
+  <data name="PreviewCode.Text" xml:space="preserve">
+    <value>预览代码</value>
   </data>
-  <data name="ProjectileDamageNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>112, 151</value>
-  </data>
-  <data name="&gt;&gt;ProjectileWidthLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="SaveButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="ProjectileTimeLeftNumericUpDown.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePath.Name" xml:space="preserve">
-    <value>OriginCodeFilePath</value>
-  </data>
-  <data name="ProjectileAIStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
-  </data>
-  <data name="ProjectileAIStyleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileImagePathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 128</value>
-  </data>
-  <data name="ProjectileDamageLabel.Text" xml:space="preserve">
-    <value>射弹伤害:</value>
-  </data>
-  <data name="ProjectileAlphaNumericUpDown.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 4, 5, 4</value>
-  </data>
-  <data name="ProjectileImagePictureBox.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaLabel.Name" xml:space="preserve">
-    <value>ProjectileAlphaLabel</value>
-  </data>
-  <data name="&gt;&gt;OriginCodeFilePathLabel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaNumericUpDown.Name" xml:space="preserve">
-    <value>ProjectileAlphaNumericUpDown</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAIStyleLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ProjectileNamespaceLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="AITabPage.Text" xml:space="preserve">
-    <value>AI</value>
-  </data>
-  <data name="ProjectileSetDefaultsCodesRichTextBox.Text" xml:space="preserve">
-    <value>//可能会出错请注意</value>
-  </data>
-  <data name="&gt;&gt;ProjectileImagePathLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileDamageLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 154</value>
-  </data>
-  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.Parent" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
-  </data>
-  <data name="ProjectileNameLabel.Text" xml:space="preserve">
-    <value>射弹名称:</value>
-  </data>
-  <data name="&gt;&gt;ProjectileHeightLabel.Name" xml:space="preserve">
-    <value>ProjectileHeightLabel</value>
-  </data>
-  <data name="&gt;&gt;ProjectilePenetrateNumericUpDown.ZOrder" xml:space="preserve">
-    <value>21</value>
-  </data>
-  <data name="ProjectileAlphaLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
+  <data name="ProjectileFriendlyComboBox.Items" xml:space="preserve">
+    <value>true</value>
   </data>
   <data name="&gt;&gt;ProjectileScaleLabel.Parent" xml:space="preserve">
     <value>SetDefaultsTabPage</value>
   </data>
-  <data name="OriginCodeFilePath.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;ProjectileImagePathLabel.Name" xml:space="preserve">
+    <value>ProjectileImagePathLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileNamespaceTextBox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="ProjectileScaleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>122, 24</value>
+  </data>
+  <data name="ProjectileNameTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="CodeViewRichTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 4, 5, 4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>射弹设置</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ProjectileTimeLeftLabel.Name" xml:space="preserve">
+    <value>ProjectileTimeLeftLabel</value>
+  </data>
+  <data name="&gt;&gt;ProjectileSetDefaultsCodesLabel.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;ProjectileDamageLabel.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="SaveButton.Text" xml:space="preserve">
+    <value>保存当前显示的代码并保存图片</value>
+  </data>
+  <data name="&gt;&gt;ProjectileScaleLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="ProjectileAIStyleLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;ProjectileImagePathLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="&gt;&gt;PreviewCode.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="OriginCodeFilePath.Text" xml:space="preserve">
-    <value>无位置</value>
+  <data name="ProjectileNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>975, 30</value>
   </data>
-  <data name="&gt;&gt;SetDefaultsTabPage.Name" xml:space="preserve">
-    <value>SetDefaultsTabPage</value>
+  <data name="OriginCodeFilePathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
   </data>
-  <data name="&gt;&gt;ProjectileFriendlyComboBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="ProjectileNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="OriginCodeFilePath.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 0, 5, 0</value>
-  </data>
-  <data name="ProjectileHostileLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>592, 116</value>
-  </data>
-  <data name="CodeViewRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>686, 788</value>
-  </data>
-  <data name="&gt;&gt;ProjectileAlphaNumericUpDown.Type" xml:space="preserve">
-    <value>System.Windows.Forms.NumericUpDown, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1637, 881</value>
   </data>
   <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
     <value>en-US</value>

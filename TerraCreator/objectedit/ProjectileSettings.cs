@@ -16,6 +16,7 @@ namespace TerraCreator
 
         string ProjectileContentWithoutLineRead = "";
         public static string ProjectilePathGlobal = "";
+        private string selectedImagePath = "";
 
         public ProjectileSettingForm(string ProjectilePath, string ProjectileNamespace)
         {
@@ -187,20 +188,85 @@ namespace TerraCreator
             CodeViewRichTextBox.Text = ProjectileContentWithoutLineRead;
         }
 
+        private bool CheckControlsForEmpty()
+        {
+            var controlsToCheck = new Control[]
+            {
+                ProjectileNamespaceTextBox,
+                ProjectileScaleTextBox,
+                ProjectileFriendlyComboBox,
+                ProjectileHostileComboBox
+                // 可根据实际需要添加更多控件
+            };
+            foreach (var ctrl in controlsToCheck)
+            {
+                if (string.IsNullOrWhiteSpace(ctrl.Text))
+                {
+                    MessageBox.Show($"控件“{ctrl.Name}”内容为空，请填写完整。", "内容缺失", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return true;
+                }
+            }
+            return false;
+        }
+
         private void PreviewCode_Click(object sender, EventArgs e)
         {
+            if (CheckControlsForEmpty()) return;
+            // 自动生成属性列表
+            var propertyList = new[]
+            {
+                "Projectile.Height",
+                "Projectile.Width",
+                "Projectile.Friendly",
+                "Projectile.timeLeft",
+                "Projectile.Scale",
+                "Projectile.Hostile",
+                "Projectile.Alpha",
+                "Projectile.Penetrate",
+                "Projectile.Damage",
+                "Projectile.aiStyle"
+            };
+
+            var customCode = ProjectileSetDefaultsCodesRichTextBox.Text;
+            var customCodeLower = customCode.ToLower();
+            var repeatedProps = new List<string>();
+            foreach (var prop in propertyList)
+            {
+                var regex = new Regex($@"{Regex.Escape(prop.ToLower())}\s*=");
+                if (regex.IsMatch(customCodeLower))
+                {
+                    repeatedProps.Add(prop);
+                }
+            }
+            if (repeatedProps.Count > 0)
+            {
+                MessageBox.Show($"以下属性在自动生成和自定义代码中均有赋值，可能冲突：\n{string.Join("\n", repeatedProps)}", "属性重复", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             string PreviewCode = WriteProjctileCode();
             CodeViewRichTextBox.Text = PreviewCode;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-            DialogResult ConfirmSaveProjectileCode = MessageBox.Show("你确定要保存当前代码吗", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (CheckControlsForEmpty()) return;
+
+            DialogResult ConfirmSaveProjectileCode = MessageBox.Show("你确定要保存当前代码和贴图吗？", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (ConfirmSaveProjectileCode == DialogResult.OK)
             {
                 try
                 {
                     File.WriteAllText(ProjectilePathGlobal, CodeViewRichTextBox.Text);
+
+                    // 保存贴图
+                    if (!string.IsNullOrWhiteSpace(selectedImagePath))
+                    {
+                        var targetImagePath = ProjectilePathGlobal.Replace(".cs", ".png");
+                        File.Copy(selectedImagePath, targetImagePath, true);
+                    }
+
+                    MessageBox.Show("保存成功！", "成功", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Close();
                 }
                 catch (Exception ex)
@@ -238,6 +304,20 @@ namespace TerraCreator
             }
 
             return body.Trim();
+        }
+
+        private void SelectImageButton_Click(object sender, EventArgs e)
+        {
+            using (var ofd = new OpenFileDialog())
+            {
+                ofd.Filter = "PNG图片|*.png";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    selectedImagePath = ofd.FileName;
+                    ProjectileImagePictureBox.Image = Image.FromFile(selectedImagePath);
+                    ProjectileImagePathLabel.Text = selectedImagePath;
+                }
+            }
         }
     }
     

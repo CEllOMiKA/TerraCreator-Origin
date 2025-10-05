@@ -129,38 +129,34 @@
             // 
             ItemTitle.AutoSize = true;
             ItemTitle.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            ItemTitle.Location = new Point(14, 9);
-            ItemTitle.Margin = new Padding(5, 0, 5, 0);
+            ItemTitle.Location = new Point(9, 6);
             ItemTitle.Name = "ItemTitle";
-            ItemTitle.Size = new Size(62, 31);
+            ItemTitle.Size = new Size(42, 21);
             ItemTitle.TabIndex = 2;
             ItemTitle.Text = "物品";
             // 
             // ItemImagePictureBox
             // 
-            ItemImagePictureBox.Location = new Point(1102, 48);
-            ItemImagePictureBox.Margin = new Padding(5, 4, 5, 4);
+            ItemImagePictureBox.Location = new Point(701, 34);
             ItemImagePictureBox.Name = "ItemImagePictureBox";
-            ItemImagePictureBox.Size = new Size(126, 119);
+            ItemImagePictureBox.Size = new Size(80, 84);
             ItemImagePictureBox.TabIndex = 17;
             ItemImagePictureBox.TabStop = false;
             // 
             // ItemImagePathLabel
             // 
             ItemImagePathLabel.AutoSize = true;
-            ItemImagePathLabel.Location = new Point(248, 125);
-            ItemImagePathLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemImagePathLabel.Location = new Point(158, 89);
             ItemImagePathLabel.Name = "ItemImagePathLabel";
-            ItemImagePathLabel.Size = new Size(100, 24);
+            ItemImagePathLabel.Size = new Size(68, 17);
             ItemImagePathLabel.TabIndex = 16;
             ItemImagePathLabel.Text = "未选择图片";
             // 
             // ItemImageChooseButton
             // 
-            ItemImageChooseButton.Location = new Point(121, 121);
-            ItemImageChooseButton.Margin = new Padding(5, 4, 5, 4);
+            ItemImageChooseButton.Location = new Point(77, 86);
             ItemImageChooseButton.Name = "ItemImageChooseButton";
-            ItemImageChooseButton.Size = new Size(118, 32);
+            ItemImageChooseButton.Size = new Size(75, 23);
             ItemImageChooseButton.TabIndex = 15;
             ItemImageChooseButton.Text = "选择图片";
             ItemImageChooseButton.UseVisualStyleBackColor = true;
@@ -168,78 +164,72 @@
             // ItemImageLabel
             // 
             ItemImageLabel.AutoSize = true;
-            ItemImageLabel.Location = new Point(14, 125);
-            ItemImageLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemImageLabel.Location = new Point(9, 89);
             ItemImageLabel.Name = "ItemImageLabel";
-            ItemImageLabel.Size = new Size(86, 24);
+            ItemImageLabel.Size = new Size(59, 17);
             ItemImageLabel.TabIndex = 14;
             ItemImageLabel.Text = "物品贴图:";
             // 
             // ItemNamespaceTextBox
             // 
-            ItemNamespaceTextBox.Location = new Point(121, 85);
-            ItemNamespaceTextBox.Margin = new Padding(5, 4, 5, 4);
+            ItemNamespaceTextBox.Location = new Point(77, 60);
             ItemNamespaceTextBox.Name = "ItemNamespaceTextBox";
-            ItemNamespaceTextBox.Size = new Size(975, 30);
+            ItemNamespaceTextBox.Size = new Size(622, 23);
             ItemNamespaceTextBox.TabIndex = 13;
             // 
             // ItemNamespaceLabel
             // 
             ItemNamespaceLabel.AutoSize = true;
-            ItemNamespaceLabel.Location = new Point(14, 88);
-            ItemNamespaceLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemNamespaceLabel.Location = new Point(9, 62);
             ItemNamespaceLabel.Name = "ItemNamespaceLabel";
-            ItemNamespaceLabel.Size = new Size(86, 24);
+            ItemNamespaceLabel.Size = new Size(59, 17);
             ItemNamespaceLabel.TabIndex = 12;
             ItemNamespaceLabel.Text = "物品名称:";
             // 
             // ItemNameTextBox
             // 
-            ItemNameTextBox.Location = new Point(121, 48);
-            ItemNameTextBox.Margin = new Padding(5, 4, 5, 4);
+            ItemNameTextBox.Location = new Point(77, 34);
             ItemNameTextBox.Name = "ItemNameTextBox";
-            ItemNameTextBox.Size = new Size(975, 30);
+            ItemNameTextBox.Size = new Size(622, 23);
             ItemNameTextBox.TabIndex = 11;
             // 
             // ItemNameLabel
             // 
             ItemNameLabel.AutoSize = true;
-            ItemNameLabel.Location = new Point(14, 51);
-            ItemNameLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemNameLabel.Location = new Point(9, 36);
             ItemNameLabel.Name = "ItemNameLabel";
-            ItemNameLabel.Size = new Size(86, 24);
+            ItemNameLabel.Size = new Size(59, 17);
             ItemNameLabel.TabIndex = 10;
             ItemNameLabel.Text = "物品名称:";
             // 
             // OriginCodeFilePath
             // 
             OriginCodeFilePath.AutoSize = true;
-            OriginCodeFilePath.Location = new Point(1382, 48);
-            OriginCodeFilePath.Margin = new Padding(5, 0, 5, 0);
+            OriginCodeFilePath.Location = new Point(879, 34);
             OriginCodeFilePath.Name = "OriginCodeFilePath";
-            OriginCodeFilePath.Size = new Size(64, 24);
+            OriginCodeFilePath.Size = new Size(44, 17);
             OriginCodeFilePath.TabIndex = 19;
             OriginCodeFilePath.Text = "无位置";
             // 
             // OriginCodeFilePathLabel
             // 
             OriginCodeFilePathLabel.AutoSize = true;
-            OriginCodeFilePathLabel.Location = new Point(1242, 48);
-            OriginCodeFilePathLabel.Margin = new Padding(5, 0, 5, 0);
+            OriginCodeFilePathLabel.Location = new Point(790, 34);
             OriginCodeFilePathLabel.Name = "OriginCodeFilePathLabel";
-            OriginCodeFilePathLabel.Size = new Size(122, 24);
+            OriginCodeFilePathLabel.Size = new Size(83, 17);
             OriginCodeFilePathLabel.TabIndex = 18;
             OriginCodeFilePathLabel.Text = "物品代码位置:";
             // 
             // ItemSettingsTabControl
             // 
-            ItemSettingsTabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            ItemSettingsTabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             ItemSettingsTabControl.Controls.Add(ItemSetDefaultsTabPage);
             ItemSettingsTabControl.Controls.Add(ItemAddRecipesTabPage);
-            ItemSettingsTabControl.Location = new Point(14, 174);
+            ItemSettingsTabControl.Location = new Point(9, 123);
+            ItemSettingsTabControl.Margin = new Padding(2);
             ItemSettingsTabControl.Name = "ItemSettingsTabControl";
             ItemSettingsTabControl.SelectedIndex = 0;
-            ItemSettingsTabControl.Size = new Size(1218, 776);
+            ItemSettingsTabControl.Size = new Size(775, 527);
             ItemSettingsTabControl.TabIndex = 20;
             // 
             // ItemSetDefaultsTabPage
@@ -262,28 +252,29 @@
             ItemSetDefaultsTabPage.Controls.Add(ItemHeightNumericUpDown);
             ItemSetDefaultsTabPage.Controls.Add(ItemWidthNumericUpDown);
             ItemSetDefaultsTabPage.Controls.Add(ItemWidthLabel);
-            ItemSetDefaultsTabPage.Location = new Point(4, 33);
+            ItemSetDefaultsTabPage.Location = new Point(4, 26);
+            ItemSetDefaultsTabPage.Margin = new Padding(2);
             ItemSetDefaultsTabPage.Name = "ItemSetDefaultsTabPage";
-            ItemSetDefaultsTabPage.Padding = new Padding(3);
-            ItemSetDefaultsTabPage.Size = new Size(1210, 739);
+            ItemSetDefaultsTabPage.Padding = new Padding(2);
+            ItemSetDefaultsTabPage.Size = new Size(767, 497);
             ItemSetDefaultsTabPage.TabIndex = 0;
             ItemSetDefaultsTabPage.Text = "SetDefaults";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(595, 521);
-            label2.Margin = new Padding(5, 0, 5, 0);
+            label2.Location = new Point(379, 369);
             label2.Name = "label2";
-            label2.Size = new Size(104, 24);
+            label2.Size = new Size(71, 17);
             label2.TabIndex = 41;
             label2.Text = "自定义代码:";
             // 
             // SetDefaultsOtherCodes
             // 
-            SetDefaultsOtherCodes.Location = new Point(593, 548);
+            SetDefaultsOtherCodes.Location = new Point(377, 388);
+            SetDefaultsOtherCodes.Margin = new Padding(2);
             SetDefaultsOtherCodes.Name = "SetDefaultsOtherCodes";
-            SetDefaultsOtherCodes.Size = new Size(576, 181);
+            SetDefaultsOtherCodes.Size = new Size(368, 129);
             SetDefaultsOtherCodes.TabIndex = 37;
             SetDefaultsOtherCodes.Text = "";
             // 
@@ -296,9 +287,11 @@
             ItemShootGroup.Controls.Add(ItemShootLabel);
             ItemShootGroup.Controls.Add(ItemShootNumericUpDown);
             ItemShootGroup.Controls.Add(ItemShootCheckBox);
-            ItemShootGroup.Location = new Point(3, 521);
+            ItemShootGroup.Location = new Point(2, 369);
+            ItemShootGroup.Margin = new Padding(2);
             ItemShootGroup.Name = "ItemShootGroup";
-            ItemShootGroup.Size = new Size(584, 208);
+            ItemShootGroup.Padding = new Padding(2);
+            ItemShootGroup.Size = new Size(372, 147);
             ItemShootGroup.TabIndex = 36;
             ItemShootGroup.TabStop = false;
             ItemShootGroup.Text = "发射!";
@@ -306,29 +299,28 @@
             // ItemShootSpeedLabel
             // 
             ItemShootSpeedLabel.AutoSize = true;
-            ItemShootSpeedLabel.Location = new Point(2, 170);
-            ItemShootSpeedLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemShootSpeedLabel.Location = new Point(1, 120);
             ItemShootSpeedLabel.Name = "ItemShootSpeedLabel";
-            ItemShootSpeedLabel.Size = new Size(122, 24);
+            ItemShootSpeedLabel.Size = new Size(83, 17);
             ItemShootSpeedLabel.TabIndex = 60;
             ItemShootSpeedLabel.Text = "发射射弹速度:";
             // 
             // ItemShootSpeedNumericUpDown
             // 
-            ItemShootSpeedNumericUpDown.Location = new Point(134, 167);
-            ItemShootSpeedNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemShootSpeedNumericUpDown.Location = new Point(85, 118);
             ItemShootSpeedNumericUpDown.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             ItemShootSpeedNumericUpDown.Name = "ItemShootSpeedNumericUpDown";
-            ItemShootSpeedNumericUpDown.Size = new Size(442, 30);
+            ItemShootSpeedNumericUpDown.Size = new Size(281, 23);
             ItemShootSpeedNumericUpDown.TabIndex = 61;
             ItemShootSpeedNumericUpDown.Value = new decimal(new int[] { 25, 0, 0, 0 });
             // 
             // ItemShootIUOPCheckBox
             // 
             ItemShootIUOPCheckBox.AutoSize = true;
-            ItemShootIUOPCheckBox.Location = new Point(134, 94);
+            ItemShootIUOPCheckBox.Location = new Point(85, 67);
+            ItemShootIUOPCheckBox.Margin = new Padding(2);
             ItemShootIUOPCheckBox.Name = "ItemShootIUOPCheckBox";
-            ItemShootIUOPCheckBox.Size = new Size(300, 28);
+            ItemShootIUOPCheckBox.Size = new Size(203, 21);
             ItemShootIUOPCheckBox.TabIndex = 59;
             ItemShootIUOPCheckBox.Text = "使用自定义射弹(启用则上框无效)";
             ItemShootIUOPCheckBox.UseVisualStyleBackColor = true;
@@ -336,37 +328,37 @@
             // ItemShootUOPComboBox
             // 
             ItemShootUOPComboBox.FormattingEnabled = true;
-            ItemShootUOPComboBox.Location = new Point(134, 128);
+            ItemShootUOPComboBox.Location = new Point(85, 91);
+            ItemShootUOPComboBox.Margin = new Padding(2);
             ItemShootUOPComboBox.Name = "ItemShootUOPComboBox";
-            ItemShootUOPComboBox.Size = new Size(442, 32);
+            ItemShootUOPComboBox.Size = new Size(283, 25);
             ItemShootUOPComboBox.TabIndex = 58;
             // 
             // ItemShootLabel
             // 
             ItemShootLabel.AutoSize = true;
-            ItemShootLabel.Location = new Point(2, 60);
-            ItemShootLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemShootLabel.Location = new Point(1, 42);
             ItemShootLabel.Name = "ItemShootLabel";
-            ItemShootLabel.Size = new Size(122, 24);
+            ItemShootLabel.Size = new Size(83, 17);
             ItemShootLabel.TabIndex = 44;
             ItemShootLabel.Text = "物品发射射弹:";
             // 
             // ItemShootNumericUpDown
             // 
-            ItemShootNumericUpDown.Location = new Point(134, 57);
-            ItemShootNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemShootNumericUpDown.Location = new Point(85, 40);
             ItemShootNumericUpDown.Maximum = new decimal(new int[] { 1021, 0, 0, 0 });
             ItemShootNumericUpDown.Name = "ItemShootNumericUpDown";
-            ItemShootNumericUpDown.Size = new Size(442, 30);
+            ItemShootNumericUpDown.Size = new Size(281, 23);
             ItemShootNumericUpDown.TabIndex = 45;
             ItemShootNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // ItemShootCheckBox
             // 
             ItemShootCheckBox.AutoSize = true;
-            ItemShootCheckBox.Location = new Point(2, 29);
+            ItemShootCheckBox.Location = new Point(1, 21);
+            ItemShootCheckBox.Margin = new Padding(2);
             ItemShootCheckBox.Name = "ItemShootCheckBox";
-            ItemShootCheckBox.Size = new Size(72, 28);
+            ItemShootCheckBox.Size = new Size(51, 21);
             ItemShootCheckBox.TabIndex = 38;
             ItemShootCheckBox.Text = "启用";
             ItemShootCheckBox.UseVisualStyleBackColor = true;
@@ -390,9 +382,11 @@
             ItemItemGroup.Controls.Add(ItemKnockbackNumericUpDown);
             ItemItemGroup.Controls.Add(ItemKnockbackLabel);
             ItemItemGroup.Controls.Add(ItemItemCheckBox);
-            ItemItemGroup.Location = new Point(3, 299);
+            ItemItemGroup.Location = new Point(2, 212);
+            ItemItemGroup.Margin = new Padding(2);
             ItemItemGroup.Name = "ItemItemGroup";
-            ItemItemGroup.Size = new Size(1166, 216);
+            ItemItemGroup.Padding = new Padding(2);
+            ItemItemGroup.Size = new Size(742, 153);
             ItemItemGroup.TabIndex = 35;
             ItemItemGroup.TabStop = false;
             ItemItemGroup.Text = "武器工具属性";
@@ -401,79 +395,73 @@
             // 
             ItemNoMeleeComboBox.FormattingEnabled = true;
             ItemNoMeleeComboBox.Items.AddRange(new object[] { "true", "false" });
-            ItemNoMeleeComboBox.Location = new Point(688, 173);
+            ItemNoMeleeComboBox.Location = new Point(438, 123);
+            ItemNoMeleeComboBox.Margin = new Padding(2);
             ItemNoMeleeComboBox.Name = "ItemNoMeleeComboBox";
-            ItemNoMeleeComboBox.Size = new Size(471, 32);
+            ItemNoMeleeComboBox.Size = new Size(301, 25);
             ItemNoMeleeComboBox.TabIndex = 57;
             ItemNoMeleeComboBox.Text = "false";
             // 
             // ItemHammerLabel
             // 
             ItemHammerLabel.AutoSize = true;
-            ItemHammerLabel.Location = new Point(2, 177);
-            ItemHammerLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemHammerLabel.Location = new Point(1, 125);
             ItemHammerLabel.Name = "ItemHammerLabel";
-            ItemHammerLabel.Size = new Size(86, 24);
+            ItemHammerLabel.Size = new Size(59, 17);
             ItemHammerLabel.TabIndex = 54;
             ItemHammerLabel.Text = "物品锤力:";
             // 
             // ItemHammerNumericUpDown
             // 
-            ItemHammerNumericUpDown.Location = new Point(105, 174);
-            ItemHammerNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemHammerNumericUpDown.Location = new Point(67, 123);
             ItemHammerNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             ItemHammerNumericUpDown.Name = "ItemHammerNumericUpDown";
-            ItemHammerNumericUpDown.Size = new Size(471, 30);
+            ItemHammerNumericUpDown.Size = new Size(300, 23);
             ItemHammerNumericUpDown.TabIndex = 55;
             ItemHammerNumericUpDown.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // ItemNoMeleeLabel
             // 
             ItemNoMeleeLabel.AutoSize = true;
-            ItemNoMeleeLabel.Location = new Point(585, 177);
-            ItemNoMeleeLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemNoMeleeLabel.Location = new Point(372, 125);
             ItemNoMeleeLabel.Name = "ItemNoMeleeLabel";
-            ItemNoMeleeLabel.Size = new Size(104, 24);
+            ItemNoMeleeLabel.Size = new Size(71, 17);
             ItemNoMeleeLabel.TabIndex = 56;
             ItemNoMeleeLabel.Text = "不用碰撞箱:";
             // 
             // ItemPickLabel
             // 
             ItemPickLabel.AutoSize = true;
-            ItemPickLabel.Location = new Point(2, 139);
-            ItemPickLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemPickLabel.Location = new Point(1, 98);
             ItemPickLabel.Name = "ItemPickLabel";
-            ItemPickLabel.Size = new Size(86, 24);
+            ItemPickLabel.Size = new Size(59, 17);
             ItemPickLabel.TabIndex = 50;
             ItemPickLabel.Text = "物品镐力:";
             // 
             // ItemPickNumericUpDown
             // 
-            ItemPickNumericUpDown.Location = new Point(105, 136);
-            ItemPickNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemPickNumericUpDown.Location = new Point(67, 96);
             ItemPickNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             ItemPickNumericUpDown.Name = "ItemPickNumericUpDown";
-            ItemPickNumericUpDown.Size = new Size(471, 30);
+            ItemPickNumericUpDown.Size = new Size(300, 23);
             ItemPickNumericUpDown.TabIndex = 51;
             ItemPickNumericUpDown.Value = new decimal(new int[] { 50, 0, 0, 0 });
             // 
             // ItemAxeNumericUpDown
             // 
-            ItemAxeNumericUpDown.Location = new Point(688, 136);
-            ItemAxeNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemAxeNumericUpDown.Location = new Point(438, 96);
             ItemAxeNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             ItemAxeNumericUpDown.Name = "ItemAxeNumericUpDown";
-            ItemAxeNumericUpDown.Size = new Size(471, 30);
+            ItemAxeNumericUpDown.Size = new Size(300, 23);
             ItemAxeNumericUpDown.TabIndex = 53;
             ItemAxeNumericUpDown.Value = new decimal(new int[] { 45, 0, 0, 0 });
             // 
             // ItemAxeLabel
             // 
             ItemAxeLabel.AutoSize = true;
-            ItemAxeLabel.Location = new Point(585, 139);
-            ItemAxeLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemAxeLabel.Location = new Point(372, 98);
             ItemAxeLabel.Name = "ItemAxeLabel";
-            ItemAxeLabel.Size = new Size(86, 24);
+            ItemAxeLabel.Size = new Size(59, 17);
             ItemAxeLabel.TabIndex = 52;
             ItemAxeLabel.Text = "物品斧力:";
             // 
@@ -481,86 +469,81 @@
             // 
             ItemDamageTypeComboBox.FormattingEnabled = true;
             ItemDamageTypeComboBox.Items.AddRange(new object[] { "/*战士*/DamageClass.Melee", "/*战士(不吃攻速加成)*/DamageClass.MeleeNoSpeed", "/*射手*/DamageClass.Ranged", "/*法师*/DamageClass.Magic", "/*召唤*/DamageClass.Summon", "/*全属性*/DamageClass.Generic", "/*无属性*/DamageClass.Default" });
-            ItemDamageTypeComboBox.Location = new Point(688, 97);
+            ItemDamageTypeComboBox.Location = new Point(438, 69);
+            ItemDamageTypeComboBox.Margin = new Padding(2);
             ItemDamageTypeComboBox.Name = "ItemDamageTypeComboBox";
-            ItemDamageTypeComboBox.Size = new Size(471, 32);
+            ItemDamageTypeComboBox.Size = new Size(301, 25);
             ItemDamageTypeComboBox.TabIndex = 49;
             // 
             // ItemDamageTypeLabel
             // 
             ItemDamageTypeLabel.AutoSize = true;
-            ItemDamageTypeLabel.Location = new Point(586, 100);
-            ItemDamageTypeLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemDamageTypeLabel.Location = new Point(373, 71);
             ItemDamageTypeLabel.Name = "ItemDamageTypeLabel";
-            ItemDamageTypeLabel.Size = new Size(86, 24);
+            ItemDamageTypeLabel.Size = new Size(59, 17);
             ItemDamageTypeLabel.TabIndex = 44;
             ItemDamageTypeLabel.Text = "伤害类型:";
             // 
             // ItemCritLabel
             // 
             ItemCritLabel.AutoSize = true;
-            ItemCritLabel.Location = new Point(2, 100);
-            ItemCritLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemCritLabel.Location = new Point(1, 71);
             ItemCritLabel.Name = "ItemCritLabel";
-            ItemCritLabel.Size = new Size(104, 24);
+            ItemCritLabel.Size = new Size(71, 17);
             ItemCritLabel.TabIndex = 42;
             ItemCritLabel.Text = "物品暴击率:";
             // 
             // ItemCritNumericUpDown
             // 
-            ItemCritNumericUpDown.Location = new Point(105, 98);
-            ItemCritNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemCritNumericUpDown.Location = new Point(67, 69);
             ItemCritNumericUpDown.Name = "ItemCritNumericUpDown";
-            ItemCritNumericUpDown.Size = new Size(471, 30);
+            ItemCritNumericUpDown.Size = new Size(300, 23);
             ItemCritNumericUpDown.TabIndex = 43;
             ItemCritNumericUpDown.Value = new decimal(new int[] { 20, 0, 0, 0 });
             // 
             // ItemDamageLabel
             // 
             ItemDamageLabel.AutoSize = true;
-            ItemDamageLabel.Location = new Point(2, 63);
-            ItemDamageLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemDamageLabel.Location = new Point(1, 45);
             ItemDamageLabel.Name = "ItemDamageLabel";
-            ItemDamageLabel.Size = new Size(86, 24);
+            ItemDamageLabel.Size = new Size(59, 17);
             ItemDamageLabel.TabIndex = 38;
             ItemDamageLabel.Text = "物品伤害:";
             // 
             // ItemDamageNumericUpDown
             // 
-            ItemDamageNumericUpDown.Location = new Point(105, 60);
-            ItemDamageNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemDamageNumericUpDown.Location = new Point(67, 42);
             ItemDamageNumericUpDown.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             ItemDamageNumericUpDown.Name = "ItemDamageNumericUpDown";
-            ItemDamageNumericUpDown.Size = new Size(471, 30);
+            ItemDamageNumericUpDown.Size = new Size(300, 23);
             ItemDamageNumericUpDown.TabIndex = 39;
             ItemDamageNumericUpDown.Value = new decimal(new int[] { 25, 0, 0, 0 });
             // 
             // ItemKnockbackNumericUpDown
             // 
-            ItemKnockbackNumericUpDown.Location = new Point(688, 60);
-            ItemKnockbackNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemKnockbackNumericUpDown.Location = new Point(438, 42);
             ItemKnockbackNumericUpDown.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             ItemKnockbackNumericUpDown.Name = "ItemKnockbackNumericUpDown";
-            ItemKnockbackNumericUpDown.Size = new Size(471, 30);
+            ItemKnockbackNumericUpDown.Size = new Size(300, 23);
             ItemKnockbackNumericUpDown.TabIndex = 41;
             ItemKnockbackNumericUpDown.Value = new decimal(new int[] { 6, 0, 0, 0 });
             // 
             // ItemKnockbackLabel
             // 
             ItemKnockbackLabel.AutoSize = true;
-            ItemKnockbackLabel.Location = new Point(585, 63);
-            ItemKnockbackLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemKnockbackLabel.Location = new Point(372, 45);
             ItemKnockbackLabel.Name = "ItemKnockbackLabel";
-            ItemKnockbackLabel.Size = new Size(86, 24);
+            ItemKnockbackLabel.Size = new Size(59, 17);
             ItemKnockbackLabel.TabIndex = 40;
             ItemKnockbackLabel.Text = "物品击退:";
             // 
             // ItemItemCheckBox
             // 
             ItemItemCheckBox.AutoSize = true;
-            ItemItemCheckBox.Location = new Point(6, 29);
+            ItemItemCheckBox.Location = new Point(4, 21);
+            ItemItemCheckBox.Margin = new Padding(2);
             ItemItemCheckBox.Name = "ItemItemCheckBox";
-            ItemItemCheckBox.Size = new Size(72, 28);
+            ItemItemCheckBox.Size = new Size(51, 21);
             ItemItemCheckBox.TabIndex = 37;
             ItemItemCheckBox.Text = "启用";
             ItemItemCheckBox.UseVisualStyleBackColor = true;
@@ -580,9 +563,11 @@
             ItemMovementGroup.Controls.Add(ItemUseTimeNumericUpDown);
             ItemMovementGroup.Controls.Add(ItemMovementCheckBox);
             ItemMovementGroup.Controls.Add(ItemUseTimeLabel);
-            ItemMovementGroup.Location = new Point(3, 113);
+            ItemMovementGroup.Location = new Point(2, 80);
+            ItemMovementGroup.Margin = new Padding(2);
             ItemMovementGroup.Name = "ItemMovementGroup";
-            ItemMovementGroup.Size = new Size(1166, 180);
+            ItemMovementGroup.Padding = new Padding(2);
+            ItemMovementGroup.Size = new Size(742, 128);
             ItemMovementGroup.TabIndex = 34;
             ItemMovementGroup.TabStop = false;
             ItemMovementGroup.Text = "物品动画";
@@ -591,9 +576,10 @@
             // 
             ItemNoUseGraphicComboBox.FormattingEnabled = true;
             ItemNoUseGraphicComboBox.Items.AddRange(new object[] { "true", "false" });
-            ItemNoUseGraphicComboBox.Location = new Point(718, 136);
+            ItemNoUseGraphicComboBox.Location = new Point(457, 96);
+            ItemNoUseGraphicComboBox.Margin = new Padding(2);
             ItemNoUseGraphicComboBox.Name = "ItemNoUseGraphicComboBox";
-            ItemNoUseGraphicComboBox.Size = new Size(441, 32);
+            ItemNoUseGraphicComboBox.Size = new Size(282, 25);
             ItemNoUseGraphicComboBox.TabIndex = 49;
             ItemNoUseGraphicComboBox.Text = "false";
             // 
@@ -601,9 +587,10 @@
             // 
             ItemUseTurnComboBox.FormattingEnabled = true;
             ItemUseTurnComboBox.Items.AddRange(new object[] { "true", "false" });
-            ItemUseTurnComboBox.Location = new Point(718, 98);
+            ItemUseTurnComboBox.Location = new Point(457, 69);
+            ItemUseTurnComboBox.Margin = new Padding(2);
             ItemUseTurnComboBox.Name = "ItemUseTurnComboBox";
-            ItemUseTurnComboBox.Size = new Size(441, 32);
+            ItemUseTurnComboBox.Size = new Size(282, 25);
             ItemUseTurnComboBox.TabIndex = 45;
             ItemUseTurnComboBox.Text = "true";
             // 
@@ -611,18 +598,18 @@
             // 
             ItemUseStyleComboBox.FormattingEnabled = true;
             ItemUseStyleComboBox.Items.AddRange(new object[] { "ItemUseStyleID.None/*无动画*/", "ItemUseStyleID.Swing/*剑挥舞*/", "ItemUseStyleID.EatFood/*吃食物*/", "ItemUseStyleID.Thrust/*伞*/", "ItemUseStyleID.HoldUp/*举起*/", "ItemUseStyleID.Shoot/*射击*/", "ItemUseStyleID.DrinkLong/*药水服用1*/", "ItemUseStyleID.DrinkOld/*药水服用(旧)*/", "ItemUseStyleID.GolfPlay/*高尔夫*/", "ItemUseStyleID.DrinkLiquid/*药水服用2*/", "ItemUseStyleID.HiddenAnimation/*类似整蛊坐垫*/", "ItemUseStyleID.MowTheLawn/*割草机*/", "ItemUseStyleID.Guitar/*类似星星吉他*/", "ItemUseStyleID.Rapier/*短剑*/", "ItemUseStyleID.RaiseLamp/*类似夜光*/" });
-            ItemUseStyleComboBox.Location = new Point(134, 136);
+            ItemUseStyleComboBox.Location = new Point(85, 96);
+            ItemUseStyleComboBox.Margin = new Padding(2);
             ItemUseStyleComboBox.Name = "ItemUseStyleComboBox";
-            ItemUseStyleComboBox.Size = new Size(442, 32);
+            ItemUseStyleComboBox.Size = new Size(283, 25);
             ItemUseStyleComboBox.TabIndex = 48;
             // 
             // ItemUseStyleLabel
             // 
             ItemUseStyleLabel.AutoSize = true;
-            ItemUseStyleLabel.Location = new Point(2, 139);
-            ItemUseStyleLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemUseStyleLabel.Location = new Point(1, 98);
             ItemUseStyleLabel.Name = "ItemUseStyleLabel";
-            ItemUseStyleLabel.Size = new Size(122, 24);
+            ItemUseStyleLabel.Size = new Size(83, 17);
             ItemUseStyleLabel.TabIndex = 47;
             ItemUseStyleLabel.Text = "物品使用动画:";
             // 
@@ -630,78 +617,74 @@
             // 
             ItemAutoReuseComboBox.FormattingEnabled = true;
             ItemAutoReuseComboBox.Items.AddRange(new object[] { "true", "false" });
-            ItemAutoReuseComboBox.Location = new Point(134, 98);
+            ItemAutoReuseComboBox.Location = new Point(85, 69);
+            ItemAutoReuseComboBox.Margin = new Padding(2);
             ItemAutoReuseComboBox.Name = "ItemAutoReuseComboBox";
-            ItemAutoReuseComboBox.Size = new Size(442, 32);
+            ItemAutoReuseComboBox.Size = new Size(283, 25);
             ItemAutoReuseComboBox.TabIndex = 44;
             ItemAutoReuseComboBox.Text = "true";
             // 
             // ItemNoUseGraphicLabel
             // 
             ItemNoUseGraphicLabel.AutoSize = true;
-            ItemNoUseGraphicLabel.Location = new Point(586, 139);
-            ItemNoUseGraphicLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemNoUseGraphicLabel.Location = new Point(373, 98);
             ItemNoUseGraphicLabel.Name = "ItemNoUseGraphicLabel";
-            ItemNoUseGraphicLabel.Size = new Size(104, 24);
+            ItemNoUseGraphicLabel.Size = new Size(71, 17);
             ItemNoUseGraphicLabel.TabIndex = 46;
             ItemNoUseGraphicLabel.Text = "物品不绘制:";
             // 
             // ItemAutoReuseLabel
             // 
             ItemAutoReuseLabel.AutoSize = true;
-            ItemAutoReuseLabel.Location = new Point(2, 101);
-            ItemAutoReuseLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemAutoReuseLabel.Location = new Point(1, 72);
             ItemAutoReuseLabel.Name = "ItemAutoReuseLabel";
-            ItemAutoReuseLabel.Size = new Size(122, 24);
+            ItemAutoReuseLabel.Size = new Size(83, 17);
             ItemAutoReuseLabel.TabIndex = 43;
             ItemAutoReuseLabel.Text = "物品自动挥舞:";
             // 
             // ItemUseTurnLabel
             // 
             ItemUseTurnLabel.AutoSize = true;
-            ItemUseTurnLabel.Location = new Point(586, 101);
-            ItemUseTurnLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemUseTurnLabel.Location = new Point(373, 72);
             ItemUseTurnLabel.Name = "ItemUseTurnLabel";
-            ItemUseTurnLabel.Size = new Size(122, 24);
+            ItemUseTurnLabel.Size = new Size(83, 17);
             ItemUseTurnLabel.TabIndex = 41;
             ItemUseTurnLabel.Text = "使用自动转身:";
             // 
             // ItemUseAnimationNumericUpDown
             // 
-            ItemUseAnimationNumericUpDown.Location = new Point(718, 61);
-            ItemUseAnimationNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemUseAnimationNumericUpDown.Location = new Point(457, 43);
             ItemUseAnimationNumericUpDown.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             ItemUseAnimationNumericUpDown.Name = "ItemUseAnimationNumericUpDown";
-            ItemUseAnimationNumericUpDown.Size = new Size(441, 30);
+            ItemUseAnimationNumericUpDown.Size = new Size(281, 23);
             ItemUseAnimationNumericUpDown.TabIndex = 39;
             ItemUseAnimationNumericUpDown.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // ItemUseAnimationLabel
             // 
             ItemUseAnimationLabel.AutoSize = true;
-            ItemUseAnimationLabel.Location = new Point(586, 65);
-            ItemUseAnimationLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemUseAnimationLabel.Location = new Point(373, 46);
             ItemUseAnimationLabel.Name = "ItemUseAnimationLabel";
-            ItemUseAnimationLabel.Size = new Size(122, 24);
+            ItemUseAnimationLabel.Size = new Size(83, 17);
             ItemUseAnimationLabel.TabIndex = 38;
             ItemUseAnimationLabel.Text = "物品动画速度:";
             // 
             // ItemUseTimeNumericUpDown
             // 
-            ItemUseTimeNumericUpDown.Location = new Point(134, 61);
-            ItemUseTimeNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemUseTimeNumericUpDown.Location = new Point(85, 43);
             ItemUseTimeNumericUpDown.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             ItemUseTimeNumericUpDown.Name = "ItemUseTimeNumericUpDown";
-            ItemUseTimeNumericUpDown.Size = new Size(442, 30);
+            ItemUseTimeNumericUpDown.Size = new Size(281, 23);
             ItemUseTimeNumericUpDown.TabIndex = 37;
             ItemUseTimeNumericUpDown.Value = new decimal(new int[] { 8, 0, 0, 0 });
             // 
             // ItemMovementCheckBox
             // 
             ItemMovementCheckBox.AutoSize = true;
-            ItemMovementCheckBox.Location = new Point(6, 29);
+            ItemMovementCheckBox.Location = new Point(4, 21);
+            ItemMovementCheckBox.Margin = new Padding(2);
             ItemMovementCheckBox.Name = "ItemMovementCheckBox";
-            ItemMovementCheckBox.Size = new Size(72, 28);
+            ItemMovementCheckBox.Size = new Size(51, 21);
             ItemMovementCheckBox.TabIndex = 36;
             ItemMovementCheckBox.Text = "启用";
             ItemMovementCheckBox.UseVisualStyleBackColor = true;
@@ -709,10 +692,9 @@
             // ItemUseTimeLabel
             // 
             ItemUseTimeLabel.AutoSize = true;
-            ItemUseTimeLabel.Location = new Point(2, 63);
-            ItemUseTimeLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemUseTimeLabel.Location = new Point(1, 45);
             ItemUseTimeLabel.Name = "ItemUseTimeLabel";
-            ItemUseTimeLabel.Size = new Size(122, 24);
+            ItemUseTimeLabel.Size = new Size(83, 17);
             ItemUseTimeLabel.TabIndex = 34;
             ItemUseTimeLabel.Text = "物品使用速度:";
             // 
@@ -720,140 +702,130 @@
             // 
             ItemRareComboBox.FormattingEnabled = true;
             ItemRareComboBox.Items.AddRange(new object[] { "-1/*灰色*/", "0/*白色(仅此级会被熔岩烧)*/", "1/*蓝色*/", "2/*绿色*/", "3/*橙色*/", "4/*浅红色*/", "5/*粉红色*/", "6/*浅紫色*/", "7/*青柠色*/", "8/*黄色*/", "9/*青色*/", "10/*红色*/", "11/*紫色*/", "-12/*彩虹色(专家模式专用物品色)*/", "-13/*火红色(大师模式专用物品色)*/", "-11/*琥珀色(任务物品色)*/" });
-            ItemRareComboBox.Location = new Point(108, 75);
+            ItemRareComboBox.Location = new Point(69, 53);
+            ItemRareComboBox.Margin = new Padding(2);
             ItemRareComboBox.Name = "ItemRareComboBox";
-            ItemRareComboBox.Size = new Size(471, 32);
+            ItemRareComboBox.Size = new Size(301, 25);
             ItemRareComboBox.TabIndex = 33;
             // 
             // ItemSoundLabel
             // 
             ItemSoundLabel.AutoSize = true;
-            ItemSoundLabel.Location = new Point(589, 78);
-            ItemSoundLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemSoundLabel.Location = new Point(375, 55);
             ItemSoundLabel.Name = "ItemSoundLabel";
-            ItemSoundLabel.Size = new Size(86, 24);
+            ItemSoundLabel.Size = new Size(59, 17);
             ItemSoundLabel.TabIndex = 31;
             ItemSoundLabel.Text = "物品声音:";
             // 
             // ItemSoundNumericUpDown
             // 
-            ItemSoundNumericUpDown.Location = new Point(691, 76);
-            ItemSoundNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemSoundNumericUpDown.Location = new Point(440, 54);
             ItemSoundNumericUpDown.Maximum = new decimal(new int[] { 69, 0, 0, 0 });
             ItemSoundNumericUpDown.Name = "ItemSoundNumericUpDown";
-            ItemSoundNumericUpDown.Size = new Size(471, 30);
+            ItemSoundNumericUpDown.Size = new Size(300, 23);
             ItemSoundNumericUpDown.TabIndex = 32;
             // 
             // ItemRareLabel
             // 
             ItemRareLabel.AutoSize = true;
-            ItemRareLabel.Location = new Point(5, 78);
-            ItemRareLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemRareLabel.Location = new Point(3, 55);
             ItemRareLabel.Name = "ItemRareLabel";
-            ItemRareLabel.Size = new Size(104, 24);
+            ItemRareLabel.Size = new Size(71, 17);
             ItemRareLabel.TabIndex = 29;
             ItemRareLabel.Text = "物品稀有度:";
             // 
             // ItemValueLabel
             // 
             ItemValueLabel.AutoSize = true;
-            ItemValueLabel.Location = new Point(589, 40);
-            ItemValueLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemValueLabel.Location = new Point(375, 28);
             ItemValueLabel.Name = "ItemValueLabel";
-            ItemValueLabel.Size = new Size(86, 24);
+            ItemValueLabel.Size = new Size(59, 17);
             ItemValueLabel.TabIndex = 27;
             ItemValueLabel.Text = "物品价值:";
             // 
             // ItemValueNumericUpDown
             // 
-            ItemValueNumericUpDown.Location = new Point(691, 38);
-            ItemValueNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemValueNumericUpDown.Location = new Point(440, 27);
             ItemValueNumericUpDown.Maximum = new decimal(new int[] { 99999999, 0, 0, 0 });
             ItemValueNumericUpDown.Name = "ItemValueNumericUpDown";
-            ItemValueNumericUpDown.Size = new Size(471, 30);
+            ItemValueNumericUpDown.Size = new Size(300, 23);
             ItemValueNumericUpDown.TabIndex = 28;
             ItemValueNumericUpDown.Value = new decimal(new int[] { 500, 0, 0, 0 });
             // 
             // ItemMaxStackLabel
             // 
             ItemMaxStackLabel.AutoSize = true;
-            ItemMaxStackLabel.Location = new Point(5, 40);
-            ItemMaxStackLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemMaxStackLabel.Location = new Point(3, 28);
             ItemMaxStackLabel.Name = "ItemMaxStackLabel";
-            ItemMaxStackLabel.Size = new Size(86, 24);
+            ItemMaxStackLabel.Size = new Size(59, 17);
             ItemMaxStackLabel.TabIndex = 25;
             ItemMaxStackLabel.Text = "物品堆叠:";
             // 
             // ItemMaxStackNumericUpDown
             // 
-            ItemMaxStackNumericUpDown.Location = new Point(108, 38);
-            ItemMaxStackNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemMaxStackNumericUpDown.Location = new Point(69, 27);
             ItemMaxStackNumericUpDown.Maximum = new decimal(new int[] { 9999, 0, 0, 0 });
             ItemMaxStackNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             ItemMaxStackNumericUpDown.Name = "ItemMaxStackNumericUpDown";
-            ItemMaxStackNumericUpDown.Size = new Size(471, 30);
+            ItemMaxStackNumericUpDown.Size = new Size(300, 23);
             ItemMaxStackNumericUpDown.TabIndex = 26;
             ItemMaxStackNumericUpDown.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // ItemHeightLabel
             // 
             ItemHeightLabel.AutoSize = true;
-            ItemHeightLabel.Location = new Point(5, 3);
-            ItemHeightLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemHeightLabel.Location = new Point(3, 2);
             ItemHeightLabel.Name = "ItemHeightLabel";
-            ItemHeightLabel.Size = new Size(86, 24);
+            ItemHeightLabel.Size = new Size(59, 17);
             ItemHeightLabel.TabIndex = 21;
             ItemHeightLabel.Text = "物品高度:";
             // 
             // ItemHeightNumericUpDown
             // 
-            ItemHeightNumericUpDown.Location = new Point(108, 0);
-            ItemHeightNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemHeightNumericUpDown.Location = new Point(69, 0);
             ItemHeightNumericUpDown.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             ItemHeightNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             ItemHeightNumericUpDown.Name = "ItemHeightNumericUpDown";
-            ItemHeightNumericUpDown.Size = new Size(471, 30);
+            ItemHeightNumericUpDown.Size = new Size(300, 23);
             ItemHeightNumericUpDown.TabIndex = 22;
             ItemHeightNumericUpDown.Value = new decimal(new int[] { 80, 0, 0, 0 });
             // 
             // ItemWidthNumericUpDown
             // 
-            ItemWidthNumericUpDown.Location = new Point(691, 0);
-            ItemWidthNumericUpDown.Margin = new Padding(5, 4, 5, 4);
+            ItemWidthNumericUpDown.Location = new Point(440, 0);
             ItemWidthNumericUpDown.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             ItemWidthNumericUpDown.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             ItemWidthNumericUpDown.Name = "ItemWidthNumericUpDown";
-            ItemWidthNumericUpDown.Size = new Size(471, 30);
+            ItemWidthNumericUpDown.Size = new Size(300, 23);
             ItemWidthNumericUpDown.TabIndex = 24;
             ItemWidthNumericUpDown.Value = new decimal(new int[] { 80, 0, 0, 0 });
             // 
             // ItemWidthLabel
             // 
             ItemWidthLabel.AutoSize = true;
-            ItemWidthLabel.Location = new Point(588, 3);
-            ItemWidthLabel.Margin = new Padding(5, 0, 5, 0);
+            ItemWidthLabel.Location = new Point(374, 2);
             ItemWidthLabel.Name = "ItemWidthLabel";
-            ItemWidthLabel.Size = new Size(86, 24);
+            ItemWidthLabel.Size = new Size(59, 17);
             ItemWidthLabel.TabIndex = 23;
             ItemWidthLabel.Text = "物品宽度:";
             // 
             // ItemAddRecipesTabPage
             // 
             ItemAddRecipesTabPage.BackColor = Color.FromArgb(192, 255, 255);
-            ItemAddRecipesTabPage.Location = new Point(4, 33);
+            ItemAddRecipesTabPage.Location = new Point(4, 26);
+            ItemAddRecipesTabPage.Margin = new Padding(2);
             ItemAddRecipesTabPage.Name = "ItemAddRecipesTabPage";
-            ItemAddRecipesTabPage.Padding = new Padding(3);
-            ItemAddRecipesTabPage.Size = new Size(1210, 739);
+            ItemAddRecipesTabPage.Padding = new Padding(2);
+            ItemAddRecipesTabPage.Size = new Size(767, 497);
             ItemAddRecipesTabPage.TabIndex = 1;
             ItemAddRecipesTabPage.Text = "AddRecipes";
             // 
             // SaveButton
             // 
             SaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            SaveButton.Location = new Point(1679, 917);
-            SaveButton.Margin = new Padding(5, 4, 5, 4);
+            SaveButton.Location = new Point(975, 626);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(294, 34);
+            SaveButton.Size = new Size(187, 24);
             SaveButton.TabIndex = 24;
             SaveButton.Text = "保存当前显示的代码并保存图片";
             SaveButton.UseVisualStyleBackColor = true;
@@ -861,33 +833,32 @@
             // OriginalCode
             // 
             OriginalCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            OriginalCode.Location = new Point(1242, 917);
-            OriginalCode.Margin = new Padding(5, 4, 5, 4);
+            OriginalCode.Location = new Point(790, 627);
             OriginalCode.Name = "OriginalCode";
-            OriginalCode.Size = new Size(130, 32);
+            OriginalCode.Size = new Size(83, 23);
             OriginalCode.TabIndex = 23;
             OriginalCode.Text = "源文件代码";
             OriginalCode.UseVisualStyleBackColor = true;
+            OriginalCode.Click += OriginalCode_Click;
             // 
             // PreviewCode
             // 
             PreviewCode.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            PreviewCode.Location = new Point(1382, 917);
-            PreviewCode.Margin = new Padding(5, 4, 5, 4);
+            PreviewCode.Location = new Point(879, 627);
             PreviewCode.Name = "PreviewCode";
-            PreviewCode.Size = new Size(118, 32);
+            PreviewCode.Size = new Size(75, 23);
             PreviewCode.TabIndex = 22;
             PreviewCode.Text = "预览代码";
             PreviewCode.UseVisualStyleBackColor = true;
+            PreviewCode.Click += PreviewCode_Click;
             // 
             // CodeViewRichTextBox
             // 
             CodeViewRichTextBox.AcceptsTab = true;
             CodeViewRichTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            CodeViewRichTextBox.Location = new Point(1242, 76);
-            CodeViewRichTextBox.Margin = new Padding(5, 4, 5, 4);
+            CodeViewRichTextBox.Location = new Point(792, 52);
             CodeViewRichTextBox.Name = "CodeViewRichTextBox";
-            CodeViewRichTextBox.Size = new Size(731, 833);
+            CodeViewRichTextBox.Size = new Size(370, 568);
             CodeViewRichTextBox.TabIndex = 21;
             CodeViewRichTextBox.TabStop = false;
             CodeViewRichTextBox.Text = "";
@@ -895,18 +866,19 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(1024, 143);
+            label3.Location = new Point(652, 101);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(70, 24);
+            label3.Size = new Size(48, 17);
             label3.TabIndex = 25;
             label3.Text = "开发中!";
             // 
             // ItemSettings
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(1987, 962);
+            ClientSize = new Size(1174, 658);
             Controls.Add(label3);
             Controls.Add(SaveButton);
             Controls.Add(OriginalCode);
@@ -925,6 +897,7 @@
             Controls.Add(ItemNameLabel);
             Controls.Add(ItemTitle);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(2);
             Name = "ItemSettings";
             Text = "物品设置";
             Load += ItemSettings_Load;

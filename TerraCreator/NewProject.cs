@@ -128,7 +128,8 @@ namespace TerraCreator
                         Main.ObjectProject.Controls.Clear();
                         Form ProjectSettingsForm = new ProjectSettings();
                         ProjectSettingsForm.TopLevel = false;
-                        //ProjectSettingsForm.FormBorderStyle = FormBorderStyle.None;
+                        ProjectSettingsForm.FormBorderStyle = FormBorderStyle.None;
+                        ProjectSettingsForm.Dock = DockStyle.Fill;
                         Main.ObjectProject.Controls.Add(ProjectSettingsForm);
                         ProjectSettingsForm.Show();
                         //Main.FileSystem.Path = ProjectData.ProjectPath;

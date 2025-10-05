@@ -118,206 +118,345 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="ProjectileAIStyleNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 107</value>
+  </data>
+  <data name="ProjectileAIStyleNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 23</value>
+  </data>
+  <data name="ProjectileAIStyleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 109</value>
+  </data>
   <data name="ProjectileAIStyleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 24</value>
+    <value>50, 17</value>
   </data>
   <data name="ProjectileAIStyleLabel.Text" xml:space="preserve">
     <value>AIStyle:</value>
   </data>
   <data name="ProjectileDamageNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 151</value>
+    <value>67, 107</value>
   </data>
   <data name="ProjectileDamageNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 30</value>
+    <value>304, 23</value>
+  </data>
+  <data name="ProjectileDamageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 109</value>
   </data>
   <data name="ProjectileDamageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
+    <value>60, 17</value>
   </data>
   <data name="ProjectileDamageLabel.Text" xml:space="preserve">
     <value>Damage:</value>
   </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 188</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>736, 313</value>
+  </data>
+  <data name="ProjectileSetDefaultsCodesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 168</value>
+  </data>
   <data name="ProjectileSetDefaultsCodesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>122, 24</value>
+    <value>85, 17</value>
   </data>
   <data name="ProjectileSetDefaultsCodesLabel.Text" xml:space="preserve">
     <value>Other Codes:</value>
   </data>
   <data name="ProjectileHostileComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 112</value>
+    <value>442, 79</value>
   </data>
   <data name="ProjectileHostileComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>469, 32</value>
+    <value>300, 25</value>
+  </data>
+  <data name="ProjectileHostileLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 82</value>
   </data>
   <data name="ProjectileHostileLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>74, 24</value>
+    <value>51, 17</value>
   </data>
   <data name="ProjectileHostileLabel.Text" xml:space="preserve">
     <value>Hostile:</value>
   </data>
   <data name="ProjectileFriendlyComboBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 112</value>
+    <value>68, 79</value>
   </data>
   <data name="ProjectileFriendlyComboBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 32</value>
+    <value>303, 25</value>
+  </data>
+  <data name="ProjectileFriendlyLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 82</value>
   </data>
   <data name="ProjectileFriendlyLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>84, 24</value>
+    <value>56, 17</value>
   </data>
   <data name="ProjectileFriendlyLabel.Text" xml:space="preserve">
     <value>Friendly:</value>
   </data>
   <data name="ProjectilePenetrateNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 75</value>
+    <value>442, 53</value>
   </data>
   <data name="ProjectilePenetrateNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 30</value>
+    <value>300, 23</value>
+  </data>
+  <data name="ProjectilePenetrateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 55</value>
   </data>
   <data name="ProjectilePenetrateLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 24</value>
+    <value>66, 17</value>
   </data>
   <data name="ProjectilePenetrateLabel.Text" xml:space="preserve">
     <value>Penetrate:</value>
   </data>
   <data name="ProjectileTimeLeftNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 75</value>
+    <value>68, 53</value>
   </data>
   <data name="ProjectileTimeLeftNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>476, 30</value>
+    <value>303, 23</value>
+  </data>
+  <data name="ProjectileTimeLeftLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 55</value>
   </data>
   <data name="ProjectileTimeLeftLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 24</value>
+    <value>60, 17</value>
   </data>
   <data name="ProjectileTimeLeftLabel.Text" xml:space="preserve">
     <value>TimeLeft:</value>
   </data>
   <data name="ProjectileAlphaNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>695, 38</value>
+    <value>442, 27</value>
   </data>
   <data name="ProjectileAlphaNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>471, 30</value>
+    <value>300, 23</value>
+  </data>
+  <data name="ProjectileAlphaLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 30</value>
   </data>
   <data name="ProjectileAlphaLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>65, 24</value>
+    <value>44, 17</value>
   </data>
   <data name="ProjectileAlphaLabel.Text" xml:space="preserve">
     <value>Alpha:</value>
   </data>
   <data name="ProjectileScaleTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 38</value>
+    <value>67, 27</value>
   </data>
   <data name="ProjectileScaleTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>474, 30</value>
+    <value>303, 23</value>
+  </data>
+  <data name="ProjectileScaleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 30</value>
   </data>
   <data name="ProjectileScaleLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
+    <value>41, 17</value>
   </data>
   <data name="ProjectileScaleLabel.Text" xml:space="preserve">
     <value>Scale:</value>
   </data>
+  <data name="ProjectileWidthNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
+    <value>442, 1</value>
+  </data>
+  <data name="ProjectileWidthNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
+    <value>300, 23</value>
+  </data>
+  <data name="ProjectileWidthLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>377, 3</value>
+  </data>
   <data name="ProjectileWidthLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 24</value>
+    <value>45, 17</value>
   </data>
   <data name="ProjectileWidthLabel.Text" xml:space="preserve">
     <value>Width:</value>
   </data>
   <data name="ProjectileHeightNumericUpDown.Location" type="System.Drawing.Point, System.Drawing">
-    <value>106, 1</value>
+    <value>67, 1</value>
   </data>
   <data name="ProjectileHeightNumericUpDown.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 30</value>
+    <value>304, 23</value>
+  </data>
+  <data name="ProjectileHeightLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 3</value>
   </data>
   <data name="ProjectileHeightLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 24</value>
+    <value>49, 17</value>
   </data>
   <data name="ProjectileHeightLabel.Text" xml:space="preserve">
     <value>Height:</value>
   </data>
+  <data name="NewProjectileTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
   <data name="NewProjectileTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 31</value>
+    <value>80, 21</value>
   </data>
   <data name="NewProjectileTitle.Text" xml:space="preserve">
     <value>Projectile</value>
   </data>
+  <data name="ProjectileNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 39</value>
+  </data>
   <data name="ProjectileNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 24</value>
+    <value>46, 17</value>
   </data>
   <data name="ProjectileNameLabel.Text" xml:space="preserve">
     <value>Name:</value>
   </data>
   <data name="ProjectileNameTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 51</value>
+    <value>92, 36</value>
   </data>
   <data name="ProjectileNameTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 30</value>
+    <value>607, 23</value>
+  </data>
+  <data name="ProjectileNamespaceLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 65</value>
   </data>
   <data name="ProjectileNamespaceLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 24</value>
+    <value>80, 17</value>
   </data>
   <data name="ProjectileNamespaceLabel.Text" xml:space="preserve">
     <value>Namespace:</value>
   </data>
   <data name="ProjectileNamespaceTextBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 88</value>
+    <value>92, 62</value>
   </data>
   <data name="ProjectileNamespaceTextBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>952, 30</value>
+    <value>607, 23</value>
+  </data>
+  <data name="ProjectileImageLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 91</value>
   </data>
   <data name="ProjectileImageLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
+    <value>48, 17</value>
   </data>
   <data name="ProjectileImageLabel.Text" xml:space="preserve">
     <value>Image:</value>
   </data>
   <data name="ProjectileImageChooseButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>144, 124</value>
+    <value>92, 88</value>
+  </data>
+  <data name="ProjectileImageChooseButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 23</value>
   </data>
   <data name="ProjectileImageChooseButton.Text" xml:space="preserve">
     <value>Choose</value>
   </data>
   <data name="ProjectileImagePathLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>272, 128</value>
+    <value>173, 91</value>
   </data>
   <data name="ProjectileImagePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 24</value>
+    <value>120, 17</value>
   </data>
   <data name="ProjectileImagePathLabel.Text" xml:space="preserve">
     <value>No choosed image</value>
   </data>
+  <data name="ProjectileImagePictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>705, 36</value>
+  </data>
+  <data name="ProjectileImagePictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 80</value>
+  </data>
+  <data name="CodeViewRichTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 56</value>
+  </data>
+  <data name="CodeViewRichTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>467, 561</value>
+  </data>
   <data name="PreviewCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1405, 881</value>
+    <value>894, 624</value>
   </data>
   <data name="PreviewCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 32</value>
+    <value>104, 23</value>
   </data>
   <data name="PreviewCode.Text" xml:space="preserve">
     <value>Generate Codes</value>
   </data>
+  <data name="OriginalCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 624</value>
+  </data>
   <data name="OriginalCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 32</value>
+    <value>97, 23</value>
   </data>
   <data name="OriginalCode.Text" xml:space="preserve">
     <value>Origin Codes</value>
   </data>
   <data name="SaveButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1579, 879</value>
+    <value>1033, 624</value>
   </data>
   <data name="SaveButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>352, 34</value>
+    <value>224, 24</value>
   </data>
   <data name="SaveButton.Text" xml:space="preserve">
     <value>Save the Image and the Codes Above</value>
   </data>
+  <data name="OriginCodeFilePathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>791, 36</value>
+  </data>
   <data name="OriginCodeFilePathLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>87, 24</value>
+    <value>60, 17</value>
   </data>
   <data name="OriginCodeFilePathLabel.Text" xml:space="preserve">
     <value>Location:</value>
   </data>
+  <data name="OriginCodeFilePath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>880, 36</value>
+  </data>
   <data name="OriginCodeFilePath.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 24</value>
+    <value>79, 17</value>
   </data>
   <data name="OriginCodeFilePath.Text" xml:space="preserve">
     <value>No Location</value>
+  </data>
+  <data name="ProjectileTabControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 117</value>
+  </data>
+  <data name="ProjectileTabControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>773, 531</value>
+  </data>
+  <data name="SetDefaultsTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="SetDefaultsTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="SetDefaultsTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>765, 501</value>
+  </data>
+  <data name="AITabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="AITabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="AITabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>765, 501</value>
+  </data>
+  <data name="OtherTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="OtherTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="OtherTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>765, 501</value>
+  </data>
+  <data name="HeadTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 26</value>
+  </data>
+  <data name="HeadTabPage.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="HeadTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="HeadTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>765, 501</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 17</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1269, 658</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
