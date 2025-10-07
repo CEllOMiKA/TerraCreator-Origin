@@ -34,8 +34,6 @@
             notice = new Label();
             ok = new Button();
             icon = new PictureBox();
-            Milestone = new Label();
-            label3 = new Label();
             label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)icon).BeginInit();
             SuspendLayout();
@@ -71,17 +69,6 @@
             icon.TabStop = false;
             icon.Click += icon_Click;
             // 
-            // Milestone
-            // 
-            resources.ApplyResources(Milestone, "Milestone");
-            Milestone.BackColor = Color.Transparent;
-            Milestone.Name = "Milestone";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(label3, "label3");
-            label3.Name = "label3";
-            // 
             // label4
             // 
             resources.ApplyResources(label4, "label4");
@@ -93,8 +80,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
             Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(Milestone);
             Controls.Add(icon);
             Controls.Add(ok);
             Controls.Add(notice);
@@ -114,8 +99,6 @@
         private Label notice;
         private Button ok;
         private PictureBox icon;
-        private Label Milestone;
-        private Label label3;
         private Label label4;
     }
 }

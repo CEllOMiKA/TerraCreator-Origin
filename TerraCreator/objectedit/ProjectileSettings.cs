@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TerraCreator
 {
@@ -241,7 +242,7 @@ namespace TerraCreator
             if (repeatedProps.Count > 0)
             {
                 MessageBox.Show($"以下属性在自动生成和自定义代码中均有赋值，可能冲突：\n{string.Join("\n", repeatedProps)}", "属性重复", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                //return;
             }
 
             string PreviewCode = WriteProjctileCode();

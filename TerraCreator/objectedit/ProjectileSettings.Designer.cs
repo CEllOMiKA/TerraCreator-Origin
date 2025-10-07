@@ -250,6 +250,7 @@
             resources.ApplyResources(ProjectileImageChooseButton, "ProjectileImageChooseButton");
             ProjectileImageChooseButton.Name = "ProjectileImageChooseButton";
             ProjectileImageChooseButton.UseVisualStyleBackColor = true;
+            ProjectileImageChooseButton.Click += SelectImageButton_Click;
             // 
             // ProjectileImagePathLabel
             // 

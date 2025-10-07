@@ -76,6 +76,7 @@
             splitter1 = new Splitter();
             fileview = new TreeView();
             ListTab = new TabControl();
+            FileViewEdit = new ToolStrip();
             MenuList.SuspendLayout();
             ToolList.SuspendLayout();
             status.SuspendLayout();
@@ -356,6 +357,7 @@
             // 
             Panel.Controls.Add(codes);
             Panel.Controls.Add(ImageBox);
+            Panel.Controls.Add(FileViewEdit);
             Panel.Controls.Add(status);
             resources.ApplyResources(Panel, "Panel");
             Panel.Name = "Panel";
@@ -398,6 +400,11 @@
             resources.ApplyResources(ListTab, "ListTab");
             ListTab.Name = "ListTab";
             ListTab.SelectedIndex = 0;
+            // 
+            // FileViewEdit
+            // 
+            resources.ApplyResources(FileViewEdit, "FileViewEdit");
+            FileViewEdit.Name = "FileViewEdit";
             // 
             // Main
             // 
@@ -466,6 +473,7 @@
         private TabPage TabProjectSettings;
         private ToolStripMenuItem terraCreatorReToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator6;
+        private ToolStrip FileViewEdit;
         public static Panel ObjectProject;
         public static ToolStripStatusLabel CodeCount;
         public static ToolStripStatusLabel FilePropt;

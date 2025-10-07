@@ -7,11 +7,13 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>assets\AquaIconTheme\Icon.ico</ApplicationIcon>
-    <Version>2025.8</Version>
+    <Version>2025.10.1</Version>
     <Authors>CEllOMiKA</Authors>
     <Copyright>GPL v3</Copyright>
-    <Company>CeniLab</Company>
-    <Description>Milestone #1</Description>
+    <Company>CeniStudio</Company>
+    <Description>Milestone 3.1</Description>
+    <UseWPF>True</UseWPF>
+    <PackAsTool>True</PackAsTool>
   </PropertyGroup>
 
   <ItemGroup>

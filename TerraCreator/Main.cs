@@ -143,7 +143,7 @@ namespace TerraCreator
             int selLength = rtb.SelectionLength;
             Color defaultColor = Color.Black;
             Color keywordColor = Color.DeepSkyBlue;
-            Color commentColor = Color.Green;
+            Color commentColor = Color.YellowGreen;
             Color functionColor = Color.Red;
 
             rtb.SuspendLayout();
@@ -190,6 +190,24 @@ namespace TerraCreator
                 rtb.Select(match.Index, match.Length);
                 rtb.SelectionColor = commentColor;
             }
+
+            // 高亮数字（深绿色）
+            var numberMatches = Regex.Matches(rtb.Text, @"\b\d+(\.\d+)?\b");
+            foreach (Match match in numberMatches)
+            {
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = Color.DarkGreen;
+            }
+
+            //// 高亮函数调用名（黄色）
+            //var callMatches = Regex.Matches(rtb.Text, @"\b(\w+)\s*\(");
+            //foreach (Match match in callMatches)
+            //{
+            //    int funcNameIndex = match.Groups[1].Index;
+            //    int funcNameLength = match.Groups[1].Length;
+            //    rtb.Select(funcNameIndex, funcNameLength);
+            //    rtb.SelectionColor = Color.Gold;
+            //}
 
             // 恢复光标和选区
             rtb.SelectionStart = selStart;
@@ -911,6 +929,74 @@ namespace TerraCreator
 
 }
         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

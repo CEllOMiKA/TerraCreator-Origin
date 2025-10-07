@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,6 +22,8 @@ namespace TerraCreator.objectedit
 
         public ItemSettings(string ItemPath, string ItemNamespace)
         {
+
+            ItemPathGlobal = ItemPath;
             //读取射弹文件每一列
             string[] ItemContent = { "" };
             try
@@ -463,7 +466,7 @@ namespace TerraCreator.objectedit
             if (repeatedProps.Count > 0)
             {
                 MessageBox.Show($"以下属性在自动生成和自定义代码中均有赋值，可能冲突：\n{string.Join("\n", repeatedProps)}", "属性重复", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                //return;
             }
 
             CodeViewRichTextBox.Text = WriteItemCode();

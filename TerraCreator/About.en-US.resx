@@ -119,40 +119,27 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>48, 4</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="name.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="name.Size" type="System.Drawing.Size, System.Drawing">
-    <value>348, 64</value>
+    <value>39, 4</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 113</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>124, 113</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 85</value>
+    <value>135, 90</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>TerraCreator Origin 
 Community Edition
-v2025.10
+v2025.10.1
 (c)CEllOMiKA
 (c)Your Name
 </value>
   </data>
   <data name="notice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 205</value>
-  </data>
-  <data name="notice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>21, 223</value>
   </data>
   <data name="notice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>497, 102</value>
+    <value>437, 90</value>
   </data>
   <data name="notice.Text" xml:space="preserve">
     <value>Note:
@@ -163,55 +150,19 @@ It can only play a role in auxiliary programming
 Thank you for your understanding</value>
   </data>
   <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>416, 382</value>
-  </data>
-  <data name="ok.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>201, 333</value>
   </data>
   <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 24</value>
+    <value>71, 21</value>
   </data>
   <data name="icon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>404, 94</value>
-  </data>
-  <data name="icon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="icon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>66, 72</value>
-  </data>
-  <data name="Milestone.Location" type="System.Drawing.Point, System.Drawing">
-    <value>351, 54</value>
-  </data>
-  <data name="Milestone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="Milestone.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 23</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 324</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>269, 17</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Some text is translated using Bing Translator</value>
+    <value>285, 139</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 77</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 25</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Origin</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 17</value>
+    <value>167, 70</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>494, 414</value>
+    <value>477, 365</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
