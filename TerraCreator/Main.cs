@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using TerraCreator;
 using TerraCreator.objectedit;
 using System.Media;
+using Microsoft.VisualBasic.Logging;
 namespace TerraCreator
 {
     public partial class Main : Form
@@ -119,6 +120,9 @@ namespace TerraCreator
         //突出代码
         public static void ColortheCode()
         {
+         
+            
+
             // C# 关键字列表
             string[] keywords = new string[]
             {
@@ -128,7 +132,7 @@ namespace TerraCreator
                 "long","namespace","new","null","object","operator","out","override","params","private","protected",
                 "public","readonly","ref","return","sbyte","sealed","short","sizeof","stackalloc","static","string",
                 "struct","switch","this","throw","true","try","typeof","uint","ulong","unchecked","unsafe","ushort",
-                "using","virtual","void","volatile","while","var","dynamic","get","set","value","partial","record",
+                "using","virtual","void","volatile","while","var","dynamic","get","set","partial","record",
                 "init","when","with","yield"
             };
 
@@ -163,16 +167,12 @@ namespace TerraCreator
                 }
             }
 
-            // 高亮函数名
-            var funcRegex = new Regex(@"\b(public|private|protected|internal|static|virtual|override|sealed|async|extern|unsafe|partial|new)\s+[\w<>\[\],\s]+\s+(\w+)\s*\([^\)]*\)\s*\{", RegexOptions.Compiled);
-            var funcMatches = funcRegex.Matches(rtb.Text);
-            foreach (Match match in funcMatches)
+            // 高亮数字（深绿色）
+            var numberMatches = Regex.Matches(rtb.Text, @"\b\d+(\.\d+)?\b");
+            foreach (Match match in numberMatches)
             {
-                // match.Groups[2] 是函数名
-                int funcNameIndex = match.Groups[2].Index;
-                int funcNameLength = match.Groups[2].Length;
-                rtb.Select(funcNameIndex, funcNameLength);
-                rtb.SelectionColor = functionColor;
+                rtb.Select(match.Index, match.Length);
+                rtb.SelectionColor = Color.DarkGreen;
             }
 
             // 高亮单行注释 //
@@ -191,23 +191,29 @@ namespace TerraCreator
                 rtb.SelectionColor = commentColor;
             }
 
-            // 高亮数字（深绿色）
-            var numberMatches = Regex.Matches(rtb.Text, @"\b\d+(\.\d+)?\b");
-            foreach (Match match in numberMatches)
+
+
+            // 高亮函数调用名（黄色）
+            var callMatches = Regex.Matches(rtb.Text, @"\b(\w+)\s*\(");
+            foreach (Match match in callMatches)
             {
-                rtb.Select(match.Index, match.Length);
-                rtb.SelectionColor = Color.DarkGreen;
+                int funcNameIndex = match.Groups[1].Index;
+                int funcNameLength = match.Groups[1].Length;
+                rtb.Select(funcNameIndex, funcNameLength);
+                rtb.SelectionColor = Color.Blue;
             }
 
-            //// 高亮函数调用名（黄色）
-            //var callMatches = Regex.Matches(rtb.Text, @"\b(\w+)\s*\(");
-            //foreach (Match match in callMatches)
-            //{
-            //    int funcNameIndex = match.Groups[1].Index;
-            //    int funcNameLength = match.Groups[1].Length;
-            //    rtb.Select(funcNameIndex, funcNameLength);
-            //    rtb.SelectionColor = Color.Gold;
-            //}
+            // 高亮函数名
+            var funcRegex = new Regex(@"\b(public|private|protected|internal|static|virtual|override|sealed|async|extern|unsafe|partial|new)\s+[\w<>\[\],\s]+\s+(\w+)\s*\([^\)]*\)\s*\{", RegexOptions.Compiled);
+            var funcMatches = funcRegex.Matches(rtb.Text);
+            foreach (Match match in funcMatches)
+            {
+                // match.Groups[2] 是函数名
+                int funcNameIndex = match.Groups[2].Index;
+                int funcNameLength = match.Groups[2].Length;
+                rtb.Select(funcNameIndex, funcNameLength);
+                rtb.SelectionColor = functionColor;
+            }
 
             // 恢复光标和选区
             rtb.SelectionStart = selStart;
@@ -334,23 +340,11 @@ namespace TerraCreator
                     Match matchPNG = checkPNG.Match(fileInfo.FullName);
                     if (matchPNG.Success)
                     {
-                        codes.Visible = false;
-                        ImageBox.Visible = true;
-                        codes.Text = "";
-                        FilePropt.Text = fileInfo.Name;
-                        CodeCount.Text = "图片";
-                        ImageBox.SizeMode = PictureBoxSizeMode.CenterImage;
-                        ImageBox.Image = Image.FromFile(fileInfo.FullName);
+                        ImageFileOpened();
                     }
                     else
                     {
-                        codes.Visible = true;
-                        ImageBox.Visible = false;
-                        ImageBox.Image = null;
-                        FilePropt.Text = fileInfo.Name;
-                        codes.Text = File.ReadAllText(fileInfo.FullName);
-                        CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
-                        ColortheCode();
+                        CodeFileOpened();
                     }
 
                 }
@@ -359,7 +353,50 @@ namespace TerraCreator
                     MessageBox.Show($"无法读取文件: \n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+
+            void CodeFileOpened()
+            {
+                codes.Visible = true;
+                ImageBox.Visible = false;
+                ImageBox.Image = null;
+                FileViewEdit.Items.Clear();
+
+                FilePropt.Text = fileInfo.Name;
+                codes.Text = File.ReadAllText(fileInfo.FullName);
+                CodeCount.Text = "字数:" + Convert.ToString(codes.Text.Count());
+
+                var ColortheCodeToolStripItem = FileViewEdit.Items.Add("代码着色");
+                ColortheCodeToolStripItem.Text = "代码着色";
+                ColortheCodeToolStripItem.Click += ColortheCodeToolStripItem_Click;
+                ColortheCodeToolStripItem.Image = Properties.Resources.ColortheCode;
+                ColortheCodeToolStripItem.DisplayStyle = ToolStripItemDisplayStyle.Image;
+
+                void ColortheCodeToolStripItem_Click(object? sender,EventArgs e)
+                {
+                    ColortheCode();
+                }
+
+            }
+
+            void ImageFileOpened()
+            {
+                codes.Visible = false;
+                ImageBox.Visible = true;
+                codes.Text = "";
+                FileViewEdit.Items.Clear();
+
+                FilePropt.Text = fileInfo.Name;
+                CodeCount.Text = "图片";
+                ImageBox.SizeMode = PictureBoxSizeMode.CenterImage;
+                ImageBox.Image = Image.FromFile(fileInfo.FullName);
+
+            }
+
+
+
         }
+
+
 
 
 

@@ -20,6 +20,8 @@ namespace TerraCreator
         public static Color RichTextBoxColor = Color.Black;
         //public static Font RichTextBoxFont = new Font("")
 
+        public static string ProjectConfigFilePath = "\\TerraCreator\\";
+
         public static string ExampleTerraCreatorConfigFileContent =
             "FormToolColor\r\n" +
             "192\r\n" +
@@ -33,6 +35,13 @@ namespace TerraCreator
             "en-US";
         public static string TerraCreatorConfigFileName = "TerraCreator.userconfig.tcdata";
         //Notice: Settings.cs!
+
+        public static string ExampleProjectConfigFileContent =
+            "[ProjectData]"+ Environment.NewLine +
+            "ProjectModItemSavePath = \"\\Items\";" + Environment.NewLine+
+            "ProjectModProjectileSavePath = \"\\Projectiles\";" + Environment.NewLine
+            ;
+        public static string ProjectConfigFileName = "TerraCreator.project.tcdata";
 
     }
 

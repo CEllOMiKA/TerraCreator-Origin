@@ -13,6 +13,7 @@ using TerraCreator;
 using System.Text.RegularExpressions;
 
 
+
 namespace TerraCreator
 {
     public partial class NewProject : Form
@@ -87,6 +88,9 @@ namespace TerraCreator
                             throw new Exception($"Check {ProjectData.ProjectNamespace}.cs . Can't match namespace");
                         }
 
+                        if(Libs.CreateProjectConifgFile(ProjectFolderPath) == false)
+                            throw new Exception($"我们无法创建配置文件,部分内容可能无法保存");
+
                     }
                     catch (Exception ex)
                     {
@@ -98,41 +102,54 @@ namespace TerraCreator
                         ProjectData.ProjectNamespace = "";
 
                         MessageBox.Show(
-                            $"无法找到文件或类\n" +
+                            $"错误\n" +
                             $"{ex.Message}\n" +
                             $"\n" +
                             $"确保模组内部名称填写正确(注意大小写)\n" +
                             $"如果文件夹没有build.txt,description.txt,launchSettings.json文件\n" +
-                            $"建议重新创建项目"
+                            $"建议重新创建项目" 
+
                         );
                     }
+
+
+                    //Libs.ReadProjectConfigFile(ProjectFolderPath);
+
 
 
 
                     if (ProjectData.ProjectChecked)
                     {
+                        try
+                        {
+                            //ProjectDictInfo.CreateSubdirectory("Items");
+                            //ProjectDictInfo.CreateSubdirectory("Projectiles");
+                            //ProjectDictInfo.CreateSubdirectory("Localization");
+                            Libs.ReadProjectConfigFile(ProjectFolderPath);
 
-                        //ProjectDictInfo.Create();
-                        //ProjectDictInfo.CreateSubdirectory("Items");
-                        //ProjectDictInfo.CreateSubdirectory("Projectiles");
-                        //ProjectDictInfo.CreateSubdirectory("Localization");
+                            ProjectData.ProjectPath = ProjectFolderPath;
+                            Main.fileview.Nodes.Clear();
+                            Main.LoadFileTreeView(ProjectData.ProjectPath);
+                            Main.fileview.ExpandAll();
+                            Main.codes.Text = "";
+                            Main.ProjectName.Text = ProjectData.ProjectNamespace;
+                            Main.PutClassBaseTypesIntoObjectListView(ProjectData.ProjectPath);
 
-                        ProjectData.ProjectPath = ProjectFolderPath;
-                        Main.fileview.Nodes.Clear();
-                        Main.LoadFileTreeView(ProjectData.ProjectPath);
-                        Main.fileview.ExpandAll();
-                        Main.codes.Text = "";
-                        Main.ProjectName.Text = ProjectData.ProjectNamespace;
-                        Main.PutClassBaseTypesIntoObjectListView(ProjectData.ProjectPath);
+                            Main.ObjectProject.Controls.Clear();
+                            Form ProjectSettingsForm = new ProjectSettings();
+                            ProjectSettingsForm.TopLevel = false;
+                            ProjectSettingsForm.FormBorderStyle = FormBorderStyle.None;
+                            ProjectSettingsForm.Dock = DockStyle.Fill;
+                            Main.ObjectProject.Controls.Add(ProjectSettingsForm);
+                            ProjectSettingsForm.Show();
+                            //Main.FileSystem.Path = ProjectData.ProjectPath;
+                        }
+                        catch(Exception ex)
+                        {
+                            MessageBox.Show($"导入项目失败\n{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
-                        Main.ObjectProject.Controls.Clear();
-                        Form ProjectSettingsForm = new ProjectSettings();
-                        ProjectSettingsForm.TopLevel = false;
-                        ProjectSettingsForm.FormBorderStyle = FormBorderStyle.None;
-                        ProjectSettingsForm.Dock = DockStyle.Fill;
-                        Main.ObjectProject.Controls.Add(ProjectSettingsForm);
-                        ProjectSettingsForm.Show();
-                        //Main.FileSystem.Path = ProjectData.ProjectPath;
+
 
                         MessageBox.Show("已完成导入", "完成", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.Close();

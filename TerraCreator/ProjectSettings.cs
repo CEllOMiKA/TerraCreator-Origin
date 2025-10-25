@@ -41,7 +41,11 @@ namespace TerraCreator
             if (this.SettingsListView.Groups[0].Items[1].Selected)
             {
                 SettingsPanel.Controls.Clear();
-                DefaultCodesSaveLocationSettings();
+                Form SaveLocationSettings = new SaveLocationSettings();
+                SaveLocationSettings.TopLevel = false;
+
+                SaveLocationSettings.Show();
+                SettingsPanel.Controls.Add(SaveLocationSettings);
             }
         }
 

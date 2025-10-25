@@ -752,8 +752,9 @@ namespace TerraCreator
                     {
                         if (!Directory.Exists(ProjectData.ProjectPath + ProjectData.ProjectModItemSavePath))
                             Directory.CreateDirectory(ProjectData.ProjectPath + ProjectData.ProjectModItemSavePath);
-                        File.WriteAllText(Path.Combine(ProjectData.ProjectPath, "Items", ItemNamespaceTextBox.Text + ".cs"), ItemCodes, Encoding.UTF8);
-                        MessageBox.Show($"物品代码已生成:\n{ItemCodes}\n", "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string SavePath = ProjectData.ProjectPath + ProjectData.ProjectModItemSavePath + "\\" + ItemNamespaceTextBox.Text + ".cs";
+                        File.WriteAllText(SavePath, ItemCodes, Encoding.UTF8);
+                        MessageBox.Show($"物品已生成\n代码位置:{SavePath}\n{ItemCodes}\n", "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {
@@ -832,10 +833,16 @@ namespace TerraCreator
 
                     try
                     {
+                        //if (!Directory.Exists(ProjectData.ProjectPath + ProjectData.ProjectModProjectileSavePath))
+                        //    Directory.CreateDirectory(ProjectData.ProjectPath + ProjectData.ProjectModProjectileSavePath);
+                        //File.WriteAllText(Path.Combine(ProjectData.ProjectPath, "Projectiles", ProjectileNamespaceTextBox.Text + ".cs"), ProjectileCodes, Encoding.UTF8);
+                        //MessageBox.Show($"物品代码已生成:\n{ProjectileCodes}\n", "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         if (!Directory.Exists(ProjectData.ProjectPath + ProjectData.ProjectModProjectileSavePath))
                             Directory.CreateDirectory(ProjectData.ProjectPath + ProjectData.ProjectModProjectileSavePath);
-                        File.WriteAllText(Path.Combine(ProjectData.ProjectPath, "Projectiles", ProjectileNamespaceTextBox.Text + ".cs"), ProjectileCodes, Encoding.UTF8);
-                        MessageBox.Show($"物品代码已生成:\n{ProjectileCodes}\n", "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        string SavePath = ProjectData.ProjectPath + ProjectData.ProjectModProjectileSavePath + "\\" + ProjectileNamespaceTextBox.Text + ".cs";
+                        File.WriteAllText(SavePath, ProjectileCodes, Encoding.UTF8);
+                        MessageBox.Show($"射弹已生成\n代码位置:{SavePath}\n{ProjectileCodes}\n", "代码预览", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     catch (Exception ex)
                     {

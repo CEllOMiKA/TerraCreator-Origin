@@ -73,10 +73,10 @@
             Panel = new Panel();
             codes = new RichTextBox();
             ImageBox = new PictureBox();
+            FileViewEdit = new ToolStrip();
             splitter1 = new Splitter();
             fileview = new TreeView();
             ListTab = new TabControl();
-            FileViewEdit = new ToolStrip();
             MenuList.SuspendLayout();
             ToolList.SuspendLayout();
             status.SuspendLayout();
@@ -379,6 +379,11 @@
             ImageBox.TabStop = false;
             ImageBox.Click += ImageBox_Click;
             // 
+            // FileViewEdit
+            // 
+            resources.ApplyResources(FileViewEdit, "FileViewEdit");
+            FileViewEdit.Name = "FileViewEdit";
+            // 
             // splitter1
             // 
             resources.ApplyResources(splitter1, "splitter1");
@@ -400,11 +405,6 @@
             resources.ApplyResources(ListTab, "ListTab");
             ListTab.Name = "ListTab";
             ListTab.SelectedIndex = 0;
-            // 
-            // FileViewEdit
-            // 
-            resources.ApplyResources(FileViewEdit, "FileViewEdit");
-            FileViewEdit.Name = "FileViewEdit";
             // 
             // Main
             // 

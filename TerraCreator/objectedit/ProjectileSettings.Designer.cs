@@ -122,9 +122,9 @@
             // 
             // ProjectileHostileComboBox
             // 
-            resources.ApplyResources(ProjectileHostileComboBox, "ProjectileHostileComboBox");
             ProjectileHostileComboBox.FormattingEnabled = true;
             ProjectileHostileComboBox.Items.AddRange(new object[] { resources.GetString("ProjectileHostileComboBox.Items"), resources.GetString("ProjectileHostileComboBox.Items1") });
+            resources.ApplyResources(ProjectileHostileComboBox, "ProjectileHostileComboBox");
             ProjectileHostileComboBox.Name = "ProjectileHostileComboBox";
             // 
             // ProjectileHostileLabel
@@ -134,9 +134,9 @@
             // 
             // ProjectileFriendlyComboBox
             // 
-            resources.ApplyResources(ProjectileFriendlyComboBox, "ProjectileFriendlyComboBox");
             ProjectileFriendlyComboBox.FormattingEnabled = true;
             ProjectileFriendlyComboBox.Items.AddRange(new object[] { resources.GetString("ProjectileFriendlyComboBox.Items"), resources.GetString("ProjectileFriendlyComboBox.Items1") });
+            resources.ApplyResources(ProjectileFriendlyComboBox, "ProjectileFriendlyComboBox");
             ProjectileFriendlyComboBox.Name = "ProjectileFriendlyComboBox";
             // 
             // ProjectileFriendlyLabel
@@ -313,7 +313,6 @@
             // 
             // SetDefaultsTabPage
             // 
-            resources.ApplyResources(SetDefaultsTabPage, "SetDefaultsTabPage");
             SetDefaultsTabPage.BackColor = Color.FromArgb(192, 255, 255);
             SetDefaultsTabPage.Controls.Add(ProjectileHeightLabel);
             SetDefaultsTabPage.Controls.Add(ProjectileAIStyleNumericUpDown);
@@ -337,24 +336,25 @@
             SetDefaultsTabPage.Controls.Add(ProjectileFriendlyLabel);
             SetDefaultsTabPage.Controls.Add(ProjectilePenetrateLabel);
             SetDefaultsTabPage.Controls.Add(ProjectilePenetrateNumericUpDown);
+            resources.ApplyResources(SetDefaultsTabPage, "SetDefaultsTabPage");
             SetDefaultsTabPage.Name = "SetDefaultsTabPage";
             // 
             // AITabPage
             // 
-            resources.ApplyResources(AITabPage, "AITabPage");
             AITabPage.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(AITabPage, "AITabPage");
             AITabPage.Name = "AITabPage";
             // 
             // OtherTabPage
             // 
-            resources.ApplyResources(OtherTabPage, "OtherTabPage");
             OtherTabPage.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(OtherTabPage, "OtherTabPage");
             OtherTabPage.Name = "OtherTabPage";
             // 
             // HeadTabPage
             // 
-            resources.ApplyResources(HeadTabPage, "HeadTabPage");
             HeadTabPage.BackColor = Color.FromArgb(192, 255, 255);
+            resources.ApplyResources(HeadTabPage, "HeadTabPage");
             HeadTabPage.Name = "HeadTabPage";
             // 
             // ProjectileSettingForm

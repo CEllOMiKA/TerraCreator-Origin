@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OutlookSettings));
             OutlookSettingsPanel = new Panel();
             ProjectIconSWSOriginButton = new Button();
             ProjectIconOriginButton = new Button();
@@ -77,16 +78,18 @@
             OutlookSettingsPanel.Controls.Add(ProjectVersionLabel);
             OutlookSettingsPanel.Controls.Add(ProjectNameTextBox);
             OutlookSettingsPanel.Controls.Add(ProjectNameLabel);
-            OutlookSettingsPanel.Location = new Point(12, 43);
+            OutlookSettingsPanel.Location = new Point(8, 30);
+            OutlookSettingsPanel.Margin = new Padding(2, 2, 2, 2);
             OutlookSettingsPanel.Name = "OutlookSettingsPanel";
-            OutlookSettingsPanel.Size = new Size(1181, 885);
+            OutlookSettingsPanel.Size = new Size(752, 627);
             OutlookSettingsPanel.TabIndex = 0;
             // 
             // ProjectIconSWSOriginButton
             // 
-            ProjectIconSWSOriginButton.Location = new Point(150, 503);
+            ProjectIconSWSOriginButton.Location = new Point(95, 356);
+            ProjectIconSWSOriginButton.Margin = new Padding(2, 2, 2, 2);
             ProjectIconSWSOriginButton.Name = "ProjectIconSWSOriginButton";
-            ProjectIconSWSOriginButton.Size = new Size(112, 34);
+            ProjectIconSWSOriginButton.Size = new Size(71, 24);
             ProjectIconSWSOriginButton.TabIndex = 20;
             ProjectIconSWSOriginButton.Text = "还原";
             ProjectIconSWSOriginButton.UseVisualStyleBackColor = true;
@@ -94,9 +97,10 @@
             // 
             // ProjectIconOriginButton
             // 
-            ProjectIconOriginButton.Location = new Point(150, 154);
+            ProjectIconOriginButton.Location = new Point(95, 109);
+            ProjectIconOriginButton.Margin = new Padding(2, 2, 2, 2);
             ProjectIconOriginButton.Name = "ProjectIconOriginButton";
-            ProjectIconOriginButton.Size = new Size(112, 34);
+            ProjectIconOriginButton.Size = new Size(71, 24);
             ProjectIconOriginButton.TabIndex = 19;
             ProjectIconOriginButton.Text = "还原";
             ProjectIconOriginButton.UseVisualStyleBackColor = true;
@@ -105,9 +109,10 @@
             // SaveButton
             // 
             SaveButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            SaveButton.Location = new Point(1058, 818);
+            SaveButton.Location = new Point(673, 579);
+            SaveButton.Margin = new Padding(2, 2, 2, 2);
             SaveButton.Name = "SaveButton";
-            SaveButton.Size = new Size(112, 34);
+            SaveButton.Size = new Size(71, 24);
             SaveButton.TabIndex = 16;
             SaveButton.Text = "保存";
             SaveButton.UseVisualStyleBackColor = true;
@@ -115,9 +120,10 @@
             // 
             // ProjectIconSWSChooseButton
             // 
-            ProjectIconSWSChooseButton.Location = new Point(150, 463);
+            ProjectIconSWSChooseButton.Location = new Point(95, 328);
+            ProjectIconSWSChooseButton.Margin = new Padding(2, 2, 2, 2);
             ProjectIconSWSChooseButton.Name = "ProjectIconSWSChooseButton";
-            ProjectIconSWSChooseButton.Size = new Size(112, 34);
+            ProjectIconSWSChooseButton.Size = new Size(71, 24);
             ProjectIconSWSChooseButton.TabIndex = 15;
             ProjectIconSWSChooseButton.Text = "选择";
             ProjectIconSWSChooseButton.UseVisualStyleBackColor = true;
@@ -126,26 +132,29 @@
             // ProjectIconSWSLabel
             // 
             ProjectIconSWSLabel.AutoSize = true;
-            ProjectIconSWSLabel.Location = new Point(12, 466);
+            ProjectIconSWSLabel.Location = new Point(8, 330);
+            ProjectIconSWSLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectIconSWSLabel.Name = "ProjectIconSWSLabel";
-            ProjectIconSWSLabel.Size = new Size(136, 24);
+            ProjectIconSWSLabel.Size = new Size(93, 17);
             ProjectIconSWSLabel.TabIndex = 14;
             ProjectIconSWSLabel.Text = "项目图片(SWS):";
             // 
             // ProjectIconSWSPictureBox
             // 
-            ProjectIconSWSPictureBox.Location = new Point(268, 463);
+            ProjectIconSWSPictureBox.Location = new Point(171, 328);
+            ProjectIconSWSPictureBox.Margin = new Padding(2, 2, 2, 2);
             ProjectIconSWSPictureBox.Name = "ProjectIconSWSPictureBox";
-            ProjectIconSWSPictureBox.Size = new Size(148, 143);
+            ProjectIconSWSPictureBox.Size = new Size(94, 101);
             ProjectIconSWSPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             ProjectIconSWSPictureBox.TabIndex = 13;
             ProjectIconSWSPictureBox.TabStop = false;
             // 
             // ProjectIconChooseButton
             // 
-            ProjectIconChooseButton.Location = new Point(150, 114);
+            ProjectIconChooseButton.Location = new Point(95, 81);
+            ProjectIconChooseButton.Margin = new Padding(2, 2, 2, 2);
             ProjectIconChooseButton.Name = "ProjectIconChooseButton";
-            ProjectIconChooseButton.Size = new Size(112, 34);
+            ProjectIconChooseButton.Size = new Size(71, 24);
             ProjectIconChooseButton.TabIndex = 12;
             ProjectIconChooseButton.Text = "选择";
             ProjectIconChooseButton.UseVisualStyleBackColor = true;
@@ -154,17 +163,19 @@
             // ProjectIconLabel
             // 
             ProjectIconLabel.AutoSize = true;
-            ProjectIconLabel.Location = new Point(12, 111);
+            ProjectIconLabel.Location = new Point(8, 79);
+            ProjectIconLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectIconLabel.Name = "ProjectIconLabel";
-            ProjectIconLabel.Size = new Size(86, 24);
+            ProjectIconLabel.Size = new Size(59, 17);
             ProjectIconLabel.TabIndex = 11;
             ProjectIconLabel.Text = "项目图片:";
             // 
             // ProjectIconPictureBox
             // 
-            ProjectIconPictureBox.Location = new Point(268, 114);
+            ProjectIconPictureBox.Location = new Point(171, 81);
+            ProjectIconPictureBox.Margin = new Padding(2, 2, 2, 2);
             ProjectIconPictureBox.Name = "ProjectIconPictureBox";
-            ProjectIconPictureBox.Size = new Size(148, 143);
+            ProjectIconPictureBox.Size = new Size(94, 101);
             ProjectIconPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             ProjectIconPictureBox.TabIndex = 10;
             ProjectIconPictureBox.TabStop = false;
@@ -172,87 +183,97 @@
             // ProjectDescriptionSWSRichTextBox
             // 
             ProjectDescriptionSWSRichTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ProjectDescriptionSWSRichTextBox.Location = new Point(573, 463);
+            ProjectDescriptionSWSRichTextBox.Location = new Point(365, 328);
+            ProjectDescriptionSWSRichTextBox.Margin = new Padding(2, 2, 2, 2);
             ProjectDescriptionSWSRichTextBox.Name = "ProjectDescriptionSWSRichTextBox";
-            ProjectDescriptionSWSRichTextBox.Size = new Size(597, 349);
+            ProjectDescriptionSWSRichTextBox.Size = new Size(381, 248);
             ProjectDescriptionSWSRichTextBox.TabIndex = 9;
             ProjectDescriptionSWSRichTextBox.Text = "";
             // 
             // ProjectDescriptionSWSLabel
             // 
             ProjectDescriptionSWSLabel.AutoSize = true;
-            ProjectDescriptionSWSLabel.Location = new Point(431, 463);
+            ProjectDescriptionSWSLabel.Location = new Point(274, 328);
+            ProjectDescriptionSWSLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectDescriptionSWSLabel.Name = "ProjectDescriptionSWSLabel";
-            ProjectDescriptionSWSLabel.Size = new Size(136, 24);
+            ProjectDescriptionSWSLabel.Size = new Size(93, 17);
             ProjectDescriptionSWSLabel.TabIndex = 8;
             ProjectDescriptionSWSLabel.Text = "项目介绍(SWS):";
             // 
             // ProjectDescriptionRichTextBox
             // 
             ProjectDescriptionRichTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ProjectDescriptionRichTextBox.Location = new Point(573, 111);
+            ProjectDescriptionRichTextBox.Location = new Point(365, 79);
+            ProjectDescriptionRichTextBox.Margin = new Padding(2, 2, 2, 2);
             ProjectDescriptionRichTextBox.Name = "ProjectDescriptionRichTextBox";
-            ProjectDescriptionRichTextBox.Size = new Size(597, 346);
+            ProjectDescriptionRichTextBox.Size = new Size(381, 246);
             ProjectDescriptionRichTextBox.TabIndex = 7;
             ProjectDescriptionRichTextBox.Text = "";
             // 
             // ProjectDescriptionLabel
             // 
             ProjectDescriptionLabel.AutoSize = true;
-            ProjectDescriptionLabel.Location = new Point(431, 111);
+            ProjectDescriptionLabel.Location = new Point(274, 79);
+            ProjectDescriptionLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectDescriptionLabel.Name = "ProjectDescriptionLabel";
-            ProjectDescriptionLabel.Size = new Size(86, 24);
+            ProjectDescriptionLabel.Size = new Size(59, 17);
             ProjectDescriptionLabel.TabIndex = 6;
             ProjectDescriptionLabel.Text = "项目介绍:";
             // 
             // ProjectAuthorTextBox
             // 
             ProjectAuthorTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ProjectAuthorTextBox.Location = new Point(150, 75);
+            ProjectAuthorTextBox.Location = new Point(95, 53);
+            ProjectAuthorTextBox.Margin = new Padding(2, 2, 2, 2);
             ProjectAuthorTextBox.Name = "ProjectAuthorTextBox";
-            ProjectAuthorTextBox.Size = new Size(1020, 30);
+            ProjectAuthorTextBox.Size = new Size(651, 23);
             ProjectAuthorTextBox.TabIndex = 5;
             // 
             // ProjectAuthorLabel
             // 
             ProjectAuthorLabel.AutoSize = true;
-            ProjectAuthorLabel.Location = new Point(12, 78);
+            ProjectAuthorLabel.Location = new Point(8, 55);
+            ProjectAuthorLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectAuthorLabel.Name = "ProjectAuthorLabel";
-            ProjectAuthorLabel.Size = new Size(86, 24);
+            ProjectAuthorLabel.Size = new Size(59, 17);
             ProjectAuthorLabel.TabIndex = 4;
             ProjectAuthorLabel.Text = "项目作者:";
             // 
             // ProjectVersionTextBox
             // 
             ProjectVersionTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ProjectVersionTextBox.Location = new Point(150, 39);
+            ProjectVersionTextBox.Location = new Point(95, 28);
+            ProjectVersionTextBox.Margin = new Padding(2, 2, 2, 2);
             ProjectVersionTextBox.Name = "ProjectVersionTextBox";
-            ProjectVersionTextBox.Size = new Size(1020, 30);
+            ProjectVersionTextBox.Size = new Size(651, 23);
             ProjectVersionTextBox.TabIndex = 3;
             // 
             // ProjectVersionLabel
             // 
             ProjectVersionLabel.AutoSize = true;
-            ProjectVersionLabel.Location = new Point(12, 42);
+            ProjectVersionLabel.Location = new Point(8, 30);
+            ProjectVersionLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectVersionLabel.Name = "ProjectVersionLabel";
-            ProjectVersionLabel.Size = new Size(86, 24);
+            ProjectVersionLabel.Size = new Size(59, 17);
             ProjectVersionLabel.TabIndex = 2;
             ProjectVersionLabel.Text = "项目版本:";
             // 
             // ProjectNameTextBox
             // 
             ProjectNameTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            ProjectNameTextBox.Location = new Point(150, 3);
+            ProjectNameTextBox.Location = new Point(95, 2);
+            ProjectNameTextBox.Margin = new Padding(2, 2, 2, 2);
             ProjectNameTextBox.Name = "ProjectNameTextBox";
-            ProjectNameTextBox.Size = new Size(1020, 30);
+            ProjectNameTextBox.Size = new Size(651, 23);
             ProjectNameTextBox.TabIndex = 1;
             // 
             // ProjectNameLabel
             // 
             ProjectNameLabel.AutoSize = true;
-            ProjectNameLabel.Location = new Point(12, 6);
+            ProjectNameLabel.Location = new Point(8, 4);
+            ProjectNameLabel.Margin = new Padding(2, 0, 2, 0);
             ProjectNameLabel.Name = "ProjectNameLabel";
-            ProjectNameLabel.Size = new Size(86, 24);
+            ProjectNameLabel.Size = new Size(59, 17);
             ProjectNameLabel.TabIndex = 0;
             ProjectNameLabel.Text = "项目名称:";
             // 
@@ -260,21 +281,21 @@
             // 
             OutlookSettingsTitleLabel.AutoSize = true;
             OutlookSettingsTitleLabel.Font = new Font("Microsoft YaHei UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 134);
-            OutlookSettingsTitleLabel.Location = new Point(12, 9);
-            OutlookSettingsTitleLabel.Margin = new Padding(5, 0, 5, 0);
+            OutlookSettingsTitleLabel.Location = new Point(8, 6);
             OutlookSettingsTitleLabel.Name = "OutlookSettingsTitleLabel";
-            OutlookSettingsTitleLabel.Size = new Size(158, 31);
+            OutlookSettingsTitleLabel.Size = new Size(106, 21);
             OutlookSettingsTitleLabel.TabIndex = 2;
             OutlookSettingsTitleLabel.Text = "项目展示设置";
             // 
             // OutlookSettings
             // 
-            AutoScaleDimensions = new SizeF(11F, 24F);
+            AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(128, 255, 255);
-            ClientSize = new Size(1205, 940);
+            ClientSize = new Size(767, 666);
             Controls.Add(OutlookSettingsTitleLabel);
             Controls.Add(OutlookSettingsPanel);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "OutlookSettings";
             Text = "项目展示设置";
             Load += OutlookSettings_Load;
