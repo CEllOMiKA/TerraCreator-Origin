@@ -262,7 +262,7 @@
     <value>Magenta</value>
   </data>
   <data name="ImportProject.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 28</value>
+    <value>23, 22</value>
   </data>
   <data name="ImportProject.Text" xml:space="preserve">
     <value>导入项目</value>
@@ -271,7 +271,7 @@
     <value>Magenta</value>
   </data>
   <data name="fresh.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 28</value>
+    <value>23, 22</value>
   </data>
   <data name="fresh.Text" xml:space="preserve">
     <value>刷新</value>
@@ -280,7 +280,7 @@
     <value>Magenta</value>
   </data>
   <data name="save.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 28</value>
+    <value>23, 22</value>
   </data>
   <data name="save.Text" xml:space="preserve">
     <value>保存</value>
@@ -289,19 +289,19 @@
     <value>Magenta</value>
   </data>
   <data name="additem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 28</value>
+    <value>23, 22</value>
   </data>
   <data name="additem.Text" xml:space="preserve">
     <value>新建项</value>
   </data>
   <data name="toolStripSeparator5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 31</value>
+    <value>6, 25</value>
   </data>
   <data name="OpenTML.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
     <value>Magenta</value>
   </data>
   <data name="OpenTML.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 28</value>
+    <value>23, 22</value>
   </data>
   <data name="OpenTML.Text" xml:space="preserve">
     <value>打开tML</value>
@@ -310,16 +310,16 @@
     <value>Magenta</value>
   </data>
   <data name="OpenCsprojFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>28, 28</value>
+    <value>23, 22</value>
   </data>
   <data name="OpenCsprojFile.Text" xml:space="preserve">
     <value>打开csproj</value>
   </data>
   <data name="toolStripSeparator4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>6, 31</value>
+    <value>6, 25</value>
   </data>
   <data name="ProjectName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 28</value>
+    <value>68, 22</value>
   </data>
   <data name="ProjectName.Text" xml:space="preserve">
     <value>未打开项目</value>
@@ -331,7 +331,7 @@
     <value>0, 0, 2, 0</value>
   </data>
   <data name="ToolList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>958, 31</value>
+    <value>958, 25</value>
   </data>
   <data name="ToolList.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -373,7 +373,7 @@
     <value>无状态</value>
   </data>
   <data name="status.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 548</value>
+    <value>0, 554</value>
   </data>
   <data name="status.Size" type="System.Drawing.Size, System.Drawing">
     <value>769, 22</value>
@@ -614,7 +614,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="codes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>769, 523</value>
+    <value>769, 529</value>
   </data>
   <data name="codes.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -644,7 +644,7 @@
     <value>0, 25</value>
   </data>
   <data name="ImageBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>769, 523</value>
+    <value>769, 529</value>
   </data>
   <data name="ImageBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>CenterImage</value>
@@ -698,7 +698,7 @@
     <value>178, 3</value>
   </data>
   <data name="Panel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>769, 570</value>
+    <value>769, 576</value>
   </data>
   <data name="Panel.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -722,7 +722,7 @@
     <value>175, 3</value>
   </data>
   <data name="splitter1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>3, 570</value>
+    <value>3, 576</value>
   </data>
   <data name="splitter1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -749,7 +749,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="fileview.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 570</value>
+    <value>172, 576</value>
   </data>
   <data name="fileview.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -773,7 +773,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="TabFile.Size" type="System.Drawing.Size, System.Drawing">
-    <value>950, 576</value>
+    <value>950, 582</value>
   </data>
   <data name="TabFile.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -797,10 +797,10 @@
     <value>Fill</value>
   </data>
   <data name="ListTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 55</value>
+    <value>0, 49</value>
   </data>
   <data name="ListTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>958, 606</value>
+    <value>958, 612</value>
   </data>
   <data name="ListTab.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>

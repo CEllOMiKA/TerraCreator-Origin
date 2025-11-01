@@ -207,7 +207,6 @@
             // 
             // ToolList
             // 
-            ToolList.ImageScalingSize = new Size(24, 24);
             ToolList.Items.AddRange(new ToolStripItem[] { ImportProject, fresh, save, additem, toolStripSeparator5, OpenTML, OpenCsprojFile, toolStripSeparator4, ProjectName });
             resources.ApplyResources(ToolList, "ToolList");
             ToolList.Name = "ToolList";

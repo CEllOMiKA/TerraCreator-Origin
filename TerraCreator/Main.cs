@@ -120,10 +120,15 @@ namespace TerraCreator
         //突出代码
         public static void ColortheCode()
         {
-         
-            
+            // 获取主窗体实例（更稳健）
+            var rtb = Main.codes;
+            if (rtb == null) return;
 
-            // C# 关键字列表
+            // 防止对极大文本阻塞 UI（阈值可调）
+            const int MaxLengthToHighlight = 200_000;
+            if (rtb.Text.Length > MaxLengthToHighlight) return;
+
+            // 关键字（小写比较用 IgnoreCase）
             string[] keywords = new string[]
             {
                 "abstract","as","base","bool","break","byte","case","catch","char","checked","class","const","continue",
@@ -136,90 +141,92 @@ namespace TerraCreator
                 "init","when","with","yield"
             };
 
-            // 获取主窗体实例
-            if (Application.OpenForms[0] is not Main mainForm) return;
-            var rtb = Main.codes;
-
-            // 冻结重绘，防止闪烁
-            NativeMethods.SendMessage(rtb.Handle, NativeMethods.WM_SETREDRAW, false, 0);
-
-            int selStart = rtb.SelectionStart;
-            int selLength = rtb.SelectionLength;
+            // 颜色定义
             Color defaultColor = Color.Black;
-            Color keywordColor = Color.DeepSkyBlue;
-            Color commentColor = Color.YellowGreen;
+            Color keywordColor = Color.Blue;
+            Color commentColor = Color.Green;
             Color functionColor = Color.Red;
+            Color numberColor = Color.DarkGreen;
+            Color callColor = Color.Orange;
 
+            // 冻结重绘
+            NativeMethods.SendMessage(rtb.Handle, NativeMethods.WM_SETREDRAW, false, 0);
             rtb.SuspendLayout();
 
-            // 先重置所有文本颜色
+            // 保存光标
+            int selStart = rtb.SelectionStart;
+            int selLength = rtb.SelectionLength;
+
+            // 先重置全部文本颜色
             rtb.SelectAll();
             rtb.SelectionColor = defaultColor;
 
-            // 高亮关键字
-            foreach (string keyword in keywords)
+            // 优先高亮 字符串与注释，避免关键字在注释/字符串里也被高亮
+            var stringMatches = System.Text.RegularExpressions.Regex.Matches(rtb.Text, @"@?""([^""]|(""""))*""", System.Text.RegularExpressions.RegexOptions.Singleline);
+            foreach (System.Text.RegularExpressions.Match m in stringMatches)
             {
-                var matches = Regex.Matches(rtb.Text, $@"\b{Regex.Escape(keyword)}\b");
-                foreach (Match match in matches)
+                rtb.Select(m.Index, m.Length);
+                rtb.SelectionColor = Color.Brown;
+            }
+
+            var singleLineMatches = System.Text.RegularExpressions.Regex.Matches(rtb.Text, @"//.*?$", System.Text.RegularExpressions.RegexOptions.Multiline);
+            foreach (System.Text.RegularExpressions.Match m in singleLineMatches)
+            {
+                rtb.Select(m.Index, m.Length);
+                rtb.SelectionColor = commentColor;
+            }
+
+            var multiLineMatches = System.Text.RegularExpressions.Regex.Matches(rtb.Text, @"/\*.*?\*/", System.Text.RegularExpressions.RegexOptions.Singleline);
+            foreach (System.Text.RegularExpressions.Match m in multiLineMatches)
+            {
+                rtb.Select(m.Index, m.Length);
+                rtb.SelectionColor = commentColor;
+            }
+
+            // 高亮关键字（忽略大小写）
+            foreach (string kw in keywords)
+            {
+                var matches = System.Text.RegularExpressions.Regex.Matches(rtb.Text, $@"\b{System.Text.RegularExpressions.Regex.Escape(kw)}\b", System.Text.RegularExpressions.RegexOptions.IgnoreCase);
+                foreach (System.Text.RegularExpressions.Match m in matches)
                 {
-                    rtb.Select(match.Index, match.Length);
+                    rtb.Select(m.Index, m.Length);
                     rtb.SelectionColor = keywordColor;
                 }
             }
 
-            // 高亮数字（深绿色）
-            var numberMatches = Regex.Matches(rtb.Text, @"\b\d+(\.\d+)?\b");
-            foreach (Match match in numberMatches)
+            // 数字
+            var numberMatches = System.Text.RegularExpressions.Regex.Matches(rtb.Text, @"\b\d+(\.\d+)?\b");
+            foreach (System.Text.RegularExpressions.Match m in numberMatches)
             {
-                rtb.Select(match.Index, match.Length);
-                rtb.SelectionColor = Color.DarkGreen;
+                rtb.Select(m.Index, m.Length);
+                rtb.SelectionColor = numberColor;
             }
 
-            // 高亮单行注释 //
-            var singleLineMatches = Regex.Matches(rtb.Text, @"//.*?$", RegexOptions.Multiline);
-            foreach (Match match in singleLineMatches)
+            // 函数调用名（形如 name(...), 高亮 name）
+            var callMatches = System.Text.RegularExpressions.Regex.Matches(rtb.Text, @"\b([A-Za-z_]\w*)\s*\(");
+            foreach (System.Text.RegularExpressions.Match m in callMatches)
             {
-                rtb.Select(match.Index, match.Length);
-                rtb.SelectionColor = commentColor;
+                int idx = m.Groups[1].Index;
+                int len = m.Groups[1].Length;
+                rtb.Select(idx, len);
+                rtb.SelectionColor = callColor;
             }
 
-            // 高亮多行注释 /* ... */
-            var multiLineMatches = Regex.Matches(rtb.Text, @"/\*.*?\*/", RegexOptions.Singleline);
-            foreach (Match match in multiLineMatches)
-            {
-                rtb.Select(match.Index, match.Length);
-                rtb.SelectionColor = commentColor;
-            }
-
-
-
-            // 高亮函数调用名（黄色）
-            var callMatches = Regex.Matches(rtb.Text, @"\b(\w+)\s*\(");
-            foreach (Match match in callMatches)
-            {
-                int funcNameIndex = match.Groups[1].Index;
-                int funcNameLength = match.Groups[1].Length;
-                rtb.Select(funcNameIndex, funcNameLength);
-                rtb.SelectionColor = Color.Blue;
-            }
-
-            // 高亮函数名
-            var funcRegex = new Regex(@"\b(public|private|protected|internal|static|virtual|override|sealed|async|extern|unsafe|partial|new)\s+[\w<>\[\],\s]+\s+(\w+)\s*\([^\)]*\)\s*\{", RegexOptions.Compiled);
+            // 方法/函数声明名（覆盖为 functionColor）
+            var funcRegex = new System.Text.RegularExpressions.Regex(@"\b(public|private|protected|internal|static|virtual|override|sealed|async|extern|unsafe|partial|new)\s+[\w<>\[\],\s]+\s+([A-Za-z_]\w*)\s*\(", System.Text.RegularExpressions.RegexOptions.Compiled | System.Text.RegularExpressions.RegexOptions.IgnoreCase);
             var funcMatches = funcRegex.Matches(rtb.Text);
-            foreach (Match match in funcMatches)
+            foreach (System.Text.RegularExpressions.Match m in funcMatches)
             {
-                // match.Groups[2] 是函数名
-                int funcNameIndex = match.Groups[2].Index;
-                int funcNameLength = match.Groups[2].Length;
+                int funcNameIndex = m.Groups[2].Index;
+                int funcNameLength = m.Groups[2].Length;
                 rtb.Select(funcNameIndex, funcNameLength);
                 rtb.SelectionColor = functionColor;
             }
 
-            // 恢复光标和选区
+            // 恢复光标
             rtb.SelectionStart = selStart;
             rtb.SelectionLength = selLength;
             rtb.SelectionColor = defaultColor;
-           
 
             rtb.ResumeLayout();
             NativeMethods.SendMessage(rtb.Handle, NativeMethods.WM_SETREDRAW, true, 0);
@@ -446,45 +453,52 @@ namespace TerraCreator
         public static void PutClassBaseTypesIntoObjectListView(string folderPath)
         {
             ObjectListView.Items.Clear();
-            var csFiles = Directory.GetFiles(folderPath, "*.cs", SearchOption.AllDirectories);
-            var regex = new Regex(@"public\s+class\s+(\w+)\s*:\s*([^{,\s]+)", RegexOptions.Compiled);
-
-            foreach (var file in csFiles)
+            try
             {
-                var content = File.ReadAllText(file);
-                foreach (Match match in regex.Matches(content))
+                var csFiles = Directory.GetFiles(folderPath, "*.cs", SearchOption.AllDirectories);
+                var regex = new Regex(@"public\s+class\s+(\w+)\s*:\s*([^{,\s]+)", RegexOptions.Compiled);
+                foreach (var file in csFiles)
                 {
-                    string className = match.Groups[1].Value;
-                    string baseType = match.Groups[2].Value;
-                    var item = new ListViewItem($"{className}");
+                    var content = File.ReadAllText(file);
+                    foreach (Match match in regex.Matches(content))
+                    {
+                        string className = match.Groups[1].Value;
+                        string baseTypeFull = match.Groups[2].Value;
+                        // 只取短名（去掉命名空间和泛型参数）
+                        var shortBase = baseTypeFull.Split('.').Last();
+                        if (shortBase.Contains("<")) shortBase = shortBase.Substring(0, shortBase.IndexOf("<"));
 
-                    // 按基类分组
-                    if (baseType == "Mod")
-                    {
-                        continue; // 忽略 Mod 基类
+                        var item = new ListViewItem(className);
+
+                        if (shortBase.Equals("Mod")) continue;
+
+                        if (shortBase.Equals("ModItem", StringComparison.OrdinalIgnoreCase) && ObjectListView.Groups.Count > 0)
+                        {
+                            item.Group = ObjectListView.Groups[0];
+                            item.Tag = file;
+                        }
+                        else if (shortBase.Equals("ModProjectile", StringComparison.OrdinalIgnoreCase) && ObjectListView.Groups.Count > 1)
+                        {
+                            item.Group = ObjectListView.Groups[1];
+                            item.Tag = file;
+                        }
+                        else if (shortBase.Equals("ModNPC", StringComparison.OrdinalIgnoreCase) && ObjectListView.Groups.Count > 2)
+                        {
+                            item.Group = ObjectListView.Groups[2];
+                            item.Tag = file;
+                        }
+                        else if (shortBase.Equals("ModTile", StringComparison.OrdinalIgnoreCase) && ObjectListView.Groups.Count > 3)
+                        {
+                            item.Group = ObjectListView.Groups[3];
+                            item.Tag = file;
+                        }
+                        ObjectListView.Items.Add(item);
                     }
-                    if (baseType == "ModItem" && ObjectListView.Groups.Count > 0)
-                    {
-                        item.Group = ObjectListView.Groups[0];
-                        item.Tag = file; // 设置 Tag 为 Item 路径
-                    }
-                    else if (baseType == "ModProjectile" && ObjectListView.Groups.Count > 1)
-                    {
-                        item.Group = ObjectListView.Groups[1];
-                        item.Tag = file; // 设置 Tag 为 Projectile 路径
-                    }
-                    else if (baseType == "ModNPC" && ObjectListView.Groups.Count > 2)
-                    {
-                        item.Group = ObjectListView.Groups[2];
-                        item.Tag = file;
-                    }
-                    else if (baseType == "ModTile" && ObjectListView.Groups.Count > 3)
-                    {
-                        item.Group = ObjectListView.Groups[3];
-                        item.Tag = file;
-                    }
-                    ObjectListView.Items.Add(item);
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"加载对象列表失败: {ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -966,140 +980,5 @@ namespace TerraCreator
 
 }
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
