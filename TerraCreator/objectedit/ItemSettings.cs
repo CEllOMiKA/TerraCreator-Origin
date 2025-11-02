@@ -354,7 +354,7 @@ namespace TerraCreator.objectedit
             sb.AppendLine($"            Item.maxStack = {ItemMaxStackNumericUpDown.Value};");
             sb.AppendLine($"            Item.value = {ItemValueNumericUpDown.Value};");
             sb.AppendLine($"            Item.rare = {ItemRareComboBox.Text.Split('/')[0].Trim()};");
-            sb.AppendLine($"            Item.useSound = {ItemSoundNumericUpDown.Value};");
+            //sb.AppendLine($"            Item.UseSound = {ItemSoundNumericUpDown.Value};");
 
             if (ItemMovementCheckBox.Checked)
             {

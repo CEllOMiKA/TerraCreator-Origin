@@ -155,17 +155,17 @@ namespace TerraCreator
                 "{" + Environment.NewLine +
               $"    public class {ProjectileNamespaceTextBox.Text}:ModProjectile" + Environment.NewLine +
                 "    {" + Environment.NewLine +
-                "        public override void public override void SetDefaults()" + Environment.NewLine +
+                "        public override void SetDefaults()" + Environment.NewLine +
                 "        {" + Environment.NewLine +
-              $"            Projectile.Height = {ProjectileHeightNumericUpDown.Value};//射弹高度" + Environment.NewLine +
-              $"            Projectile.Width = {ProjectileWidthNumericUpDown.Value};//射弹宽度" + Environment.NewLine +
-              $"            Projectile.Friendly = {ProjectileFriendlyComboBox.Text};//射弹是否可以攻击敌方" + Environment.NewLine +
+              $"            Projectile.height = {ProjectileHeightNumericUpDown.Value};//射弹高度" + Environment.NewLine +
+              $"            Projectile.width = {ProjectileWidthNumericUpDown.Value};//射弹宽度" + Environment.NewLine +
+              $"            Projectile.friendly = {ProjectileFriendlyComboBox.Text};//射弹是否可以攻击敌方" + Environment.NewLine +
               $"            Projectile.timeLeft = {ProjectileTimeLeftNumericUpDown.Value};//射弹存在时间" + Environment.NewLine +
-              $"            Projectile.Scale = {ProjectileScaleTextBox.Text};//射弹缩放倍率" + Environment.NewLine +
-              $"            Projectile.Hostile = {ProjectileHostileComboBox.Text};//射弹是否可以攻击友方和NPC" + Environment.NewLine +
-              $"            Projectile.Alpha = {ProjectileAlphaNumericUpDown.Value};//射弹透明度" + Environment.NewLine +
-              $"            Projectile.Penetrate = {ProjectilePenetrateNumericUpDown.Value};//射弹穿透次数" + Environment.NewLine +
-              $"            Projectile.Damage = {ProjectileDamageNumericUpDown.Value};//射弹伤害" + Environment.NewLine +
+              $"            Projectile.scale = {ProjectileScaleTextBox.Text};//射弹缩放倍率" + Environment.NewLine +
+              $"            Projectile.hostile = {ProjectileHostileComboBox.Text};//射弹是否可以攻击友方和NPC" + Environment.NewLine +
+              $"            Projectile.alpha = {ProjectileAlphaNumericUpDown.Value};//射弹透明度" + Environment.NewLine +
+              $"            Projectile.penetrate = {ProjectilePenetrateNumericUpDown.Value};//射弹穿透次数" + Environment.NewLine +
+              $"            Projectile.damage = {ProjectileDamageNumericUpDown.Value};//射弹伤害" + Environment.NewLine +
               $"            Projectile.aiStyle = {ProjectileAIStyleNumericUpDown.Value};//射弹AI" + Environment.NewLine +
               $"            {ProjectileSetDefaultsCodesRichTextBox.Text}" + Environment.NewLine +
                 "        }" + Environment.NewLine +

@@ -119,27 +119,26 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="name.Location" type="System.Drawing.Point, System.Drawing">
-    <value>60, 4</value>
+    <value>102, -1</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 113</value>
+    <value>213, 171</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>135, 90</value>
+    <value>210, 112</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>TerraCreator Origin 
 Community Edition
-v2025.11
+v2025.11.3
 (c)CEllOMiKA
-(c)Your Name
 </value>
   </data>
   <data name="notice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 214</value>
+    <value>34, 300</value>
   </data>
   <data name="notice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>497, 102</value>
+    <value>727, 144</value>
   </data>
   <data name="notice.Text" xml:space="preserve">
     <value>Note:
@@ -150,22 +149,22 @@ It can only play a role in auxiliary programming
 Thank you for your understanding</value>
   </data>
   <data name="ok.Location" type="System.Drawing.Point, System.Drawing">
-    <value>222, 333</value>
+    <value>337, 470</value>
   </data>
   <data name="ok.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 21</value>
+    <value>112, 30</value>
   </data>
   <data name="icon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 130</value>
+    <value>469, 184</value>
   </data>
   <data name="icon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 57</value>
+    <value>90, 90</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 70</value>
+    <value>304, 102</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>519, 365</value>
+    <value>793, 522</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
